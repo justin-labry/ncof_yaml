@@ -1,0 +1,481 @@
+{
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "eventNotifs": [
+    {
+      "event": "PERF_DATA",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "perfDataInfos": [
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "UE1 - gNB1 경유 flow의 UE IP 주소",
+            "ipv6Addr": "null",
+            "ipv56Prefix": "null"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "UE1 - gNB1 경유 UL flow 식별을 위한 주소",
+              "UE1 - gNB1 경유 DL flow 식별을 위한 주소"
+            ],
+            "tosTC": "UE1 - gNB1 경유 flow의 Type-of-Service bit-string의 2-octet 표현"
+          },
+          "userLoc": {
+            "nrLocation": {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB1의 NR Cell ID",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": "false",
+              "ageOfLocationInformation": "null",
+              "ueLocationTimestamp": "null",
+              "geographicalInformation": "null",
+              "geodeticInformation": "null",
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "n3IwfId": "null",
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                },
+                "ngeNbId": "null",
+                "wagfId": "null",
+                "tngfId": "null",
+                "nid": "000000001",
+                "eNbId": "null"
+              },
+              "ntnTaiInfo": "null"
+            },
+            "n3gaLocation": "null",
+            "eutraLocation": "null",
+            "utraLocation": "null",
+            "geraLocation": "null"
+          },
+          "appLocs": [
+            "UE1 - gNB1 경유 QoS flow의 DNAI"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "UE1 - gNB1 경유 flow의 APP server IP 주소",
+              "ipv6Addr": "null",
+              "ipv56Prefix": "null"
+            },
+            "fqdn": "APP server의 FQDN (Fully Qualified Domain Name) 주소"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          },
+          "_comments": [
+            "UE1 - gNB1 경유 flow의 E2E performance",
+            "표준 data (For SERVICE_EXPERIENCE analytics): ",
+            "E2E delay (avg RTT, avg DL, max UL/DL)",
+            "E2E packet loss rate (avg, avg DL, max UL/DL)",
+            "E2E throughput (avg UL/DL, min UL/DL, max UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "E2E delay (min/max RTT, avg UL, min UL/DL)",
+            "E2E jitter (avg)"
+          ]
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "UE1 - Non-3GPP access 경유 flow의 UE IP 주소"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "UE1 - Non-3GPP access 경유 UL flow 식별을 위한 주소",
+              "UE1 - Non-3GPP access 경유 DL flow 식별을 위한 주소"
+            ],
+            "tosTC": "UE1 - Non-3GPP access 경유 flow의 Type-of-Service bit-string의 2-octet 표현"
+          },
+          "userLoc": {
+            "n3gaLocation": {
+              "n3gppTai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "n3IwfId": "000001",
+              "ueIpv4Addr": "UE1 - Non-3GPP access 경유 flow의 UE IP 주소",
+              "portNumber": 10002,
+              "protocol": "TCP 또는 UDP 중 택 1",
+              "tnapId": {
+                "ssid": "Non-3GPP access의 SSID",
+                "bssId": "Non-3GPP access의 BSSID",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "twapId": {
+                "ssid": "Non-3GPP access의 SSID",
+                "bssId": "Non-3GPP access의 BSSID",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "hfcNodeId": "null",
+              "gli": "null (Global Location Identifier)",
+              "w5gbanLineType": "DSL 또는 PON 중 택 1",
+              "gci": "null (Global Cable Identifier)"
+            }
+          },
+          "appLocs": [
+            "UE1 - Non-3GPP access 경유 QoS flow의 DNAI"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "UE1 - Non-3GPP access 경유 flow의 APP server IP 주소"
+            },
+            "fqdn": "APP server의 FQDN (Fully Qualified Domain Name) 주소"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          },
+          "_comments": [
+            "UE1 - non-3GPP access 경유 flow의 E2E performance",
+            "표준 data (For SERVICE_EXPERIENCE analytics): ",
+            "E2E delay (avg RTT, avg DL, max UL/DL)",
+            "E2E packet loss rate (avg, avg DL, max UL/DL)",
+            "E2E throughput (avg UL/DL, min UL/DL, max UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "E2E delay (min/max RTT, avg UL, min UL/DL)",
+            "E2E jitter (avg)"
+          ]
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "UE2 - gNB2 경유 flow의 UE IP 주소"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "UE2 - gNB2 경유 UL flow 식별을 위한 주소",
+              "UE2 - gNB2 경유 DL flow 식별을 위한 주소"
+            ],
+            "tosTC": "UE2 - gNB2 경유 flow의 Type-of-Service bit-string의 2-octet 표현"
+          },
+          "userLoc": {
+            "nrLocation": {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB2의 NR Cell ID",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": "false",
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                }
+              }
+            }
+          },
+          "appLocs": [
+            "UE2 - gNB2 경유 QoS flow의 DNAI"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "UE2 - gNB2 경유 flow의 APP server IP 주소"
+            },
+            "fqdn": "APP server의 FQDN (Fully Qualified Domain Name) 주소"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          },
+          "_comments": [
+            "UE2 - gNB2 경유 flow의 E2E performance",
+            "표준 data (For SERVICE_EXPERIENCE analytics): ",
+            "E2E delay (avg RTT, avg DL, max UL/DL)",
+            "E2E packet loss rate (avg, avg DL, max UL/DL)",
+            "E2E throughput (avg UL/DL, min UL/DL, max UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "E2E delay (min/max RTT, avg UL, min UL/DL)",
+            "E2E jitter (avg)"
+          ]
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "UE2 - Non-3GPP access 경유 flow의 UE IP 주소"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "UE2 - Non-3GPP access 경유 UL flow 식별을 위한 주소",
+              "UE2 - Non-3GPP access 경유 DL flow 식별을 위한 주소"
+            ],
+            "tosTC": "UE2 - Non-3GPP access 경유 flow의 Type-of-Service bit-string의 2-octet 표현"
+          },
+          "userLoc": {
+            "n3gaLocation": {
+              "n3gppTai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "n3IwfId": "000001",
+              "ueIpv4Addr": "UE2 - Non-3GPP access 경유 flow의 UE IP 주소",
+              "portNumber": 10002,
+              "protocol": "TCP 또는 UDP 중 택 1",
+              "tnapId": {
+                "ssid": "Non-3GPP access의 SSID",
+                "bssId": "Non-3GPP access의 BSSID",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "twapId": {
+                "ssid": "Non-3GPP access의 SSID",
+                "bssId": "Non-3GPP access의 BSSID",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "gli": "null (Global Location Identifier)",
+              "w5gbanLineType": "DSL 또는 PON 중 택 1",
+              "gci": "null (Global Cable Identifier)"
+            }
+          },
+          "appLocs": [
+            "UE2 - Non-3GPP access 경유 QoS flow의 DNAI"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "UE2 - Non-3GPP access 경유 flow의 APP server IP 주소"
+            },
+            "fqdn": "APP server의 FQDN (Fully Qualified Domain Name) 주소"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          },
+          "_comments": [
+            "UE2 - non-3GPP access 경유 flow의 E2E performance",
+            "표준 data (For SERVICE_EXPERIENCE analytics): ",
+            "E2E delay (avg RTT, avg DL, max UL/DL)",
+            "E2E packet loss rate (avg, avg DL, max UL/DL)",
+            "E2E throughput (avg UL/DL, min UL/DL, max UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "E2E delay (min/max RTT, avg UL, min UL/DL)",
+            "E2E jitter"
+          ]
+        }
+      ]
+    },
+    {
+      "event": "DISPERSION",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "dispersionInfos": [
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "UE1 - gNB1 경유 flow의 GPSI",
+          "supi": "UE1 - gNB1 경유 flow의 SUPI",
+          "ueAddr": {
+            "ipv4Addr": "UE1 - gNB1 경유 flow의 UE IP 주소"
+          },
+          "flowDesp": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "dnais": [
+            "UE1 - gNB1 경유 QoS flow의 DNAI"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          },
+          "_comments": [
+            "UE1 - gNB1 경유 flow의 E2E traffic volume",
+            "표준 data (For E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "E2E traffic volume (total/UL/DL)"
+          ]
+        },
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "UE1 - Non-3GPP access 경유 flow의 GPSI",
+          "supi": "UE1 - Non-3GPP access 경유 flow의 SUPI",
+          "ueAddr": {
+            "ipv4Addr": "UE1 - Non-3GPP access 경유 flow의 UE IP 주소"
+          },
+          "flowDesp": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "dnais": [
+            "UE1 - Non-3GPP access 경유 QoS flow의 DNAI"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          },
+          "_comments": [
+            "표준 data (For E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE1 - Non-3GPP access 경유 flow의 E2E traffic volume",
+            "E2E traffic volume (total/UL/DL)"
+          ]
+        },
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "UE2 - gNB2 경유 flow의 GPSI",
+          "supi": "UE2 - gNB2 경유 flow의 SUPI",
+          "ueAddr": {
+            "ipv4Addr": "UE2 - gNB2 경유 flow의 UE IP 주소"
+          },
+          "flowDesp": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "dnais": [
+            "UE2 - gNB2 경유 QoS flow의 DNAI"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          },
+          "_comments": [
+            "UE2 - gNB2 경유 flow의 E2E traffic volume",
+            "표준 data (For E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "E2E traffic volume (total/UL/DL)"
+          ]
+        },
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "UE2 - Non-3GPP access 경유 flow의 GPSI",
+          "supi": "UE2 - Non-3GPP access 경유 flow의 SUPI",
+          "ueAddr": {
+            "ipv4Addr": "UE2 - Non-3GPP access 경유 flow의 UE IP 주소"
+          },
+          "flowDesp": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "dnais": [
+            "UE2 - Non-3GPP access 경유 QoS flow의 DNAI"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          },
+          "_comments": [
+            "UE2 - Non-3GPP access 경유 flow의 E2E traffic volume",
+            "표준 data (For E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "E2E traffic volume (total/UL/DL)"
+          ]
+        }
+      ]
+    }
+  ]
+}

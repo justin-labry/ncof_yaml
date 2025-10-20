@@ -1,0 +1,496 @@
+{
+  "correlationId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "eventNotifyUri": "https://6g-i2p.etri.re.kr/poc2/upf/",
+  "achievedSampRatio": 100,
+  "notificationItems": [
+    {
+      "eventType": "QOS_MONITORING",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "ueIpv4Addr": "UE1 - gNB1 경유 flow의 UE IP 주소",
+      "ueIpv6Prefix": "null",
+      "ueMacAddr": "UE1 - gNB1 경유 flow가 통과하는 interface의 MAC 주소",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": "UE1 - gNB1 경유 QoS flow가 속한 S-NSSAI",
+      "gpsi": "UE1 - gNB1 경유 flow의 GPSI",
+      "supi": "UE1 - gNB1 경유 flow의 SUPI",
+      "ratType": "NR",
+      "terminationCause": "null",
+      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "qosMonitoringMeasurement": {
+        "dlPacketDelay": 5,
+        "ulPacketDelay": 5,
+        "rtrPacketDelay": 10,
+        "dlAveThroughput": "150Mbps",
+        "ulAveThroughput": "50Mbps",
+        "dlCongestion": 100,
+        "ulCongestion": 100,
+        "dlAvailableBitrate": "200Mbps",
+        "ulAvailableBitrate": "100Mbps",
+        "measureFailure": "null",
+        "defaultQoSFlowInd": "false",
+        "_dlMinPacketDelay": 2,
+        "_ulMinPacketDelay": 2,
+        "_rtrMinPacketDelay": 5,
+        "_dlMaxPacketDelay": 10,
+        "_ulMaxPacketDelay": 10,
+        "_rtrMaxPacketDelay": 20,
+        "_packetLossRate": 2,
+        "_jitter": 0.0
+      },
+      "_comments": [
+        "UE1 - gNB1 경유 flow의 UE - UPF 간 performance",
+        "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+        "UE - UPF 간 delay (avg RTT/UL/DL)",
+        "UE - UPF 간 throughput (avg UL/DL)",
+        "UE - UPF 간 congestion (avg UL/DL)",
+        "UE - UPF 간 available bit-rate (UL/DL)",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+        "UE - UPF 간 packet loss rate (avg)",
+        "UE - UPF 간 jitter"
+      ]
+    },
+    {
+      "eventType": "QOS_MONITORING",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "ueIpv4Addr": "UE1 - Non-3GPP access 경유 flow의 UE IP 주소",
+      "ueMacAddr": "UE1 - Non-3GPP access 경유 flow가 통과하는 interface의 MAC 주소",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": "UE1 - Non-3GPP access 경유 QoS flow가 속한 S-NSSAI",
+      "gpsi": "UE1 - Non-3GPP access 경유 flow의 GPSI",
+      "supi": "UE1 - Non-3GPP access 경유 flow의 SUPI",
+      "ratType": "WLAN",
+      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "qosMonitoringMeasurement": {
+        "dlPacketDelay": 5,
+        "ulPacketDelay": 5,
+        "rtrPacketDelay": 10,
+        "dlAveThroughput": "150Mbps",
+        "ulAveThroughput": "50Mbps",
+        "dlCongestion": 100,
+        "ulCongestion": 100,
+        "dlAvailableBitrate": "300Mbps",
+        "ulAvailableBitrate": "100Mbps",
+        "defaultQoSFlowInd": "false",
+        "_dlMinPacketDelay": 2,
+        "_ulMinPacketDelay": 2,
+        "_rtrMinPacketDelay": 5,
+        "_dlMaxPacketDelay": 10,
+        "_ulMaxPacketDelay": 10,
+        "_rtrMaxPacketDelay": 20,
+        "_packetLossRate": 2,
+        "_jitter": 0.0
+      },
+      "_comments": [
+        "UE1 - Non-3GPP access 경유 flow의 UE - UPF 간 performance",
+        "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+        "UE - UPF 간 delay (avg RTT/UL/DL)",
+        "UE - UPF 간 throughput (avg UL/DL)",
+        "UE - UPF 간 congestion (avg UL/DL)",
+        "UE - UPF 간 available bit-rate (UL/DL)",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+        "UE - UPF 간 packet loss rate (avg)",
+        "UE - UPF 간 jitter"
+      ]
+    },
+    {
+      "eventType": "QOS_MONITORING",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "ueIpv4Addr": "UE2 - gNB2 경유 flow의 UE IP 주소",
+      "ueMacAddr": "UE2 - gNB2 경유 flow가 통과하는 interface의 MAC 주소",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": "UE2 - gNB2 경유 QoS flow가 속한 S-NSSAI",
+      "gpsi": "UE2 - gNB2 경유 flow의 GPSI",
+      "supi": "UE2 - gNB2 경유 flow의 SUPI",
+      "ratType": "NR",
+      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "qosMonitoringMeasurement": {
+        "dlPacketDelay": 5,
+        "ulPacketDelay": 5,
+        "rtrPacketDelay": 10,
+        "dlAveThroughput": "150Mbps",
+        "ulAveThroughput": "50Mbps",
+        "dlCongestion": 100,
+        "ulCongestion": 100,
+        "dlAvailableBitrate": "300Mbps",
+        "ulAvailableBitrate": "100Mbps",
+        "defaultQoSFlowInd": "false",
+        "_dlMinPacketDelay": 2,
+        "_ulMinPacketDelay": 2,
+        "_rtrMinPacketDelay": 5,
+        "_dlMaxPacketDelay": 10,
+        "_ulMaxPacketDelay": 10,
+        "_rtrMaxPacketDelay": 20,
+        "_packetLossRate": 2,
+        "_jitter": 0.0
+      },
+      "_comments": [
+        "UE2 - gNB2 경유 flow의 UE - UPF 간 performance",
+        "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+        "UE - UPF 간 delay (avg RTT/UL/DL)",
+        "UE - UPF 간 throughput (avg UL/DL)",
+        "UE - UPF 간 congestion (avg UL/DL)",
+        "UE - UPF 간 available bit-rate (UL/DL)",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+        "UE - UPF 간 packet loss rate (avg)",
+        "UE - UPF 간 jitter"
+      ]
+    },
+    {
+      "eventType": "QOS_MONITORING",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "ueIpv4Addr": "UE2 - Non-3GPP access 경유 flow의 UE IP 주소",
+      "ueMacAddr": "UE2 - Non-3GPP access 경유 flow가 통과하는 interface의 MAC 주소",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": "UE2 - Non-3GPP access 경유 QoS flow가 속한 S-NSSAI",
+      "gpsi": "UE2 - Non-3GPP access 경유 flow의 GPSI",
+      "supi": "UE2 - Non-3GPP access 경유 flow의 SUPI",
+      "ratType": "WLAN",
+      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "qosMonitoringMeasurement": {
+        "dlPacketDelay": 5,
+        "ulPacketDelay": 5,
+        "rtrPacketDelay": 10,
+        "dlAveThroughput": "150Mbps",
+        "ulAveThroughput": "50Mbps",
+        "dlCongestion": 100,
+        "ulCongestion": 100,
+        "dlAvailableBitrate": "300Mbps",
+        "ulAvailableBitrate": "100Mbps",
+        "defaultQoSFlowInd": "false",
+        "_dlMinPacketDelay": 2,
+        "_ulMinPacketDelay": 2,
+        "_rtrMinPacketDelay": 5,
+        "_dlMaxPacketDelay": 10,
+        "_ulMaxPacketDelay": 10,
+        "_rtrMaxPacketDelay": 20,
+        "_packetLossRate": 2,
+        "_jitter": 0.0
+      },
+      "_comments": [
+        "UE2 - Non-3GPP access 경유 flow의 UE - UPF 간 performance",
+        "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+        "UE - UPF 간 delay (avg RTT/UL/DL)",
+        "UE - UPF 간 throughput (avg UL/DL)",
+        "UE - UPF 간 congestion (avg UL/DL)",
+        "UE - UPF 간 available bit-rate (UL/DL)",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+        "UE - UPF 간 packet loss rate (avg)",
+        "UE - UPF 간 jitter"
+      ]
+    },
+    {
+      "eventType": "USER_DATA_USAGE_MEASURES",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "ueIpv4Addr": "null",
+      "ueIpv6Prefix": "null",
+      "ueMacAddr": "null",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": "null",
+      "gpsi": "null",
+      "supi": "null",
+      "ratType": "null",
+      "terminationCause": "null",
+      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "userDataUsageMeasurements": [
+        {
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "flowInfo": {
+            "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+            "ethFlowDescription": {
+              "ethType": "0800",
+              "sourceMacAddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+              "srcMacAddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+              "fDesc": "null",
+              "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1",
+              "vlanTags": "null"
+            },
+            "packFiltId": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열 ID",
+            "packetFilterUsage": "false",
+            "tosTrafficClass": "UE1 - gNB1 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+            "spi": "IPSec 패킷의 경우 security parameter index",
+            "flowLabel": "null (IPv6 flow label header)",
+            "flowDirection": "BIDIRECTIONAL",
+            "mpxMediaUlInfos": "null",
+            "mpxMediaDlInfos": "null"
+          },
+          "applicationRelatedInformation": {
+            "urls": [
+              "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
+            ],
+            "domainInfoList": [
+              {
+                "domainName": "6g-i2p.etri.re.kr",
+                "domainNameProtocol": "DNS_QNAME"
+              }
+            ]
+          },
+          "volumeMeasurement": {
+            "totalVolume": "12GB",
+            "ulVolume": "3GB",
+            "dlVolume": "9GB",
+            "totalNbOfPackets": 12000,
+            "ulNbOfPackets": 6000,
+            "dlNbOfPackets": 6000
+          },
+          "throughputMeasurement": {
+            "ulThroughput": "null",
+            "dlThroughput": "null",
+            "ulPacketThroughput": "null",
+            "dlPacketThroughput": "null"
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50Mbps",
+            "dlAverageThroughput": "150Mbps",
+            "ulPeakThroughput": "100Mbps",
+            "dlPeakThroughput": "300Mbps",
+            "ulAveragePacketThroughput": "50Kpps",
+            "dlAveragePacketThroughput": "500Kpps",
+            "ulPeakPacketThroughput": "100Kpps",
+            "dlPeakPacketThroughput": "300Kpps"
+          },
+          "_comments": [
+            "UE1 - gNB1 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE - UPF 간 traffic volume (Total/UL/DL)",
+            "UE - UPF 간 packet Tx number (total/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL, peak UL/DL)",
+            "UE - UPF 간 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        },
+        {
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "flowInfo": {
+            "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+            "ethFlowDescription": {
+              "ethType": "0800",
+              "sourceMacAddr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "srcMacAddrEnd": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddrEnd": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "fDir": "BIDIRECTIONAL"
+            },
+            "packFiltId": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+            "packetFilterUsage": "false",
+            "tosTrafficClass": "UE1 - Non-3GPP access 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+            "spi": "IPSec 패킷의 경우 security parameter index",
+            "flowDirection": "BIDIRECTIONAL"
+          },
+          "applicationRelatedInformation": {
+            "urls": [
+              "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
+            ],
+            "domainInfoList": [
+              {
+                "domainName": "6g-i2p.etri.re.kr",
+                "domainNameProtocol": "DNS_QNAME"
+              }
+            ]
+          },
+          "volumeMeasurement": {
+            "totalVolume": "12GB",
+            "ulVolume": "3GB",
+            "dlVolume": "9GB",
+            "totalNbOfPackets": 12000,
+            "ulNbOfPackets": 6000,
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50Mbps",
+            "dlAverageThroughput": "150Mbps",
+            "ulPeakThroughput": "100Mbps",
+            "dlPeakThroughput": "300Mbps",
+            "ulAveragePacketThroughput": "50Kpps",
+            "dlAveragePacketThroughput": "500Kpps",
+            "ulPeakPacketThroughput": "100Kpps",
+            "dlPeakPacketThroughput": "300Kpps"
+          },
+          "_comments": [
+            "UE1 - Non-3GPP access 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE - UPF 간 traffic volume (Total/UL/DL)",
+            "UE - UPF 간 packet Tx number (total/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL, peak UL/DL)",
+            "UE - UPF 간 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        },
+        {
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "flowInfo": {
+            "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+            "ethFlowDescription": {
+              "ethType": "0800",
+              "sourceMacAddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+              "srcMacAddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+              "fDir": "BIDIRECTIONAL"
+            },
+            "packFiltId": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열 ID",
+            "packetFilterUsage": "false",
+            "tosTrafficClass": "UE2 - gNB2 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+            "spi": "IPSec 패킷의 경우 security parameter index",
+            "flowDirection": "BIDIRECTIONAL"
+          },
+          "applicationRelatedInformation": {
+            "urls": [
+              "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+            ],
+            "domainInfoList": [
+              {
+                "domainName": "6g-i2p.etri.re.kr",
+                "domainNameProtocol": "DNS_QNAME"
+              }
+            ]
+          },
+          "volumeMeasurement": {
+            "totalVolume": "12GB",
+            "ulVolume": "3GB",
+            "dlVolume": "9GB",
+            "totalNbOfPackets": 12000,
+            "ulNbOfPackets": 6000,
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50Mbps",
+            "dlAverageThroughput": "150Mbps",
+            "ulPeakThroughput": "100Mbps",
+            "dlPeakThroughput": "300Mbps",
+            "ulAveragePacketThroughput": "50Kpps",
+            "dlAveragePacketThroughput": "500Kpps",
+            "ulPeakPacketThroughput": "100Kpps",
+            "dlPeakPacketThroughput": "300Kpps"
+          },
+          "_comments": [
+            "UE2 - gNB2 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE - UPF 간 traffic volume (Total/UL/DL)",
+            "UE - UPF 간 packet Tx number (total/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL, peak UL/DL)",
+            "UE - UPF 간 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        },
+        {
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "flowInfo": {
+            "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+            "ethFlowDescription": {
+              "ethType": "0800",
+              "sourceMacAddr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "srcMacAddrEnd": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "destMacAddrEnd": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+              "fDir": "BIDIRECTIONAL"
+            },
+            "packFiltId": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+            "packetFilterUsage": "false",
+            "tosTrafficClass": "UE2 - Non-3GPP access 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+            "spi": "IPSec 패킷의 경우 security parameter index",
+            "flowDirection": "BIDIRECTIONAL"
+          },
+          "applicationRelatedInformation": {
+            "urls": [
+              "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+            ],
+            "domainInfoList": [
+              {
+                "domainName": "6g-i2p.etri.re.kr",
+                "domainNameProtocol": "DNS_QNAME"
+              }
+            ]
+          },
+          "volumeMeasurement": {
+            "totalVolume": "12GB",
+            "ulVolume": "3GB",
+            "dlVolume": "9GB",
+            "totalNbOfPackets": 12000,
+            "ulNbOfPackets": 6000,
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50Mbps",
+            "dlAverageThroughput": "150Mbps",
+            "ulPeakThroughput": "100Mbps",
+            "dlPeakThroughput": "300Mbps",
+            "ulAveragePacketThroughput": "50Kpps",
+            "dlAveragePacketThroughput": "500Kpps",
+            "ulPeakPacketThroughput": "100Kpps",
+            "dlPeakPacketThroughput": "300Kpps"
+          },
+          "_comments": [
+            "UE2 - Non-3GPP access 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE - UPF 간 traffic volume (Total/UL/DL)",
+            "UE - UPF 간 packet Tx number (total/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL, peak UL/DL)",
+            "UE - UPF 간 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        }
+      ]
+    }, 
+    {
+      "eventType": "USER_DATA_USAGE_MEASURES",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "dnn": "6g-i2p.etri.re.kr",
+      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "userDataUsageMeasurements": [
+        {
+          "flowInfo": {
+            "flowDescription": "Non-3GPP access 경유 traffic (total) 식별을 위한 필터 문자열",
+            "ethFlowDescription": {
+              "ethType": "0800",
+              "sourceMacAddr": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+              "destMacAddr": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+              "srcMacAddrEnd": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+              "destMacAddrEnd": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+              "fDir": "BIDIRECTIONAL"
+            },
+            "packFiltId": "Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+            "packetFilterUsage": "false",
+            "tosTrafficClass": "Non-3GPP access 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+            "spi": "IPSec 패킷의 경우 security parameter index",
+            "flowDirection": "BIDIRECTIONAL"
+          },
+          "applicationRelatedInformation": "null",
+          "volumeMeasurement": {
+            "totalVolume": "12GB",
+            "ulVolume": "3GB",
+            "dlVolume": "9GB",
+            "totalNbOfPackets": 12000,
+            "ulNbOfPackets": 6000,
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50Mbps",
+            "dlAverageThroughput": "150Mbps",
+            "ulPeakThroughput": "100Mbps",
+            "dlPeakThroughput": "300Mbps",
+            "ulAveragePacketThroughput": "50Kpps",
+            "dlAveragePacketThroughput": "500Kpps",
+            "ulPeakPacketThroughput": "100Kpps",
+            "dlPeakPacketThroughput": "300Kpps"
+          },
+          "_comments": [
+            "Non-3GPP access 경유 traffic(total)의 UE - UPF 간 traffic volume 및 throughput ",
+            "표준 data (For WLAN_PERFORMANCE analytics): ",
+            "Non-3GPP access 경유 traffic volume (Total/UL/DL)",
+            "Non-3GPP access 경유 packet Tx number (total/UL/DL)",
+            "Non-3GPP access 경유 traffic throughput (avg UL/DL, peak UL/DL)",
+            "Non-3GPP access 경유 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        }
+      ]
+    }
+  ]
+}

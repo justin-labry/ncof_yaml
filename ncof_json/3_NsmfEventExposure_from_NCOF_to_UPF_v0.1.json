@@ -1,0 +1,627 @@
+{
+  "subId": "null",
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ncof/",
+  "altNotifIpv6Addrs": "null",
+  "altNotifFqdns": [
+    "NCOF의 FQDN 주소 (필요시)"
+  ],
+  "altNotifIpv4Addrs": [
+    "NCOF의 IPv4 주소 (필요시)"
+  ],
+  "nfId": "NCOF의 UUID",
+  "notifMethod": "PERIODIC",
+  "repPeriod": 60,
+  "maxReportNbr": 0,
+  "expiry": "2026-03-08T12:00:00+09:00",
+  "ImmeRep": false,
+  "sampRatio": 100,
+  "partitionCriteria": "null",
+  "grpRepTime": 10,
+  "notifFlag": "null",
+  "notifFlagInstruct": "null",
+  "mutingSetting": "null",
+  "serviveName": "nsmf-event-exposure",
+  "supportedFeatures": "FF",
+  "defQosSupp": false,
+  "qosMonPending": false,
+  "udrRestartInd": false,
+  "supi": "null",
+  "gpsi": "null",
+  "anyUeInd": false,
+  "groupId": "대상 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID",
+  "pduSeId": "null",
+  "snssai": "null",
+  "dnai": "null",
+  "dnn": "6g-i2p.etri.re.kr",
+  "upfId": "대상 UPF의 ID",
+  "ssId": "null",
+  "bssId": "null",
+  "guami": {
+    "plmnId": {
+      "mcc": "999",
+      "mnc": "01",
+      "nid": "000000001"
+    },
+    "amfId": "null"
+  },
+  "eventSubs": [
+    {
+      "event": "UPF_EVENT",
+      "targetPeriod": {
+        "startTime": "2026-03-01T12:00:00+09:00",
+        "stopTime": "2026-03-08T12:00:00+09:00"
+      },
+      "tws": [
+        {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "stopTime": "2026-03-08T12:00:00+09:00"
+        }
+      ],
+      "referenceId": "null",
+      "dnaiChgType": "null",
+      "dddTraDescriptors": "null",
+      "dddStati": "null",
+      "appIds": "null",
+      "ueIpAddr": "null",
+      "flowDescs": "null",
+      "networkArea": {
+        "ecgis": "null",
+        "ncgis": [
+          {
+            "ncgi": {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "nrCellId": "gNB1의 NR Cell ID",
+              "nid": "000000001"
+            }
+          },
+          {},
+          {
+            "ncgi": {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "nrCellId": "gNB2의 NR Cell ID",
+              "nid": "000000001"
+            }
+          },
+          {},
+          {},
+          {}
+        ],
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "null",
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000001"
+            },
+            "nid": "null",
+            "eNbId": "null"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            }
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          },
+          {},
+          {}
+        ],
+        "tais": [
+          {
+            "tai": {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "tac": "0001",
+              "nid": "000000001"
+            }
+          },
+          {
+            "tai": "이전 record와 동일"
+          },
+          {
+            "tai": "이전 record와 동일"
+          },
+          {
+            "tai": "이전 record와 동일"
+          },
+          {
+            "tai": "이전 record와 동일"
+          },
+          {
+            "tai": "이전 record와 동일"
+          }
+        ]
+      },
+      "transacDispInd": true,
+      "transacMetrics": "null",
+      "bundlingAllowed": "null",
+      "bundleId": "null",
+      "bundledEventNotifyUri": "null",
+      "upfEvents": [
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "measurementTypes": "null",
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDesc": "null",
+                "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1",
+                "vlanTags": "null"
+              },
+              "packFiltId": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE1 - gNB1 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowLabel": "null (IPv6 flow label header)",
+              "flowDirection": "BIDIRECTIONAL",
+              "mpxMediaUlInfos": "null",
+              "mpxMediaDlInfos": "null"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "UE1 - gNB1 경유 flow 식별에 활용될 remote server IPv4 주소",
+          "remoteIpv6Addr": "null",
+          "remotePortNumber": 80,
+          "ipDomain": "UE1 - gNB1 경유 flow 식별을 위한 IP 도메인 문자열",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_NULL_REPORT",
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ],
+            "validityTimes": [
+              {
+                "recurTimeWindow": {
+                  "startTime": "2026-03-08T12:01:00+09:00",
+                  "endTime": "2026-03-08T12:00:00+09:00"
+                }
+              }
+            ],
+            "thresholdCond": {
+              "thresholdTrafficVolume": {
+                "totalVolume": "null",
+                "ulVolume": "null",
+                "dlVolume": "null",
+                "totalNbOfPackets": "null",
+                "ulNbOfPackets": "null",
+                "dlNbOfPackets": "null"
+              },
+              "thresholdThroughput": {
+                "ulThroughput": "null",
+                "dlThroughput": "null",
+                "ulPacketThroughput": "null",
+                "dlPacketThroughput": "null"
+              }
+            }
+          },
+          "inclRatType": true,
+          "ratTypeList": [
+            "NR"
+          ],
+          "_comments": [
+            "UE1 - gNB1 경유 flow의 UE - UPF 간 QOS_MONITORING event 수집을 위한 subscription request",
+            "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+            "UE - UPF 간 delay (avg RTT/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL)",
+            "UE - UPF 간 congestion (avg UL/DL)",
+            "UE - UPF 간 available bit-rate (UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+            "UE - UPF 간 packet loss rate (avg)",
+            "UE - UPF 간 jitter"
+          ]
+        },
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1"
+              },
+              "packFiltId": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE1 - gNB1 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 remote server IPv4 주소",
+          "remotePortNumber": 80,
+          "ipDomain": "UE1 - Non-3GPP access 경유 flow 식별을 위한 IP 도메인 문자열",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "WLAN"
+          ],
+          "_comments": [
+            "UE1 - Non-3GPP access 경유 flow의 UE - UPF 간 QOS_MONITORING event 수집을 위한 subscription request",
+            "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+            "UE - UPF 간 delay (avg RTT/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL)",
+            "UE - UPF 간 congestion (avg UL/DL)",
+            "UE - UPF 간 available bit-rate (UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+            "UE - UPF 간 packet loss rate (avg)",
+            "UE - UPF 간 jitter"
+          ]
+        },
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "measurementTypes": [
+            "null"
+          ],
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDesc": "null",
+                "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1",
+                "vlanTags": "null"
+              },
+              "packFiltId": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE2 - gNB2 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "UE2 - gNB2 경유 flow 식별에 활용될 remote server IPv4 주소",
+          "remotePortNumber": 80,
+          "ipDomain": "UE2 - gNB2 경유 flow 식별을 위한 IP 도메인 문자열",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "NR"
+          ],
+          "_comments": [
+            "UE2 - gNB2 경유 flow의 UE - UPF 간 QOS_MONITORING event 수집을 위한 subscription request",
+            "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+            "UE - UPF 간 delay (avg RTT/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL)",
+            "UE - UPF 간 congestion (avg UL/DL)",
+            "UE - UPF 간 available bit-rate (UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+            "UE - UPF 간 packet loss rate (avg)",
+            "UE - UPF 간 jitter"
+          ]
+        },
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1"
+              },
+              "packFiltId": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE2 - gNB1 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 remote server IPv4 주소",
+          "remotePortNumber": 80,
+          "ipDomain": "UE2 - Non-3GPP access 경유 flow 식별을 위한 IP 도메인 문자열",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "WLAN"
+          ],
+          "_comments": [
+            "UE2 - Non-3GPP access 경유 flow의 UE - UPF 간 QOS_MONITORING event 수집을 위한 subscription request",
+            "표준 data (For SERVICE_EXPERIENCE, E2E_DATA_VOL_TRANS_TIME, and QOS_POLICY_ASSIST analytics): ",
+            "UE - UPF 간 delay (avg RTT/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL)",
+            "UE - UPF 간 congestion (avg UL/DL)",
+            "UE - UPF 간 available bit-rate (UL/DL)",
+            "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+            "UE - UPF 간 delay (min RTT/UL/DL, max RTT/UL/DL)",
+            "UE - UPF 간 packet loss rate (avg)",
+            "UE - UPF 간 jitter"
+          ]
+        },
+        {
+          "type": "USER_DATA_USAGE_MEASURES",
+          "immediateFlag": false,
+          "measurementTypes": [
+            "APPLICATION_RELATED_INFO",
+            "HROUGHPUT_MEASUREMENT",
+            "VOLUME_MEASUREMENT"
+          ],
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1"
+              },
+              "packFiltId": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE1 - gNB1 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            },
+            {
+              "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE1 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDir": "BIDIRECTIONAL"
+              },
+              "packFiltId": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE1 - Non-3GPP access 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            },
+            {
+              "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDir": "BIDIRECTIONAL"
+              },
+              "packFiltId": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE2 - gNB2 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            },
+            {
+              "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "UE2 - Non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                "fDir": "BIDIRECTIONAL"
+              },
+              "packFiltId": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE2 - Non-3GPP access 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "NR",
+            "WLAN",
+            "NR",
+            "WLAN"
+          ],
+          "_comments": [
+            "4개 flow의 UE - UPF 간 USER_DATA_USAGE_MEASURES event 수집을 위한 subscription request",
+            "UE1 - gNB1 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "UE1 - Non-3GPP access 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "UE2 - gNB1 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "UE2 - Non-3GPP access 경유 flow의 UE - UPF 간 traffic volume 및 throughput ",
+            "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE - UPF 간 traffic volume (Total/UL/DL)",
+            "UE - UPF 간 packet Tx number (total/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL, peak UL/DL)",
+            "UE - UPF 간 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        },
+        {
+          "type": "USER_DATA_USAGE_MEASURES",
+          "immediateFlag": false,
+          "measurementTypes": [
+            "THROUGHPUT_MEASUREMENT",
+            "VOLUME_MEASUREMENT"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "Non-3GPP access 경유 traffic (total) 식별을 위한 필터 문자열",
+              "ethFlowDescription": {
+                "ethType": "0800",
+                "sourceMacAddr": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+                "destMacAddr": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+                "srcMacAddrEnd": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+                "destMacAddrEnd": "Non-3GPP access 경유 traffic (total) 식별에 활용될 Ethernet 주소",
+                "fDir": "BIDIRECTIONAL"
+              },
+              "packFiltId": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열 ID",
+              "packetFilterUsage": "false",
+              "tosTrafficClass": "UE2 - Non-3GPP access 경유 flow의 Type-of-Service bit-string (binary인지 octet인지는 분명하지 않음)",
+              "spi": "IPSec 패킷의 경우 security parameter index",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": false,
+          "_comments": [
+            "Non-3GPP access AP의 UE - UPF 간 USER_DATA_USAGE_MEASURES event 수집을 위한 subscription request",
+            "표준 data (For SERVICE_EXPERIENCE and E2E_DATA_VOL_TRANS_TIME analytics): ",
+            "UE - UPF 간 traffic volume (Total/UL/DL)",
+            "UE - UPF 간 packet Tx number (total/UL/DL)",
+            "UE - UPF 간 throughput (avg UL/DL, peak UL/DL)",
+            "UE - UPF 간 packet throughput (avg UL/DL, peak UL/DL)"
+          ]
+        }
+      ]
+    }
+  ]
+}

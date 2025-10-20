@@ -1,0 +1,293 @@
+[
+  {
+    "subscriptionId": "SUBSCRIPTION_2026-03-01T12:01:00+09:00_2",
+    "notifCorrId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+    "oldSubscriptionId": "null",
+    "resourceUri": "https://6g-i2p.etri.re.kr/poc2/ncof/SUBSCRIPTION_2026-03-01T12:01:00+09:00_2",
+    "termCause": "null",
+    "transEvents": [
+      "QOS_POLICY_ASSIST"
+    ],
+    "eventNotifications": [
+      {
+        "event": "QOS_POLICY_ASSIST",
+        "timeStampGen": "2026-03-01T12:01:00+09:00",
+        "start": "2026-03-01T12:01:00+09:00",
+        "expiry": "2026-03-01T12:02:00+09:00",
+        "failNotifyCode": "null",
+        "rvWaitTime": "null",
+        "anaMetaInfo": {
+          "numSamples": 1,
+          "dataWindow": {
+            "startTime": "2026-03-01T12:01:00+09:00",
+            "stopTime": "2026-03-01T12:02:00+09:00"
+          },
+          "dataStatProps": [
+            "NO_OUTLIERS",
+            "NO_OUTLIERS",
+            "NO_OUTLIERS",
+            "NO_OUTLIERS"
+          ],
+          "strategy": "GRADIENT",
+          "accuracy": "null",
+          "_optScore": 1.0,
+          "nfIds": [
+            "SMF의 UUID",
+            "UPF의 UUID",
+            "AF의 UUID (APP Server 영역 AF로 가정)"
+          ],
+          "nfSetIds": [
+            "6G-I2P_POC_2"
+          ],
+          "procInstructs": "null"
+        },
+        "pauseInd": "false",
+        "resumeInd": "false",
+        "cancelAccuInd": "false",
+        "_ctrlEventInd": "true",
+        "qosPolAssistInfos": [
+          {
+            "qosPolAssistInfo": {
+              "tsStart": "2026-03-01T12:01:00+09:00",
+              "tsDuration": "2026-03-01T12:02:00+09:00",
+              "maxQoSFlowUsgDur": "null",
+              "minQoSFlowUsgDur": "null",
+              "avgQoSFlowUsgDur": "null",
+              "qoSFlowUsgNumber": "null",
+              "confidence": "null",
+              "_optScore": 1.0,
+              "qosPolAssistSets": [
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "UE1 - gNB1 경유 flow 식별에 활용될 5-tuple 주소",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddr": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                        "srcMacAdddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddrEnd": "UE1 - gNB1 경유 flow 식별에 활용될 Ethernet 주소",
+                        "fDesc": "null",
+                        "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1",
+                        "vLanTags": "null"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "n3IwfId": "null",
+                        "gNbId": {
+                          "bitLength": 24,
+                          "gNBValue": "000001"
+                        },
+                        "nid": "000000001",
+                        "eNbId": "null"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "NR"
+                  ],
+                  "freqs": "null",
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_1",
+                    "5qi": "null",
+                    "priorityLvl": "null",
+                    "rscType": "null",
+                    "pdb": "null",
+                    "gbrUl": "null",
+                    "gbrDl": "5.0Mbps",
+                    "mbrUl": "null",
+                    "mbrDl": "10.0Mbps",
+                    "maxPlrUl": "null",
+                    "maxPlrDl": "null",
+                    "avgWin": "null",
+                    "maxDataBurstVol": "null"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                },
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "UE1 - non-3GPP access 경유 flow 식별에 활용될 5-tuple 주소",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "UE1 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddr": "UE1 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "srcMacAdddrEnd": "UE1 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddrEnd": "UE1 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "n3IwfId": "000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "WLAN"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_2",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                },
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "UE2 - gNB2 경유 flow 식별에 활용될 5-tuple 주소",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddr": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                        "srcMacAdddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddrEnd": "UE2 - gNB2 경유 flow 식별에 활용될 Ethernet 주소",
+                        "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "gNbId": {
+                          "bitLength": 24,
+                          "gNBValue": "000002"
+                        },
+                        "nid": "000000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "NR"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_3",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                },
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "UE2 - non-3GPP access 경유 flow 식별에 활용될 5-tuple 주소",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "UE2 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddr": "UE2 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "srcMacAdddrEnd": "UE2 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "destMacAdddrEnd": "UE2 - non-3GPP access 경유 flow 식별에 활용될 Ethernet 주소",
+                        "fDir": "DOWNLINK, UPLINK, BIDIRECTIONAL, UNSPECIFIED 중 택 1"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "n3IwfId": "000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "WLAN"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_4",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                }
+              ]
+            }
+          }
+        ],
+        "_comments": [
+          "4개 FLOW의 QOS_POLICY_ASSIST control",
+          "UE1 - gNB1 경유 flow의 DL GBR/MBR 결정",
+          "UE1 - Non-3GPP access 경유 flow의 DL GBR/MBR 결정",
+          "UE2 - gNB2 경유 flow의 DL GBR/MBR 결정",
+          "UE2 - Non-3GPP access 경유 flow의 DL GBR/MBR 결정"
+        ]
+      }
+    ]
+  }
+]
