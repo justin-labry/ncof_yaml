@@ -1,0 +1,163 @@
+openapi: 3.0.0
+info:
+  title: 5GMS Common Data Types
+  version: 3.1.1
+  description: |
+    5GMS Common Data Types
+    © 2025, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).
+    All rights reserved.
+
+##### Disabled due to the rule of Swagger #####
+# tags:
+#  - name: 5GMS Common Data Types
+#    description: '5G Media Streaming: Common Data Types'
+# externalDocs:
+#  description: 'TS 26.512 V18.6.0; 5G Media Streaming (5GMS); Protocols'
+#  url: 'https://www.3gpp.org/ftp/Specs/archive/26_series/26.512/'
+# paths: {}
+###############################################
+
+components:
+  schemas:
+    #################################
+    # Clause 6.4.2: Simple data types
+    #################################
+
+    #####################################
+    # Clause 6.4.3: Structured data types
+    #####################################
+    MediaStreamingBaseReportingRecord:
+      type: object
+      properties:
+        sliceInfo:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Snssai'
+        dataNetworkName:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Dnn'
+        location:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/TypedLocation'
+
+    MediaStreamingSessionIdentification:
+      type: object
+      required:
+        - sessionId
+      properties:
+        sessionId:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/MediaDeliverySessionId'
+
+    MediaStreamingAccess:
+      type: object
+      description: Common properties of a single media access by the Media Stream Handler.
+      required:
+        - mediaStreamHandlerEndpointAddress
+        - applicationServerEndpointAddress
+        - requestMessage
+        - responseMessage
+        - processingLatency
+      properties:
+        mediaStreamHandlerEndpointAddress:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/EndpointAddress'
+        applicationServerEndpointAddress:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/EndpointAddress'
+        requestMessage:
+          type: object
+          required:
+            - method
+            - url
+            - protocolVersion
+            - size
+            - bodySize
+          properties:
+            method:
+              type: string
+            url:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/AbsoluteUrl'
+            protocolVersion:
+              type: string
+            range:
+              type: string
+            size:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+            bodySize:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+            contentType:
+              type: string
+            userAgent:
+              type: string
+            userIdentity:
+              type: string
+            referer:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/AbsoluteUrl'
+        cacheStatus:
+          $ref: '#/components/schemas/CacheStatus'
+        responseMessage:
+          type: object
+          required:
+            - responseCode
+            - size
+            - bodySize
+          properties:
+            responseCode:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+            size:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+            bodySize:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+            contentType:
+              type: string
+        processingLatency:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+        connectionMetrics:
+          type: object
+          required:
+            - meanNetworkRoundTripTime
+            - networkRoundTripTimeVariation
+            - congestionWindowSize
+          properties:
+            meanNetworkRoundTripTime:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+            networkRoundTripTimeVariation:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+            congestionWindowSize:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+
+    NetworkAssistanceInvocation:
+      description: Common properties of a single Network Assistance invocation.
+      type: object
+      properties:
+        policyTemplateId:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/ResourceId'
+        applicationFlowDescriptions:
+          type: array
+          minItems: 1
+          items:
+            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/ApplicationFlowDescription'
+        requestedQoS:
+          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/UnidirectionalQoSSpecification'
+        # The network QoS parameters (if any) requested by the Media Session Handler.
+        recommendedQoS:
+          type: object
+          description: The network QoS parameters (if any) recommended to the Media Session Handler.
+          required:
+            - maximumBitRate
+            - minimumBitRate
+          properties:
+            maximumBitRate:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/BitRate'
+            minimumBitRate:
+              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/BitRate'
+
+    #####################################
+    # Clause 6.4.4: Enumerated data types
+    #####################################
+    CacheStatus:
+      anyOf:
+        - type: string
+          enum:
+            - HIT
+            - MISS
+            - EXPIRED
+        - type: string
+          description: >
+            This string provides forward-compatibility with future
+            extensions to the enumeration but is not used to encode
+            content defined in the present version of this API.

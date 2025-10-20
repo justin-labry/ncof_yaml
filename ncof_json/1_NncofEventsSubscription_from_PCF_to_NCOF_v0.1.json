@@ -1,0 +1,757 @@
+{
+  "notificationURI": "https://6g-i2p.etri.re.kr/poc2/pcf/",
+  "notifCorrId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "evtReq": {
+    "notificationMethod": "PERIODIC",
+    "repPeriod": 60,
+    "maxReportNbr": 0,
+    "monDur": "2026-03-08T12:00:00+09:00",
+    "immRep": false,
+    "sampRatio": 100,
+    "partitionCriteria": "null",
+    "grpRepTime": 10,
+    "notifFlag": "null",
+    "notifFlagInstruct": "null",
+    "mutingSetting": "null"
+  },
+  "supportedFeatures": "FF",
+  "failEventReports": "null",
+  "prevSub": "null",
+  "consNfInfo": {
+    "nfId": "PCF의 UUID",
+    "nfSetId": "6G-I2P_POC_2",
+    "taiList": [
+      {
+        "plmnId": {
+          "mnc": "999",
+          "mcc": "01"
+        },
+        "tac": "0001",
+        "nid": "0000000001"
+      },
+      {
+        "plmnId": {
+          "mnc": "999",
+          "mcc": "01"
+        },
+        "tac": "0001",
+        "nid": "0000000001"
+      },
+      {
+        "plmnId": {
+          "mnc": "999",
+          "mcc": "01"
+        },
+        "tac": "0001",
+        "nid": "0000000001"
+      }
+    ]
+  },
+  "eventSubscriptions": [
+    {
+      "event": "QOS_POLICY_ASSIST",
+      "notificationMethod": "PERIODIC",
+      "repetitionPeriod": 60,
+      "loadLevelThreshold": "null",
+      "nfLoadLvlThds": "null",
+      "nsiLevelThrds": "null",
+      "qosFlowRetThds": "null",
+      "ranUeThrouThds": "null",
+      "e2eDelayThds": "null",
+      "matchingDir": "null",
+      "extraReportReq": {
+        "accuracy": "null",
+        "_optLevel": "HIGH",
+        "accPerSubset": "null",
+        "startTs": "2026-03-01T12:00:00+09:00",
+        "endTs": "2026-03-08T12:00:00+09:00",
+        "offsetPeriod": 60,
+        "sampRatio": 100,
+        "maxObjectNbr": 0,
+        "maxSupiNbr": 0,
+        "anaMeta": "null",
+        "anaMetaInd": "null",
+        "histAnaTimePeriod": "null"
+      },
+      "listOfAnaSubsets": "null",
+      "dnns": [
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr"
+      ],
+      "dnais": [
+        "UE1 - gNB1 경유 QoS flow의 DNAI",
+        "UE1 - non-3GPP access 경유 QoS flow의 DNAI",
+        "UE2 - gNB2 경유 QoS flow의 DNAI",
+        "UE2 - non-3GPP access 경유 QoS flow의 DNAI"
+      ],
+      "ladnDnns": "null (Loca Area Data Network DNN으로 DNN보다 좁은 개념)",
+      "anySlice": false,
+      "snssaia": [
+        "UE1 - gNB1 경유 QoS flow가 속한 S-NSSAI",
+        "UE1 - non-3GPP access 경유 QoS flow가 속한 S-NSSAI",
+        "UE2 - gNB2 경유 QoS flow가 속한 S-NSSAI",
+        "UE2 - non-3GPP access 경유 QoS flow가 속한 S-NSSAI"
+      ],
+      "nsiIdInfos": [
+        "UE1 - gNB1 경유 QoS flow가 속한 network slice instance ID",
+        "UE1 - non-3GPP access 경유 QoS flow가 속한 network slice instance ID",
+        "UE2 - gNB2 경유 QoS flow가 속한 network slice instance ID",
+        "UE2 - non-3GPP access 경유 QoS flow가 속한 network slice instance ID"
+      ],
+      "appIds": [
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+      ],
+      "appServerAddrs": [
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[0]의 APP server의 IPv4 주소",
+            "ipv6Addr": "null",
+            "ipv6Prefix": "null"
+          },
+          "fqdn": "appIds[0]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[1]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[1]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[2]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[2]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[3]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[3]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        }
+      ],
+      "nfInstanceIds": [
+        "UPF의 UUID",
+        "AF의 UUID (APP Server 영역 AF로 가정)"
+      ],
+      "nfTypes": [
+        "UPF",
+        "AF"
+      ],
+      "nfSetIds": [
+        "6G-I2P_POC_2"
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "null",
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000001"
+            },
+            "nid": "000000001",
+            "eNbId": "null"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            },
+            "nid": "000000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          }
+        ]
+      },
+      "tgtUe": {
+        "anyUe": false,
+        "supis": [
+          "UE1 - gNB1 경유 flow의 SUPI",
+          "UE1 - non-3GPP access 경유 flow의 SUPI",
+          "UE2 - gNB2 경유 flow의 SUPI",
+          "UE2 - non-3GPP access 경유 flow의 SUPI"
+        ],
+        "gpsis": [
+          "UE1 - gNB1 경유 flow의 GPSI",
+          "UE1 - non-3GPP access 경유 flow의 GPSI",
+          "UE2 - gNB2 경유 flow의 GPSI",
+          "UE2 - non-3GPP access 경유 flow의 GPSI"
+        ],
+        "intGroupId": [
+          "supis 및 gpsis에서 명세한 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID"
+        ]
+      },
+      "upfInfo": {
+        "upfId": "대상 UPF의 ID",
+        "upfAddr": {
+          "ipAddr": {
+            "ipv4Addr": "대상 UPF의 IPv4 주소",
+            "ipv6Addr": "null",
+            "ipv6Prefix": "null"
+          },
+          "fqdn": "대상 UPF의 FQDN 주소"
+        }
+      },
+      "pduSesInfos": [
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "NON_3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "NON_3GPP_ACCESS"
+        }
+      ],
+      "ratFreqs": [
+        {
+          "allFreq": true,
+          "allRat": true,
+          "freq": "null",
+          "ratType": "null",
+          "svcExpThreshold": "null",
+          "matchingDir": "null"
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        }
+      ],
+      "location": {
+        "point": "null",
+        "pointAlt": "null",
+        "refPoint": "null",
+        "localCoords": "null"
+      },
+      "fineGranAreas": [
+        {
+          "civicAddress": "null",
+          "shapes": "null"
+        }
+      ],
+      "roamingInfos": "null",
+      "visitedAreas": "null",
+      "bwRequs": "null",
+      "temporalGranSize": 60,
+      "spatialGranSizeTa": 1,
+      "spatialGranSizeCell": 1,
+      "locGranularity": "CELL_LEVEL",
+      "locOrientation": "HOR_AND_VER",
+      "accuReq": "null",
+      "feedback": "null",
+      "deviations": "null",
+      "useCaseCtx": "null",
+      "maxTopAppUlNbr": "null",
+      "maxTopAppDlNbr": "null",
+      "userDataConOrderCrit": "null",
+      "excepRequs": [
+        {
+          "exceptId": "null",
+          "excepLevel": "null",
+          "excepTrend": "null"
+        }
+      ],
+      "pauseFlg": false,
+      "resumeFlg": false,
+      "_ctrlEventFlg": true,
+      "_latentAnalyticsFlg": false,
+      "qosPolAssistReqs": [
+        {
+          "qosParamSets": [
+            {
+              "5qi": "null",
+              "priorityLvl": "null",
+              "rscType": "null",
+              "pdb": "null",
+              "gbrUl": "null",
+              "gbrDl": "0.0Mbps",
+              "mbrUl": "null",
+              "mbrDl": "0.0Mbps",
+              "maxPlrUl": "null",
+              "maxPlrDl": "null",
+              "avgWin": "null",
+              "maxDataBurstVol": "null"
+            },
+            {
+              "gbrDl": "1000.0Mbps",
+              "mbrDl": "1000.0Mbps"
+            }
+          ],
+          "freqs": [
+            "NR 주파수 ARFCN 번호 (정수)"
+          ],
+          "ratTypes": [
+            "NR"
+          ],
+          "requestedQoE": 1.0,
+          "orderCriterion": "null",
+          "orderDirection": "null"
+        },
+        {
+          "qosParamSets": [
+            {
+              "gbrDl": "0.0Mbps",
+              "mbrDl": "0.0Mbps"
+            },
+            {
+              "gbrDl": "1000.0Mbps",
+              "mbrDl": "1000.0Mbps"
+            }
+          ],
+          "ratTypes": [
+            "WLAN"
+          ],
+          "requestedQoE": 1.0
+        },
+        {
+          "qosParamSets": [
+            {
+              "gbrDl": "0.0Mbps",
+              "mbrDl": "0.0Mbps"
+            },
+            {
+              "gbrDl": "1000.0Mbps",
+              "mbrDl": "1000.0Mbps"
+            }
+          ],
+          "freqs": [
+            "NR 주파수 ARFCN 번호 (정수)"
+          ],
+          "ratTypes": [
+            "NR"
+          ],
+          "requestedQoE": 1.0
+        },
+        {
+          "qosParamSets": [
+            {
+              "gbrDl": "0.0Mbps",
+              "mbrDl": "0.0Mbps"
+            },
+            {
+              "gbrDl": "1000.0Mbps",
+              "mbrDl": "1000.0Mbps"
+            }
+          ],
+          "ratTypes": [
+            "WLAN"
+          ],
+          "requestedQoE": 1.0
+        }
+      ],
+      "_comments": [
+        "4개 FLOW의 QOS_POLICY_ASSIST control을 위한 subscription request",
+        "UE1 - gNB1 경유 flow의 DL GBR/MBR 결정",
+        "UE1 - Non-3GPP access 경유 flow의 DL GBR/MBR 결정",
+        "UE2 - gNB2 경유 flow의 DL GBR/MBR 결정",
+        "UE2 - Non-3GPP access 경유 flow의 DL GBR/MBR 결정"
+      ]
+    },
+    {
+      "event": "SERVICE_EXPERIENCE",
+      "notificationMethod": "PERIODIC",
+      "repetitionPeriod": 60,
+      "extraReportReq": {
+        "accuracy": "HIGH",
+        "startTs": "2026-03-01T12:00:00+09:00",
+        "endTs": "2026-03-08T12:00:00+09:00",
+        "offsetPeriod": 60,
+        "sampRatio": 100,
+        "maxObjectNbr": 0,
+        "maxSupiNbr": 0
+      },
+      "dnns": [
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr"
+      ],
+      "dnais": [
+        "UE1 - gNB1 경유 QoS flow의 DNAI",
+        "UE1 - non-3GPP access 경유 QoS flow의 DNAI",
+        "UE2 - gNB2 경유 QoS flow의 DNAI",
+        "UE2 - non-3GPP access 경유 QoS flow의 DNAI"
+      ],
+      "ladnDnns": "null (Loca Area Data Network DNN으로 DNN보다 좁은 개념)",
+      "anySlice": false,
+      "snssaia": [
+        "UE1 - gNB1 경유 QoS flow가 속한 S-NSSAI",
+        "UE1 - non-3GPP access 경유 QoS flow가 속한 S-NSSAI",
+        "UE2 - gNB2 경유 QoS flow가 속한 S-NSSAI",
+        "UE2 - non-3GPP access 경유 QoS flow가 속한 S-NSSAI"
+      ],
+      "nsiIdInfos": [
+        "UE1 - gNB1 경유 QoS flow가 속한 network slice instance ID",
+        "UE1 - non-3GPP access 경유 QoS flow가 속한 network slice instance ID",
+        "UE2 - gNB2 경유 QoS flow가 속한 network slice instance ID",
+        "UE2 - non-3GPP access 경유 QoS flow가 속한 network slice instance ID"
+      ],
+      "appIds": [
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+      ],
+      "appServerAddrs": [
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[0]의 APP server의 IPv4 주소",
+            "ipv6Addr": "null",
+            "ipv6Prefix": "null"
+          },
+          "fqdn": "appIds[0]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[1]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[1]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[2]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[2]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[3]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[3]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        }
+      ],
+      "nfInstanceIds": [
+        "UPF의 UUID",
+        "AF의 UUID (APP Server 영역 AF로 가정)"
+      ],
+      "nfTypes": [
+        "UPF",
+        "AF"
+      ],
+      "nfSetIds": [
+        "6G-I2P_POC_2"
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "null",
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000001"
+            },
+            "nid": "000000001",
+            "eNbId": "null"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            },
+            "nid": "000000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          }
+        ]
+      },
+      "tgtUe": {
+        "anyUe": false,
+        "supis": [
+          "UE1 - gNB1 경유 flow의 SUPI",
+          "UE1 - non-3GPP access 경유 flow의 SUPI",
+          "UE2 - gNB2 경유 flow의 SUPI",
+          "UE2 - non-3GPP access 경유 flow의 SUPI"
+        ],
+        "gpsis": [
+          "UE1 - gNB1 경유 flow의 GPSI",
+          "UE1 - non-3GPP access 경유 flow의 GPSI",
+          "UE2 - gNB2 경유 flow의 GPSI",
+          "UE2 - non-3GPP access 경유 flow의 GPSI"
+        ],
+        "intGroupId": [
+          "supis 및 gpsis에서 명세한 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID"
+        ]
+      },
+      "upfInfo": {
+        "upfId": "대상 UPF의 ID",
+        "upfAddr": {
+          "ipAddr": {
+            "ipv4Addr": "대상 UPF의 IPv4 주소"
+          },
+          "fqdn": "대상 UPF의 FQDN 주소"
+        }
+      },
+      "pduSesInfos": [
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "NON_3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "NON_3GPP_ACCESS"
+        }
+      ],
+      "ratFreqs": [
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        }
+      ],
+      "temporalGranSize": 60,
+      "spatialGranSizeTa": 1,
+      "spatialGranSizeCell": 1,
+      "locGranularity": "CELL_LEVEL",
+      "locOrientation": "HOR_AND_VER",
+      "pauseFlg": false,
+      "resumeFlg": false,
+      "_ctrlEventFlg": false,
+      "_latentAnalyticsFlg": true,
+      "_comments": [
+        "4개 FLOW의 SERVICE_EXPERIENCE (latent) analytics의 input 수집을 위한 subscription request",
+        "UE1 - gNB1 경유 flow의 UE - gNB 간 / UE - UPF 간 / E2E performance 및 traffic volume",
+        "UE1 - Non-3GPP access 경유 flow의 UE - gNB 간 / UE - UPF 간 / E2E performance 및 traffic volume",
+        "UE2 - gNB2 경유 flow의 UE - gNB 간 / UE - UPF 간 / E2E performance 및 traffic volume",
+        "UE2 - Non-3GPP access 경유 flow의 UE - gNB 간 / UE - UPF 간 / E2E performance 및 traffic volume"
+      ]
+    },
+    {
+      "event": "WLAN_PERFORMANCE",
+      "notificationMethod": "PERIODIC",
+      "repetitionPeriod": 60,
+      "extraReportReq": {
+        "accuracy": "HIGH",
+        "startTs": "2026-03-01T12:00:00+09:00",
+        "endTs": "2026-03-08T12:00:00+09:00",
+        "offsetPeriod": 60,
+        "sampRatio": 100,
+        "maxObjectNbr": 0,
+        "maxSupiNbr": 0
+      },
+      "dnns": [
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr"
+      ],
+      "dnais": [
+        "UE1 - non-3GPP access 경유 QoS flow의 DNAI",
+        "UE2 - non-3GPP access 경유 QoS flow의 DNAI"
+      ],
+      "ladnDnns": "null (Loca Area Data Network DNN으로 DNN보다 좁은 개념)",
+      "anySlice": false,
+      "snssaia": [
+        "UE1 - non-3GPP access 경유 QoS flow가 속한 S-NSSAI",
+        "UE2 - non-3GPP access 경유 QoS flow가 속한 S-NSSAI"
+      ],
+      "nsiIdInfos": [
+        "UE1 - non-3GPP access 경유 QoS flow가 속한 network slice instance ID",
+        "UE2 - non-3GPP access 경유 QoS flow가 속한 network slice instance ID"
+      ],
+      "appIds": [
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+      ],
+      "appServerAddrs": [
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[0]의 APP server의 IPv4 주소",
+            "ipv6Addr": "null",
+            "ipv6Prefix": "null"
+          },
+          "fqdn": "appIds[0]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "appIds[1]의 APP server의 IPv4 주소"
+          },
+          "fqdn": "appIds[1]의 APP server의 FQDN (Fully Qualified Domain Name) 주소"
+        }
+      ],
+      "nfInstanceIds": [
+        "UPF의 UUID",
+        "AF의 UUID (APP Server 영역 AF로 가정)"
+      ],
+      "nfTypes": [
+        "UPF",
+        "AF"
+      ],
+      "nfSetIds": [
+        "6G-I2P_POC_2"
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          }
+        ]
+      },
+      "tgtUe": {
+        "anyUe": false,
+        "supis": [
+          "UE1 - non-3GPP access 경유 flow의 SUPI",
+          "UE2 - non-3GPP access 경유 flow의 SUPI"
+        ],
+        "gpsis": [
+          "UE1 - non-3GPP access 경유 flow의 GPSI",
+          "UE2 - non-3GPP access 경유 flow의 GPSI"
+        ],
+        "intGroupId": [
+          "supis 및 gpsis에서 명세한 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID"
+        ]
+      },
+      "upfInfo": {
+        "upfId": "UPF ID",
+        "upfAddr": {
+          "ipAddr": {
+            "ipv4Addr": "UPF IPv4 주소"
+          },
+          "fqdn": "UPF FQDN 주소"
+        }
+      },
+      "pduSesInfos": [
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "NON_3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "NON_3GPP_ACCESS"
+        }
+      ],
+      "ratFreqs": [
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        }
+      ],
+      "temporalGranSize": 60,
+      "spatialGranSizeTa": 1,
+      "spatialGranSizeCell": 1,
+      "locGranularity": "CELL_LEVEL",
+      "locOrientation": "HOR_AND_VER",
+      "pauseFlg": false,
+      "resumeFlg": false,
+      "_ctrlEventFlg": false,
+      "_latentAnalyticsFlg": true,
+      "wlanReqs": [
+        {
+          "ssids": [
+            "Non-3GPP SSID",
+            "Non-3GPP SSID"
+          ],
+          "bssids": [
+            "Non-3GPP BSSID",
+            "Non-3GPP BSSID"
+          ],
+          "wlanOrderCriter": "TIME_SLOT_START"
+        }
+      ],
+      "_comments": [
+        "2개 FLOW의 WLAN_PERFORMANCE (latent) analytics의 input 수집을 위한 subscription request",
+        "UE1 - Non-3GPP access 경유 flow의 UE - AP 간 performance 및 traffic volume",
+        "UE2 - Non-3GPP access 경유 flow의 UE - AP 간 performance 및 traffic volume"
+      ]
+    }
+  ]
+}

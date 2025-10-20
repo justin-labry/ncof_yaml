@@ -1,0 +1,264 @@
+{
+  "dataAccProfId": "3GPP 규격의 data access profile ID (null 가능한지 분명하지 않음)",
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ncof/",
+  "eventsRepInfo": {
+    "notificationMethod": "PERIODIC",
+    "repPeriod": 60,
+    "maxReportNbr": 0,
+    "monDur": "2026-03-08T12:00:00+09:00",
+    "immRep": false,
+    "sampRatio": 100,
+    "partitionCriteria": "null",
+    "grpRepTime": 10,
+    "notifFlag": "null",
+    "notifFlagInstruct": "null",
+    "mutingSetting": "null"
+  },
+  "suppFeat": "FF",
+  "eventsSubs": [
+    {
+      "event": "PERF_DATA",
+      "eventFilter": {
+        "tgtUe": {
+          "anyUe": false,
+          "supis": [
+            "UE1 - gNB1 경유 flow의 SUPI",
+            "UE2 - gNB2 경유 flow의 SUPI"
+          ],
+          "gpsis": [
+            "UE1 - gNB1 경유 flow의 GPSI",
+            "UE2 - gNB2 경유 flow의 GPSI"
+          ],
+          "intGroupId": [
+            "supis 및 gpsis에서 명세한 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID"
+          ]
+        },
+        "appIds": [
+          "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+        ],
+        "locArea": {
+          "ecgis": "null",
+          "ncgis": [
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB1의 NR Cell ID",
+                "nid": "000000001"
+              }
+            },
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB2의 NR Cell ID",
+                "nid": "000000001"
+              }
+            }
+          ],
+          "gRanNodeIds": [
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "n3IwfId": "null",
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000001"
+              },
+              "nid": "000000001",
+              "eNbId": "null"
+            },
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000002"
+              }
+            }
+          ],
+          "tais": [
+            {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              }
+            },
+            {
+              "tai": "이전 record와 동일"
+            }
+          ]
+        }
+      },
+      "eventRepInfo": "상위 계층에 선언된 eventRepInfo와 동일",
+      "_comments": [
+        "2개 flow의 UE - gNB 간 PERF_DATA event 수집을 위한 subscription request",
+        "UE1 - gNB1 경유 flow의 E2E performance",
+        "UE2 - gNB1 경유 flow의 E2E performance",
+        "표준 data (For SERVICE_EXPERIENCE analytics): ",
+        "UE - gNB 간 delay (avg RTT, avg DL, max UL/DL)",
+        "UE - gNB 간 packet loss rate (avg, avg DL, max UL/DL)",
+        "UE - gNB 간 throughput (avg UL/DL, min UL/DL, max UL/DL)",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "UE - gNB 간 delay (min/max RTT, avg UL, min UL/DL)",
+        "UE - gNB 간 jitter (avg)"
+      ]
+    },
+    {
+      "event": "_RF_SIGNAL",
+      "eventFilter": {
+        "tgtUe": {
+          "anyUe": false,
+          "supis": [
+            "UE1의 SUPI",
+            "UE2의 SUPI"
+          ],
+          "gpsis": [
+            "UE1의 GPSI",
+            "UE2의 GPSI"
+          ],
+          "intGroupId": [
+            "supis 및 gpsis에서 명세한 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID"
+          ]
+        },
+        "locArea": {
+          "ncgis": [
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB1의 NR Cell ID",
+                "nid": "000000001"
+              }
+            },
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB2의 NR Cell ID",
+                "nid": "000000001"
+              }
+            }
+          ],
+          "gRanNodeIds": [
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000001"
+              },
+              "nid": "000000001"
+            },
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000002"
+              },
+              "nid": "000000001"
+            }
+          ],
+          "tais": [
+            {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              }
+            },
+            {
+              "tai": "이전 record와 동일"
+            }
+          ]
+        }
+      },
+      "eventRepInfo": "상위 계층에 선언된 eventRepInfo와 동일"
+    },
+    {
+      "event": "_POWER_ENERGY_CONSUMPTION",
+      "eventFilter": {
+        "locArea": {
+          "ncgis": [
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB1의 NR Cell ID",
+                "nid": "000000001"
+              }
+            },
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB2의 NR Cell ID",
+                "nid": "000000001"
+              }
+            }
+          ],
+          "gRanNodeIds": [
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000001"
+              },
+              "nid": "000000001"
+            },
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000002"
+              },
+              "nid": "000000001"
+            }
+          ]
+        }
+      },
+      "eventRepInfo": "상위 계층에 선언된 eventRepInfo와 동일", 
+      "_comments": [
+        "2개 gNB의 _POWER_ENERGY_CONSUMPTION event 수집을 위한 subscription request",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "gNB2의 power 및 energy consumption data"
+      ]
+    }
+  ]
+}

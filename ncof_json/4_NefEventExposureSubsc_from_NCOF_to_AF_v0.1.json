@@ -1,0 +1,164 @@
+{
+  "dataAccProfId": "3GPP 규격의 data access profile ID (null 가능한지 분명하지 않음)",
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ncof/",
+  "eventsRepInfo": {
+    "notificationMethod": "PERIODIC",
+    "repPeriod": 60,
+    "maxReportNbr": 0,
+    "monDur": "2026-03-08T12:00:00+09:00",
+    "immRep": false,
+    "sampRatio": 100,
+    "partitionCriteria": "null",
+    "grpRepTime": 10,
+    "notifFlag": "null",
+    "notifFlagInstruct": "null",
+    "mutingSetting": "null"
+  },
+  "suppFeat": "FF",
+  "eventsSubs": [
+    {
+      "event": "PERF_DATA",
+      "eventFilter": {
+        "tgtUe": {
+          "anyUe": false,
+          "supis": [
+            "UE1 - gNB1 경유 flow의 SUPI",
+            "UE1 - Non-3GPP acess 경유 flow의 SUPI",
+            "UE2 - gNB2 경유 flow의 SUPI",
+            "UE2 - Non-3GPP acess 경유 flow의 SUPI"
+          ],
+          "gpsis": [
+            "UE1 - gNB1 경유 flow의 GPSI",
+            "UE1 - Non-3GPP acess 경유 flow의 GPSI",
+            "UE2 - gNB2 경유 flow의 GPSI",
+            "UE2 - Non-3GPP acess 경유 flow의 GPSI"
+          ],
+          "intGroupId": [
+            "supis 및 gpsis에서 명세한 UE들의 IMSI 모음을 판별하기 위한 internal globally unique ID"
+          ]
+        },
+        "appIds": [
+          "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+        ],
+        "locArea": {
+          "ecgis": "null",
+          "ncgis": [
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB1의 NR Cell ID",
+                "nid": "000000001"
+              }
+            },
+            {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "gNB2의 NR Cell ID",
+                "nid": "000000001"
+              }
+            }
+          ],
+          "gRanNodeIds": [
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "n3IwfId": "null",
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000001"
+              },
+              "nid": "null",
+              "eNbId": "null"
+            },
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "n3IwfId": "000001"
+            },
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "gNbId": {
+                "bitLength": 24,
+                "gNBValue": "000002"
+              }
+            },
+            {
+              "plmnId": {
+                "mnc": "999",
+                "mcc": "01"
+              },
+              "n3IwfId": "000001"
+            }
+          ],
+          "tais": [
+            {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              }
+            },
+            {
+              "tai": "이전 record와 동일"
+            },
+            {
+              "tai": "이전 record와 동일"
+            },
+            {
+              "tai": "이전 record와 동일"
+            }
+          ]
+        }
+      },
+      "eventRepInfo": "상위 계층에 선언된 eventRepInfo와 동일",
+      "_comments": [
+        "4개 flow의 UE - AF 간 PERF_DATA event 수집을 위한 subscription request",
+        "UE1 - gNB1 경유 flow의 E2E performance",
+        "UE1 - Non-3GPP access 경유 flow의 E2E performance",
+        "UE2 - gNB1 경유 flow의 E2E performance",
+        "UE2 - Non-3GPP access 경유 flow의 E2E performance",
+        "표준 data (For SERVICE_EXPERIENCE analytics): ",
+        "E2E delay (avg RTT, avg DL, max UL/DL)",
+        "E2E packet loss rate (avg, avg DL, max UL/DL)",
+        "E2E throughput (avg UL/DL, min UL/DL, max UL/DL)",
+        "비표준 data (For ETRI-DoDo1 6G-I2P PoC Scenario): ",
+        "E2E delay (min/max RTT, avg UL, min UL/DL)",
+        "E2E jitter (avg)"
+      ]
+    },
+    {
+      "event": "DISPERSION",
+      "eventFilter": "이전 NetEventSubs object(PERF_DATA)에 선언된 eventFilter와 동일",
+      "eventRepInfo": "상위 계층에 선언된 eventRepInfo와 동일",
+      "_comments": [
+        "Non-3GPP access 경유 traffic(total)의 DISPERSION event 수집을 위한 subscription request",
+        "Non-3GPP access 경유 traffic(total)의 UE - UPF 간 traffic volume 및 throughput",
+        "표준 data (For WLAN_PERFORMANCE analytics): ",
+        "Non-3GPP access 경유 traffic volume (Total/UL/DL)",
+        "Non-3GPP access 경유 packet Tx number (total/UL/DL)",
+        "Non-3GPP access 경유 traffic throughput (avg UL/DL, peak UL/DL)",
+        "Non-3GPP access 경유 packet throughput (avg UL/DL, peak UL/DL)"
+      ]
+    }
+  ]
+}
