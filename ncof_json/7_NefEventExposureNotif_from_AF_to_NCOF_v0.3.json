@@ -1,0 +1,398 @@
+{
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "eventNotifs": [
+    {
+      "event": "PERF_DATA",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "perfDataInfos": [
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.10"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "192.168.1.10:8080 -> 192.168.1.100:80",
+              "192.168.1.100:80 -> 192.168.1.10:8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "userLoc": {
+            "nrLocation": {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-001",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                },
+                "nid": "000000001"
+              }
+            }
+          },
+          "appLocs": [
+            "dnai-ue1-gnb1-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.100"
+            },
+            "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.11"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10002,
+            "flowDescriptions": [
+              "192.168.1.11:8080 -> 192.168.1.101:80",
+              "192.168.1.101:80 -> 192.168.1.11:8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "userLoc": {
+            "n3gaLocation": {
+              "n3gppTai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "n3IwfId": "000001",
+              "ueIpv4Addr": "192.168.1.11",
+              "portNumber": 10002,
+              "protocol": "TCP",
+              "tnapId": {
+                "ssid": "WiFi-6G-I2P",
+                "bssId": "aa:bb:cc:dd:ee:ff",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "twapId": {
+                "ssid": "WiFi-6G-I2P",
+                "bssId": "aa:bb:cc:dd:ee:ff",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "w5gbanLineType": "PON"
+            }
+          },
+          "appLocs": [
+            "dnai-ue1-non3gpp-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.101"
+            },
+            "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.12"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10003,
+            "flowDescriptions": [
+              "192.168.1.12:8080 -> 192.168.1.102:80",
+              "192.168.1.102:80 -> 192.168.1.12:8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "userLoc": {
+            "nrLocation": {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-002",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                }
+              }
+            }
+          },
+          "appLocs": [
+            "dnai-ue2-gnb2-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.102"
+            },
+            "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.13"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10004,
+            "flowDescriptions": [
+              "192.168.1.13:8080 -> 192.168.1.103:80",
+              "192.168.1.103:80 -> 192.168.1.13:8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "userLoc": {
+            "n3gaLocation": {
+              "n3gppTai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "n3IwfId": "000001",
+              "ueIpv4Addr": "192.168.1.13",
+              "portNumber": 10002,
+              "protocol": "TCP",
+              "tnapId": {
+                "ssid": "WiFi-6G-I2P",
+                "bssId": "aa:bb:cc:dd:ee:ff",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "twapId": {
+                "ssid": "WiFi-6G-I2P",
+                "bssId": "aa:bb:cc:dd:ee:ff",
+                "civicAddress": "6G-I2P PoC Test-bed (ETRI-DoDo1)"
+              },
+              "w5gbanLineType": "PON"
+            }
+          },
+          "appLocs": [
+            "dnai-ue2-non3gpp-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.103"
+            },
+            "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "event": "DISPERSION",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "dispersionInfos": [
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "msisdn-001010000000001",
+          "supi": "imsi-001010000000001",
+          "ueAddr": {
+            "ipv4Addr": "192.168.1.10"
+          },
+          "flowDesp": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "dnais": [
+            "dnai-ue1-gnb1-001"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          }
+        },
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "msisdn-001010000000002",
+          "supi": "imsi-001010000000002",
+          "ueAddr": {
+            "ipv4Addr": "192.168.1.11"
+          },
+          "flowDesp": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "dnais": [
+            "dnai-ue1-non3gpp-001"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          }
+        },
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "msisdn-001010000000003",
+          "supi": "imsi-001010000000003",
+          "ueAddr": {
+            "ipv4Addr": "192.168.1.12"
+          },
+          "flowDesp": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "dnais": [
+            "dnai-ue2-gnb2-001"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          }
+        },
+        {
+          "timestamp": "2026-03-01T12:01:00+09:00",
+          "gpsi": "msisdn-001010000000004",
+          "supi": "imsi-001010000000004",
+          "ueAddr": {
+            "ipv4Addr": "192.168.1.13"
+          },
+          "flowDesp": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "dnais": [
+            "dnai-ue2-non3gpp-001"
+          ],
+          "appDur": 60,
+          "dataUsage": {
+            "duration": 60,
+            "totalVolume": 12000000000,
+            "downlinkVolume": 9000000000,
+            "uplinkVolume": 3000000000
+          }
+        }
+      ]
+    }
+  ]
+}

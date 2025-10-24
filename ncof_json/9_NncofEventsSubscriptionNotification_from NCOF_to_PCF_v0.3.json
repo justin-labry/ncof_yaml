@@ -1,0 +1,260 @@
+[
+  {
+    "subscriptionId": "SUBSCRIPTION_2026-03-01T12:01:00+09:00_2",
+    "notifCorrId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+    "resourceUri": "https://6g-i2p.etri.re.kr/poc2/ncof/SUBSCRIPTION_2026-03-01T12:01:00+09:00_2",
+    "transEvents": [
+      "QOS_POLICY_ASSIST"
+    ],
+    "eventNotifications": [
+      {
+        "event": "QOS_POLICY_ASSIST",
+        "timeStampGen": "2026-03-01T12:01:00+09:00",
+        "start": "2026-03-01T12:01:00+09:00",
+        "expiry": "2026-03-01T12:02:00+09:00",
+        "anaMetaInfo": {
+          "numSamples": 1,
+          "dataWindow": {
+            "startTime": "2026-03-01T12:01:00+09:00",
+            "stopTime": "2026-03-01T12:02:00+09:00"
+          },
+          "dataStatProps": [
+            "NO_OUTLIERS",
+            "NO_OUTLIERS",
+            "NO_OUTLIERS",
+            "NO_OUTLIERS"
+          ],
+          "strategy": "GRADIENT",
+          "_optScore": 1.0,
+          "nfIds": [
+            "smf-uuid-001",
+            "upf-uuid-001",
+            "af-uuid-001"
+          ],
+          "nfSetIds": [
+            "6G-I2P_POC_2"
+          ]
+        },
+        "pauseInd": false,
+        "resumeInd": false,
+        "cancelAccuInd": false,
+        "_ctrlEventInd": true,
+        "qosPolAssistInfos": [
+          {
+            "qosPolAssistInfo": {
+              "tsStart": "2026-03-01T12:01:00+09:00",
+              "tsDuration": "2026-03-01T12:02:00+09:00",
+              "_optScore": 1.0,
+              "qosPolAssistSets": [
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "192.168.1.10:8080 -> 192.168.1.100:80",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "aa:bb:cc:dd:ee:01",
+                        "destMacAdddr": "aa:bb:cc:dd:ee:02",
+                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:01",
+                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:02",
+                        "fDir": "BIDIRECTIONAL"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "gNbId": {
+                          "bitLength": 24,
+                          "gNBValue": "000001"
+                        },
+                        "nid": "000000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "NR"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_1",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                },
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "192.168.1.11:8080 -> 192.168.1.101:80",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "aa:bb:cc:dd:ee:03",
+                        "destMacAdddr": "aa:bb:cc:dd:ee:04",
+                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:03",
+                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:04",
+                        "fDir": "BIDIRECTIONAL"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "n3IwfId": "000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "WLAN"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_2",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                },
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "192.168.1.12:8080 -> 192.168.1.102:80",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "aa:bb:cc:dd:ee:05",
+                        "destMacAdddr": "aa:bb:cc:dd:ee:06",
+                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:05",
+                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:06",
+                        "fDir": "BIDIRECTIONAL"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "gNbId": {
+                          "bitLength": 24,
+                          "gNBValue": "000002"
+                        },
+                        "nid": "000000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "NR"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_3",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                },
+                {
+                  "qosPolTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "dnn": "6g-i2p.etri.re.kr",
+                  "fDescs": [
+                    {
+                      "ipTrafficFilter": "192.168.1.13:8080 -> 192.168.1.103:80",
+                      "ethTrafficFilter": {
+                        "ethType": "0800",
+                        "sourceMacAdddr": "aa:bb:cc:dd:ee:07",
+                        "destMacAdddr": "aa:bb:cc:dd:ee:08",
+                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:07",
+                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:08",
+                        "fDir": "BIDIRECTIONAL"
+                      }
+                    }
+                  ],
+                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+                  "spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "n3IwfId": "000001"
+                      }
+                    ]
+                  },
+                  "ratTypes": [
+                    "WLAN"
+                  ],
+                  "qosParamSet": {
+                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_4",
+                    "gbrDl": "5.0Mbps",
+                    "mbrDl": "10.0Mbps"
+                  },
+                  "appDuration": 60,
+                  "predictedAvgQoe": 1.0,
+                  "predictedMaxQoe": 1.0,
+                  "predictedMinQoe": 1.0,
+                  "predictedQoeVariance": 1.0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

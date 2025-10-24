@@ -1,0 +1,376 @@
+{
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "eventNotifs": [
+    {
+      "event": "PERF_DATA",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "perfDataInfos": [
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.10"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "192.168.1.10:8080 -> 192.168.1.100:80",
+              "192.168.1.100:80 -> 192.168.1.10:8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "userLoc": {
+            "nrLocation": {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-001",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                },
+                "nid": "000000001"
+              }
+            }
+          },
+          "appLocs": [
+            "dnai-ue1-gnb1-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.100"
+            },
+            "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.12"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10003,
+            "flowDescriptions": [
+              "192.168.1.12:8080 -> 192.168.1.102:80",
+              "192.168.1.102:80 -> 192.168.1.12:8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "userLoc": {
+            "nrLocation": {
+              "tai": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "tac": "0001",
+                "nid": "000000001"
+              },
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-002",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                }
+              }
+            }
+          },
+          "appLocs": [
+            "dnai-ue2-gnb2-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.102"
+            },
+            "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50Mbps",
+            "maxThrputUl": "100Mbps",
+            "minThrputUl": "100Mbps",
+            "thrputDl": "150Mps",
+            "maxThrputDl": "300Mbps",
+            "minThrputDl": "300Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "event": "_RF_SIGNAL",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "_rfSignalInfos": [
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_supi": "imsi-001010000000001",
+          "_gpsi": "msisdn-001010000000001",
+          "_ueIpAddr": {
+            "ipv4Addr": "192.168.1.10"
+          },
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "10.0.1.1"
+              },
+              "fqdn": "gnb-001.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-001",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                },
+                "nid": "000000001"
+              }
+            }
+          },
+          "_rfSignalData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_refSignalMeasurements": [
+              {
+                "_ratType": "NR",
+                "_refSignalType": "SS",
+                "_blockType": "TB",
+                "_rsrp": "85dBm",
+                "_rsrq": "-10dB",
+                "_sinr": "13dB",
+                "_bler": 0.999,
+                "_connectivity": "EXCELLENT"
+              }
+            ]
+          }
+        },
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_supi": "imsi-001010000000003",
+          "_gpsi": "msisdn-001010000000003",
+          "_ueIpAddr": {
+            "ipv4Addr": "192.168.1.12"
+          },
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "10.0.1.2"
+              },
+              "fqdn": "gnb-002.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-002",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                },
+                "nid": "000000001"
+              }
+            }
+          },
+          "_rfSignalData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_refSignalMeasurements": [
+              {
+                "_ratType": "NR",
+                "_refSignalType": "SS",
+                "_blockType": "TB",
+                "_rsrp": "85dBm",
+                "_rsrq": "-10dB",
+                "_sinr": "13dB",
+                "_bler": 0.999,
+                "_connectivity": "EXCELLENT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "event": "_POWER_ENERGY_CONSUMPTION",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "_powerEnergyConsInfos": [
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "10.0.1.1"
+              },
+              "fqdn": "gnb-001.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-001",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                }
+              }
+            }
+          },
+          "_powerEnergyConsData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_power": "20mW",
+            "_minPower": "0mW",
+            "_peakPower": "50mW",
+            "_energy": "1.2J",
+            "_powerState": "ACTIVE"
+          }
+        },
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "10.0.1.2"
+              },
+              "fqdn": "gnb-002.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "nrCellId": "cell-002",
+                "nid": "000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "01"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                }
+              }
+            }
+          },
+          "_powerEnergyConsData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_power": "20mW",
+            "_minPower": "0mW",
+            "_peakPower": "50mW",
+            "_energy": "1.2J",
+            "_powerState": "ACTIVE"
+          }
+        }
+      ]
+    }
+  ]
+}
