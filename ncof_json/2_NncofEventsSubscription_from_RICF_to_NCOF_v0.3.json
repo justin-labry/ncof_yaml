@@ -1,0 +1,362 @@
+{
+  "notificationURI": "https://6g-i2p.etri.re.kr/poc2/ricf/",
+  "notifCorrId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "evtReq": {
+    "notificationMethod": "PERIODIC",
+    "repPeriod": 60,
+    "maxReportNbr": 0,
+    "monDur": "2026-03-08T12:00:00+09:00",
+    "immRep": false,
+    "sampRatio": 100,
+    "grpRepTime": 10
+  },
+  "supportedFeatures": "FF",
+  "consNfInfo": {
+    "nfId": "ricf-uuid-001",
+    "nfSetId": "6G-I2P_POC_2",
+    "taiList": [
+      {
+        "plmnId": {
+          "mnc": "999",
+          "mcc": "01"
+        },
+        "tac": "0001",
+        "nid": "0000000001"
+      }
+    ]
+  },
+  "eventSubscriptions": [
+    {
+      "event": "_CELL_POWER_CTRL",
+      "notificationMethod": "PERIODIC",
+      "repetitionPeriod": 60,
+      "extraReportReq": {
+        "_optLevel": "HIGH",
+        "startTs": "2026-03-01T12:00:00+09:00",
+        "endTs": "2026-03-08T12:00:00+09:00",
+        "offsetPeriod": 60,
+        "sampRatio": 100,
+        "maxObjectNbr": 0,
+        "maxSupiNbr": 0
+      },
+      "nfInstanceIds": [
+        "ricf-uuid-001"
+      ],
+      "nfTypes": [
+        "AF"
+      ],
+      "nfSetIds": [
+        "6G-I2P_POC_2"
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            },
+            "nid": "000000001"
+          }
+        ]
+      },
+      "tgtUe": {
+        "anyUe": true
+      },
+      "ratFreqs": [
+        {
+          "allFreq": true,
+          "allRat": true
+        }
+      ],
+      "fineGranAreas": [
+        {
+        }
+      ],
+      "temporalGranSize": 60,
+      "spatialGranSizeTa": 1,
+      "spatialGranSizeCell": 1,
+      "locGranularity": "CELL_LEVEL",
+      "locOrientation": "HOR_AND_VER",
+      "excepRequs": [
+        {
+        }
+      ],
+      "pauseFlg": false,
+      "resumeFlg": false,
+      "_ctrlEventFlg": true,
+      "_latentAnalyticsFlg": false,
+      "_cellPowerCtrlOptReqs": [
+        {
+          "_freqs": [
+            2580
+          ],
+          "_ratTypes": [
+            "NR"
+          ]
+        }
+      ]
+    },
+    {
+      "event": "SERVICE_EXPERIENCE",
+      "notificationMethod": "PERIODIC",
+      "repetitionPeriod": 60,
+      "extraReportReq": {
+        "accuracy": "HIGH",
+        "startTs": "2026-03-01T12:00:00+09:00",
+        "endTs": "2026-03-08T12:00:00+09:00",
+        "offsetPeriod": 60,
+        "sampRatio": 100,
+        "maxObjectNbr": 0,
+        "maxSupiNbr": 0
+      },
+      "dnns": [
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr"
+      ],
+      "dnais": [
+        "dnai-ue1-gnb1-001",
+        "dnai-ue2-gnb2-001"
+      ],
+      "anySlice": false,
+      "snssaia": [
+        "01000001",
+        "01000003"
+      ],
+      "nsiIdInfos": [
+        "nsi-ue1-gnb1-001",
+        "nsi-ue2-gnb2-001"
+      ],
+      "appIds": [
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+      ],
+      "appServerAddrs": [
+        {
+          "ipAddr": {
+            "ipv4Addr": "192.168.1.100"
+          },
+          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "192.168.1.102"
+          },
+          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+        }
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000001"
+            },
+            "nid": "000000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            },
+            "nid": "000000001"
+          }
+        ]
+      },
+      "tgtUe": {
+        "anyUe": false,
+        "supis": [
+          "imsi-001010000000001",
+          "imsi-001010000000003"
+        ],
+        "gpsis": [
+          "msisdn-001010000000001",
+          "msisdn-001010000000003"
+        ],
+        "intGroupId": [
+          "group-id-001"
+        ]
+      },
+      "upfInfo": {
+        "upfId": "upf-001",
+        "upfAddr": {
+          "ipAddr": {
+            "ipv4Addr": "10.0.1.100"
+          },
+          "fqdn": "upf-001.6g-i2p.etri.re.kr"
+        }
+      },
+      "pduSesInfos": [
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        }
+      ],
+      "ratFreqs": [
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        }
+      ],
+      "temporalGranSize": 60,
+      "spatialGranSizeTa": 1,
+      "spatialGranSizeCell": 1,
+      "locGranularity": "CELL_LEVEL",
+      "locOrientation": "HOR_AND_VER",
+      "pauseFlg": false,
+      "resumeFlg": false,
+      "_ctrlEventFlg": false,
+      "_latentAnalyticsFlg": true
+    },
+    {
+      "event": "E2E_DATA_VOL_TRANS_TIME",
+      "notificationMethod": "PERIODIC",
+      "repetitionPeriod": 60,
+      "extraReportReq": {
+        "accuracy": "HIGH",
+        "startTs": "2026-03-01T12:00:00+09:00",
+        "endTs": "2026-03-08T12:00:00+09:00",
+        "offsetPeriod": 60,
+        "sampRatio": 100,
+        "maxObjectNbr": 0,
+        "maxSupiNbr": 0
+      },
+      "dnns": [
+        "6g-i2p.etri.re.kr",
+        "6g-i2p.etri.re.kr"
+      ],
+      "dnais": [
+        "dnai-ue1-gnb1-001",
+        "dnai-ue2-gnb2-001"
+      ],
+      "anySlice": false,
+      "snssaia": [
+        "01000001",
+        "01000003"
+      ],
+      "nsiIdInfos": [
+        "nsi-ue1-gnb1-001",
+        "nsi-ue2-gnb2-001"
+      ],
+      "appIds": [
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+        "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+      ],
+      "appServerAddrs": [
+        {
+          "ipAddr": {
+            "ipv4Addr": "192.168.1.100"
+          },
+          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+        },
+        {
+          "ipAddr": {
+            "ipv4Addr": "192.168.1.102"
+          },
+          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+        }
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000001"
+            },
+            "nid": "000000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            },
+            "nid": "000000001"
+          }
+        ]
+      },
+      "tgtUe": {
+        "anyUe": false,
+        "supis": [
+          "imsi-001010000000001",
+          "imsi-001010000000003"
+        ],
+        "gpsis": [
+          "msisdn-001010000000001",
+          "msisdn-001010000000003"
+        ],
+        "intGroupId": [
+          "group-id-001"
+        ]
+      },
+      "upfInfo": {
+        "upfId": "upf-001",
+        "upfAddr": {
+          "ipAddr": {
+            "ipv4Addr": "10.0.1.100"
+          },
+          "fqdn": "upf-001.6g-i2p.etri.re.kr"
+        }
+      },
+      "pduSesInfos": [
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        },
+        {
+          "pduSessType": "IPV4",
+          "sscMode": "SSC_MODE_1",
+          "accessTypes": "3GPP_ACCESS"
+        }
+      ],
+      "ratFreqs": [
+        {
+          "allFreq": true,
+          "allRat": true
+        },
+        {
+          "allFreq": true,
+          "allRat": true
+        }
+      ],
+      "temporalGranSize": 60,
+      "spatialGranSizeTa": 1,
+      "spatialGranSizeCell": 1,
+      "locGranularity": "CELL_LEVEL",
+      "locOrientation": "HOR_AND_VER",
+      "pauseFlg": false,
+      "resumeFlg": false,
+      "_ctrlEventFlg": false,
+      "_latentAnalyticsFlg": true
+    }
+  ]
+}

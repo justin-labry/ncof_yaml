@@ -1,0 +1,100 @@
+[
+  {
+    "subscriptionId": "SUBSCRIPTION_2026-03-01T12:01:00+09:00_1",
+    "notifCorrId": "NOTIFICATION_2026-03-01T12:01:00+09:00_1",
+    "resourceUri": "https://6g-i2p.etri.re.kr/scenario2/ncof/SUBSCRIPTION_2026-03-01T12:01:00+09:00_1",
+    "transEvents": [
+      "_CELL_POWER_CTRL"
+    ],
+    "eventNotifications": [
+      {
+        "event": "_CELL_POWER_CTRL",
+        "timeStampGen": "2026-03-01T12:01:00+09:00",
+        "start": "2026-03-01T12:01:00+09:00",
+        "expiry": "2026-03-01T12:02:00+09:00",
+        "anaMetaInfo": {
+          "numSamples": 1,
+          "dataWindow": {
+            "startTime": "2026-03-01T12:01:00+09:00",
+            "stopTime": "2026-03-01T12:02:00+09:00"
+          },
+          "dataStatProps": [
+            "NO_OUTLIERS"
+          ],
+          "strategy": "GRADIENT",
+          "_optScore": 1.0,
+          "nfIds": [
+            "ricf-uuid-001"
+          ],
+          "nfSetIds": [
+            "6G-I2P_POC_2"
+          ]
+        },
+        "pauseInd": false,
+        "resumeInd": false,
+        "cancelAccuInd": false,
+        "_ctrlEventInd": true,
+        "_cellPowerCtrlOptInfos": [
+          {
+            "_cellPowerCtrlInfo": {
+              "_tsStart": "2026-03-01T12:01:00+09:00",
+              "_tsDuration": "2026-03-01T12:02:00+09:00",
+              "_ratFreq": {
+                "allFreq": true,
+                "allRat": false,
+                "ratType": "NR"
+              },
+              "_confidence": 0.95,
+              "_optScore": 1.0,
+              "_cellPowerParamSets": [
+                {
+                  "_ctrlTimeWin": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "_validityPeriod": {
+                    "startTime": "2026-03-01T12:01:00+09:00",
+                    "stopTime": "2026-03-01T12:02:00+09:00"
+                  },
+                  "_spatialValidity": {
+                    "gRanNodeIds": [
+                      {
+                        "plmnId": {
+                          "mnc": "999",
+                          "mcc": "01"
+                        },
+                        "gNbId": {
+                          "bitLength": 24,
+                          "gNBValue": "000002"
+                        },
+                        "nid": "000000001"
+                      }
+                    ]
+                  },
+                  "_ratTypes": [
+                    "NR"
+                  ],
+                  "_freqs": [
+                    2580
+                  ],
+                  "_cellPowerParamSet": {
+                    "_paramSetId": "CELL_POWER_PARAM_SET-2026-03-01T12:01:00+09:00_1",
+                    "_cellPowerState": "DEEP_SLEEP",
+                    "_cellTxPower": "20dBm",
+                    "_ssPbchBlockPower": "15dBm",
+                    "_siBlockPower": "10dBm",
+                    "_pdschBlockPower": "18dBm",
+                    "_pdcchBlockPower": "12dBm",
+                    "_csiRsPowerOffset": "3dB",
+                    "_qRxLevMin": "-120dBm",
+                    "_cellIndividualOffset": "0dB"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
