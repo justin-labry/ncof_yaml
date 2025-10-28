@@ -8,7 +8,7 @@
     "monDur": "2026-03-08T12:00:00+09:00",
     "immRep": false,
     "sampRatio": 100,
-    "grpRepTime": 10
+    "grpRepTime": null
   },
   "supportedFeatures": "FF",
   "consNfInfo": {
@@ -75,25 +75,25 @@
           "ipAddr": {
             "ipv4Addr": "192.168.1.100"
           },
-          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-1-1.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.101"
           },
-          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-1-2.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.102"
           },
-          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-2-1.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.103"
           },
-          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-2-2.6g-i2p.etri.re.kr"
         }
       ],
       "nfInstanceIds": [
@@ -112,7 +112,7 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "0"
             },
             "gNbId": {
               "bitLength": 24,
@@ -123,14 +123,14 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "0"
             },
             "n3IwfId": "000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "0"
             },
             "gNbId": {
               "bitLength": 24,
@@ -141,7 +141,7 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "0"
             },
             "n3IwfId": "000001"
           }
@@ -353,25 +353,25 @@
           "ipAddr": {
             "ipv4Addr": "192.168.1.100"
           },
-          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-1-1.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.101"
           },
-          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-1-2.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.102"
           },
-          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-2-1.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.103"
           },
-          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-2-2.6g-i2p.etri.re.kr"
         }
       ],
       "nfInstanceIds": [
@@ -541,13 +541,13 @@
           "ipAddr": {
             "ipv4Addr": "192.168.1.100"
           },
-          "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-1-3.6g-i2p.etri.re.kr"
         },
         {
           "ipAddr": {
             "ipv4Addr": "192.168.1.102"
           },
-          "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          "fqdn": "app-server-2-3.6g-i2p.etri.re.kr"
         }
       ],
       "nfInstanceIds": [
