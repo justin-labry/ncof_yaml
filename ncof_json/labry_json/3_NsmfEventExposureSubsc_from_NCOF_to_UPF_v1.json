@@ -1,0 +1,70 @@
+{
+    "subId": "sub-qosmon-ue1-pdu10-qfi7",
+    "notifId": "QOS_MON_2026-03-01T12:00:00+09:00",
+    "notifUri": "https://6g-i2p.etri.re.kr/poc2/ncof/notify",
+    "nfId": "ncof-uuid-001",
+  
+    "serviveName": "nsmf-event-exposure",
+    "notifMethod": "PERIODIC",
+    "repPeriod": 60,
+    "expiry": "2026-03-08T12:00:00+09:00",
+  
+    "sampRatio": 100,
+    "ImmeRep": false,
+    "anyUeInd": false,
+  
+    /* === QoS Flow context (핵심) === */
+    "supi": "imsi-001010000000001",
+    "dnn": "6g-i2p.etri.re.kr",
+    "snssai": {
+      "sst": 1,
+      "sd": "01000001"
+    },
+    "pduSeId": 10,
+    "qfi": 7,
+  
+    /* === UPF scope === */
+    "upfId": "upf-001",
+  
+    /* === Event subscription === */
+    "eventSubs": [
+      {
+        "event": "UPF_EVENT",
+  
+        "targetPeriod": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "stopTime": "2026-03-08T12:00:00+09:00"
+        },
+  
+        "upfEvents": [
+          {
+            "type": "QOS_MONITORING",
+            "immediateFlag": false,
+  
+            /* QoS Flow 단위 명시 */
+            "granularityOfMeasurement": "PER_FLOW",
+  
+            /* 측정 대상 QoS Flow */
+            "qfi": 7,
+  
+            "validityTimes": [
+              {
+                "recurTimeWindow": {
+                  "startTime": "2026-03-01T12:00:00+09:00",
+                  "endTime": "2026-03-08T12:00:00+09:00"
+                }
+              }
+            ],
+  
+            "reportingSuggestionInfo": {
+              "reportingUrgency": "DELAY_TOLERANT",
+              "reportingTimeInfo": 10
+            },
+  
+            "remainingDataReports": "DISCARD"
+          }
+        ]
+      }
+    ]
+  }
+  

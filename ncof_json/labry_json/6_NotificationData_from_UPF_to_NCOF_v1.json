@@ -1,0 +1,226 @@
+{
+    "correlationId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+    "eventNotifyUri": "https://6g-i2p.etri.re.kr/poc2/upf/",
+    "achievedSampRatio": 100,
+    "notificationItems": [
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000001",
+        "gpsi": "msisdn-001010000000001",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000001",
+        "accessType": "3GPP_ACCESS",
+        "ratType": "NR",
+        "pduSeId": 10,
+        "qfi": 5,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 6,
+          "ulPacketDelayMs": 5,
+          "rttPacketDelayMs": 12,
+          "dlAvgThroughputKbps": 152000,
+          "ulAvgThroughputKbps": 52000,
+          "packetLossRatePpm": 1800,
+          "jitterMs": 0.4,
+          "defaultQosFlowInd": false
+        }
+      },
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000001",
+        "gpsi": "msisdn-001010000000001",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000001",
+        "accessType": "NON_3GPP_ACCESS",
+        "ratType": "WLAN",
+        "pduSeId": 11,
+        "qfi": 5,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 9,
+          "ulPacketDelayMs": 8,
+          "rttPacketDelayMs": 19,
+          "dlAvgThroughputKbps": 140000,
+          "ulAvgThroughputKbps": 48000,
+          "packetLossRatePpm": 2400,
+          "jitterMs": 0.7,
+          "defaultQosFlowInd": false
+        }
+      },
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000002",
+        "gpsi": "msisdn-001010000000002",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000002",
+        "accessType": "3GPP_ACCESS",
+        "ratType": "NR",
+        "pduSeId": 12,
+        "qfi": 9,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 4,
+          "ulPacketDelayMs": 4,
+          "rttPacketDelayMs": 9,
+          "dlAvgThroughputKbps": 210000,
+          "ulAvgThroughputKbps": 70000,
+          "packetLossRatePpm": 900,
+          "jitterMs": 0.3,
+          "defaultQosFlowInd": false
+        }
+      },
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000002",
+        "gpsi": "msisdn-001010000000002",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000002",
+        "accessType": "NON_3GPP_ACCESS",
+        "ratType": "WLAN",
+        "pduSeId": 13,
+        "qfi": 9,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 11,
+          "ulPacketDelayMs": 10,
+          "rttPacketDelayMs": 23,
+          "dlAvgThroughputKbps": 130000,
+          "ulAvgThroughputKbps": 46000,
+          "packetLossRatePpm": 3100,
+          "jitterMs": 0.9,
+          "defaultQosFlowInd": false
+        }
+      },
+  
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000003",
+        "gpsi": "msisdn-001010000000003",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000003",
+        "accessType": "3GPP_ACCESS",
+        "ratType": "NR",
+        "pduSeId": 14,
+        "qfi": 5,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 7,
+          "ulPacketDelayMs": 6,
+          "rttPacketDelayMs": 14,
+          "dlAvgThroughputKbps": 160000,
+          "ulAvgThroughputKbps": 54000,
+          "packetLossRatePpm": 1500,
+          "jitterMs": 0.5,
+          "defaultQosFlowInd": false
+        }
+      },
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000003",
+        "gpsi": "msisdn-001010000000003",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000003",
+        "accessType": "NON_3GPP_ACCESS",
+        "ratType": "WLAN",
+        "pduSeId": 15,
+        "qfi": 5,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 13,
+          "ulPacketDelayMs": 12,
+          "rttPacketDelayMs": 28,
+          "dlAvgThroughputKbps": 120000,
+          "ulAvgThroughputKbps": 42000,
+          "packetLossRatePpm": 3600,
+          "jitterMs": 1.1,
+          "defaultQosFlowInd": false
+        }
+      },
+  
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000004",
+        "gpsi": "msisdn-001010000000004",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000004",
+        "accessType": "3GPP_ACCESS",
+        "ratType": "NR",
+        "pduSeId": 16,
+        "qfi": 7,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 5,
+          "ulPacketDelayMs": 5,
+          "rttPacketDelayMs": 11,
+          "dlAvgThroughputKbps": 175000,
+          "ulAvgThroughputKbps": 61000,
+          "packetLossRatePpm": 1200,
+          "jitterMs": 0.4,
+          "defaultQosFlowInd": false
+        }
+      },
+      {
+        "eventType": "QOS_MONITORING",
+        "timeStamp": "2026-03-01T12:01:00+09:00",
+        "period": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-01T12:01:00+09:00"
+        },
+        "upfId": "upf-001",
+        "supi": "imsi-001010000000004",
+        "gpsi": "msisdn-001010000000004",
+        "dnn": "6g-i2p.etri.re.kr",
+        "snssai": "01000004",
+        "accessType": "NON_3GPP_ACCESS",
+        "ratType": "WLAN",
+        "pduSeId": 17,
+        "qfi": 7,
+        "qosMonitoringMeasurement": {
+          "dlPacketDelayMs": 10,
+          "ulPacketDelayMs": 9,
+          "rttPacketDelayMs": 21,
+          "dlAvgThroughputKbps": 145000,
+          "ulAvgThroughputKbps": 50000,
+          "packetLossRatePpm": 2600,
+          "jitterMs": 0.8,
+          "defaultQosFlowInd": false
+        }
+      }
+    ]
+  }
+  

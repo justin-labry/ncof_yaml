@@ -1,0 +1,107 @@
+{
+    "type": "USER_DATA_USAGE_MEASURES",
+    "immediateFlag": false,
+    "measurementTypes": [
+      "APPLICATION_RELATED_INFO",
+      "HROUGHPUT_MEASUREMENT",
+      "VOLUME_MEASUREMENT"
+    ],
+    "appIds": [
+      "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+      "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+      "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+      "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+    ],
+    "trafficFilters": [
+      {
+        "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+        "ethFlowDescription": {
+          "ethType": "0800",
+          "sourceMacAddr": "aa:bb:cc:dd:ee:01",
+          "destMacAddr": "aa:bb:cc:dd:ee:02",
+          "srcMacAddrEnd": "aa:bb:cc:dd:ee:01",
+          "destMacAddrEnd": "aa:bb:cc:dd:ee:02",
+          "fDir": "BIDIRECTIONAL"
+        },
+        "packFiltId": "filter-001",
+        "packetFilterUsage": false,
+        "tosTrafficClass": "0x00",
+        "spi": "spi-001",
+        "flowDirection": "BIDIRECTIONAL"
+      },
+      {
+        "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+        "ethFlowDescription": {
+          "ethType": "0800",
+          "sourceMacAddr": "aa:bb:cc:dd:ee:03",
+          "destMacAddr": "aa:bb:cc:dd:ee:04",
+          "srcMacAddrEnd": "aa:bb:cc:dd:ee:03",
+          "destMacAddrEnd": "aa:bb:cc:dd:ee:04",
+          "fDir": "BIDIRECTIONAL"
+        },
+        "packFiltId": "filter-002",
+        "packetFilterUsage": false,
+        "tosTrafficClass": "0x00",
+        "spi": "spi-002",
+        "flowDirection": "BIDIRECTIONAL"
+      },
+      {
+        "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+        "ethFlowDescription": {
+          "ethType": "0800",
+          "sourceMacAddr": "aa:bb:cc:dd:ee:05",
+          "destMacAddr": "aa:bb:cc:dd:ee:06",
+          "srcMacAddrEnd": "aa:bb:cc:dd:ee:05",
+          "destMacAddrEnd": "aa:bb:cc:dd:ee:06",
+          "fDir": "BIDIRECTIONAL"
+        },
+        "packFiltId": "filter-003",
+        "packetFilterUsage": false,
+        "tosTrafficClass": "0x00",
+        "spi": "spi-003",
+        "flowDirection": "BIDIRECTIONAL"
+      },
+      {
+        "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+        "ethFlowDescription": {
+          "ethType": "0800",
+          "sourceMacAddr": "aa:bb:cc:dd:ee:07",
+          "destMacAddr": "aa:bb:cc:dd:ee:08",
+          "srcMacAddrEnd": "aa:bb:cc:dd:ee:07",
+          "destMacAddrEnd": "aa:bb:cc:dd:ee:08",
+          "fDir": "BIDIRECTIONAL"
+        },
+        "packFiltId": "filter-004",
+        "packetFilterUsage": false,
+        "tosTrafficClass": "0x00",
+        "spi": "spi-004",
+        "flowDirection": "BIDIRECTIONAL"
+      }
+    ],
+    "granularityOfMeasurement": "PER_FLOW",
+    "reportingSuggestionInfo": {
+      "reportingUrgency": "DELAY_TOLERANT",
+      "reportingTimeInfo": 10
+    },
+    "remainingDataReports": "DISCARD",
+    "skipReportingInstruction": {
+      "skipReportCond": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ]
+    },
+    "validityTimes": [
+      {
+        "recurTimeWindow": {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "endTime": "2026-03-08T12:00:00+09:00"
+        }
+      }
+    ],
+    "inclRatType": true,
+    "ratTypeList": [
+      "NR",
+      "WLAN",
+      "NR",
+      "WLAN"
+    ]
+  }
