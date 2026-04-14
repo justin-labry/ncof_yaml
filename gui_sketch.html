@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCOF - Network Control & Optimization Function</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Consolas', sans-serif; transition: background 0.3s, color 0.3s; }
+
+  /* ===== CSS Variables for Theming ===== */
+  :root {
+    /* VS Code Light (default) */
+    --bg-main: #ffffff;
+    --bg-sidebar: #f3f3f3;
+    --bg-topbar: #dddddd;
+    --bg-card: #ffffff;
+    --bg-input: #ffffff;
+    --bg-hover: #e8e8e8;
+    --bg-gauge: #f5f5f5;
+    --bg-action: #f0f0f0;
+    --bg-modal: #ffffff;
+    --border: #e0e0e0;
+    --border-strong: #cccccc;
+    --text-primary: #1e1e1e;
+    --text-secondary: #616161;
+    --text-muted: #999999;
+    --accent-blue: #0451a5;
+    --accent-green: #008000;
+    --accent-red: #cd3131;
+    --accent-yellow: #795e26;
+    --accent-cyan: #267f99;
+    --accent-purple: #af00db;
+    --accent-orange: #a31515;
+    --accent-ncof: #795e26;
+    --btn-primary: #0066b8;
+    --btn-primary-hover: #005ba4;
+    --btn-secondary: #e0e0e0;
+    --btn-secondary-text: #616161;
+    --statusbar-bg: #007acc;
+    --statusbar-text: #ffffff;
+    --tag-ctrl-bg: #fce4e4;
+    --tag-ctrl-text: #cd3131;
+    --tag-ana-bg: #d6f5e6;
+    --tag-ana-text: #008000;
+    --tag-periodic-bg: #d6e8f5;
+    --tag-periodic-text: #0451a5;
+    --tag-event-bg: #f5ead6;
+    --tag-event-text: #795e26;
+    --node-fill: #f3f3f3;
+    --node-ncof-fill: #fffbea;
+    --node-upf-fill: #eaf5ee;
+    --node-ricf-fill: #fceaea;
+    --badge-bg: #e8e8e8;
+    --power-normal-bg: #e8f0fe;
+    --power-normal-border: #0451a5;
+    --power-sleep-bg: #f0f0f0;
+    --power-sleep-border: #999999;
+    --sidebar-active-bg: #e8e8e8;
+    --sidebar-active-border: #0451a5;
+    --tab-active-bg: #ffffff;
+    --tab-inactive-bg: #ececec;
+    --score-bg: #f5f5f5;
+    --scroll-thumb: #cccccc;
+  }
+
+  [data-theme="dark"] {
+    --bg-main: #1e1e1e;
+    --bg-sidebar: #252526;
+    --bg-topbar: #3c3c3c;
+    --bg-card: #252526;
+    --bg-input: #1e1e1e;
+    --bg-hover: #2a2d2e;
+    --bg-gauge: #1e1e1e;
+    --bg-action: #2d2d2d;
+    --bg-modal: #252526;
+    --border: #3c3c3c;
+    --border-strong: #4c4c4c;
+    --text-primary: #d4d4d4;
+    --text-secondary: #808080;
+    --text-muted: #5a5a5a;
+    --accent-blue: #569cd6;
+    --accent-green: #4ec9b0;
+    --accent-red: #f14c4c;
+    --accent-yellow: #dcdcaa;
+    --accent-cyan: #9cdcfe;
+    --accent-purple: #c586c0;
+    --accent-orange: #ce9178;
+    --accent-ncof: #dcdcaa;
+    --btn-primary: #0e639c;
+    --btn-primary-hover: #1177bb;
+    --btn-secondary: #3c3c3c;
+    --btn-secondary-text: #808080;
+    --statusbar-bg: #007acc;
+    --statusbar-text: #ffffff;
+    --tag-ctrl-bg: #3a2020;
+    --tag-ctrl-text: #f14c4c;
+    --tag-ana-bg: #1e3a2a;
+    --tag-ana-text: #4ec9b0;
+    --tag-periodic-bg: #1e2a3a;
+    --tag-periodic-text: #569cd6;
+    --tag-event-bg: #3a2a1a;
+    --tag-event-text: #ce9178;
+    --node-fill: #2d2d2d;
+    --node-ncof-fill: #37373d;
+    --node-upf-fill: #1e3a2a;
+    --node-ricf-fill: #3a2020;
+    --badge-bg: #333333;
+    --power-normal-bg: #1e2a3a;
+    --power-normal-border: #569cd6;
+    --power-sleep-bg: #2d2d2d;
+    --power-sleep-border: #5a5a5a;
+    --sidebar-active-bg: #37373d;
+    --sidebar-active-border: #569cd6;
+    --tab-active-bg: #1e1e1e;
+    --tab-inactive-bg: #2d2d2d;
+    --score-bg: #1e1e1e;
+    --scroll-thumb: #4c4c4c;
+  }
+
+  body { background: var(--bg-main); color: var(--text-primary); }
+
+  /* Top Nav */
+  .topbar {
+    background: var(--bg-topbar);
+    padding: 10px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar h1 { font-size: 18px; color: var(--accent-ncof); letter-spacing: 2px; }
+  .topbar h1 span { color: var(--accent-cyan); font-weight: 400; font-size: 13px; margin-left: 10px; }
+  .topbar-right { display: flex; gap: 16px; align-items: center; font-size: 13px; color: var(--text-secondary); }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); display: inline-block; margin-right: 6px; }
+  .status-dot.warn { background: var(--accent-yellow); }
+
+  /* Sidebar */
+  .layout { display: flex; height: calc(100vh - 44px); }
+  .sidebar {
+    width: 220px; background: var(--bg-sidebar); padding: 16px 0;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+  }
+  .sidebar a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 20px; color: var(--text-secondary); text-decoration: none;
+    font-size: 13px; transition: all 0.15s; border-left: 3px solid transparent;
+  }
+  .sidebar a:hover, .sidebar a.active {
+    background: var(--sidebar-active-bg); color: var(--text-primary);
+    border-left: 3px solid var(--sidebar-active-border);
+  }
+  .sidebar a .icon { font-size: 16px; width: 20px; text-align: center; }
+  .sidebar .section-label {
+    padding: 16px 20px 6px; font-size: 10px; text-transform: uppercase;
+    color: var(--text-muted); letter-spacing: 1.5px;
+  }
+
+  /* Theme Selector in Sidebar */
+  .theme-selector {
+    margin: 12px 16px; padding: 10px 12px; border-radius: 6px;
+    background: var(--bg-card); border: 1px solid var(--border);
+  }
+  .theme-selector label {
+    display: block; font-size: 10px; text-transform: uppercase;
+    color: var(--text-muted); letter-spacing: 1px; margin-bottom: 8px;
+  }
+  .theme-option {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 8px; border-radius: 4px; cursor: pointer;
+    font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;
+    transition: all 0.15s;
+  }
+  .theme-option:hover { background: var(--bg-hover); }
+  .theme-option.selected { background: var(--sidebar-active-bg); color: var(--text-primary); font-weight: 600; }
+  .theme-option .theme-preview {
+    width: 20px; height: 14px; border-radius: 3px; border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .theme-option .theme-preview.preview-light { background: linear-gradient(135deg, #fff 50%, #f3f3f3 50%); }
+  .theme-option .theme-preview.preview-dark { background: linear-gradient(135deg, #252526 50%, #1e1e1e 50%); }
+  .theme-option .theme-check { width: 16px; text-align: center; font-size: 11px; color: var(--accent-green); }
+
+  /* Main Content */
+  .main { flex: 1; overflow-y: auto; padding: 20px; }
+  .main::-webkit-scrollbar { width: 8px; }
+  .main::-webkit-scrollbar-thumb { background: var(--scroll-thumb); border-radius: 4px; }
+
+  /* Dashboard Grid */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+    padding: 16px; position: relative;
+  }
+  .card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px;
+  }
+  .card-header h3 { font-size: 13px; color: var(--accent-blue); font-weight: 500; }
+  .card-header .badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 10px;
+    background: var(--badge-bg); color: var(--accent-blue);
+  }
+  .card-header .badge.ctrl { background: var(--tag-ctrl-bg); color: var(--tag-ctrl-text); }
+  .card-header .badge.analytics { background: var(--tag-ana-bg); color: var(--tag-ana-text); }
+
+  /* KPI Stat Cards */
+  .kpi-row { grid-column: 1 / -1; display: flex; gap: 16px; }
+  .kpi {
+    flex: 1; background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px; text-align: center;
+  }
+  .kpi .value { font-size: 28px; font-weight: 700; }
+  .kpi .label { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+  .kpi .trend { font-size: 11px; margin-top: 4px; }
+  .kpi .trend.up { color: var(--accent-green); }
+  .kpi .trend.down { color: var(--accent-red); }
+
+  /* Topology */
+  .topology-card { grid-column: 1 / 3; grid-row: span 2; min-height: 320px; }
+  .topology-svg { width: 100%; height: 280px; }
+
+  /* Subscription Table */
+  .sub-card { grid-column: 3 / 5; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 8px 10px; color: var(--accent-blue); border-bottom: 1px solid var(--border); font-weight: 500; }
+  td { padding: 7px 10px; border-bottom: 1px solid var(--border); color: var(--text-primary); }
+  tr:hover { background: var(--bg-hover); }
+  .tag {
+    display: inline-block; padding: 2px 6px; border-radius: 4px;
+    font-size: 10px; font-weight: 600;
+  }
+  .tag-ctrl { background: var(--tag-ctrl-bg); color: var(--tag-ctrl-text); }
+  .tag-ana { background: var(--tag-ana-bg); color: var(--tag-ana-text); }
+  .tag-periodic { background: var(--tag-periodic-bg); color: var(--tag-periodic-text); }
+  .tag-event { background: var(--tag-event-bg); color: var(--tag-event-text); }
+
+  /* Control Actions Panel */
+  .ctrl-card { grid-column: 1 / 3; }
+  .action-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px; margin-bottom: 8px; border-radius: 6px;
+    background: var(--bg-action); border-left: 3px solid var(--accent-red);
+  }
+  .action-item .action-icon { font-size: 24px; }
+  .action-item .action-info { flex: 1; }
+  .action-item .action-info h4 { font-size: 13px; color: var(--text-primary); margin-bottom: 2px; }
+  .action-item .action-info p { font-size: 11px; color: var(--text-secondary); }
+  .action-item .score {
+    text-align: center; padding: 6px 12px;
+    border-radius: 6px; background: var(--score-bg);
+  }
+  .action-item .score .val { font-size: 18px; font-weight: 700; color: var(--accent-green); }
+  .action-item .score .lbl { font-size: 9px; color: var(--text-muted); }
+  .btn-sm {
+    padding: 5px 14px; border: none; border-radius: 4px;
+    font-size: 11px; cursor: pointer; font-weight: 600;
+  }
+  .btn-apply { background: var(--btn-primary); color: #fff; }
+  .btn-apply:hover { background: var(--btn-primary-hover); }
+  .btn-reject { background: var(--btn-secondary); color: var(--btn-secondary-text); margin-left: 6px; }
+
+  /* UE Table */
+  .ue-card { grid-column: 3 / 5; }
+
+  /* Event Log */
+  .log-card { grid-column: 1 / -1; }
+  .log-entry {
+    display: flex; gap: 12px; padding: 8px 10px; border-bottom: 1px solid var(--border);
+    font-size: 12px; align-items: center;
+  }
+  .log-entry .time { color: var(--text-muted); width: 150px; flex-shrink: 0; font-family: 'Consolas', monospace; font-size: 11px; }
+  .log-entry .arrow { color: var(--accent-blue); font-size: 16px; width: 24px; text-align: center; }
+  .log-entry .from, .log-entry .to { font-weight: 500; width: 60px; }
+  .log-entry .msg { flex: 1; color: var(--accent-cyan); }
+
+  /* Tab bar */
+  .tabs { display: flex; gap: 0; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .tab {
+    padding: 8px 20px; font-size: 12px; cursor: pointer;
+    background: var(--tab-inactive-bg); border: 1px solid var(--border); color: var(--text-secondary);
+    border-bottom: none;
+  }
+  .tab:first-child { border-radius: 4px 0 0 0; }
+  .tab:last-child { border-radius: 0 4px 0 0; }
+  .tab.active { background: var(--tab-active-bg); color: var(--text-primary); border-bottom: 2px solid var(--accent-blue); }
+  .tab:hover:not(.active) { color: var(--text-primary); }
+
+  /* SVG styles */
+  .node-box { cursor: pointer; }
+  .node-box:hover rect { filter: brightness(1.1); }
+  .flow-line { stroke-dasharray: 6 3; animation: dash 1s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -9; } }
+
+  /* Modal */
+  .modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4); z-index: 1000;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--bg-modal); border: 1px solid var(--border); border-radius: 8px;
+    width: 700px; max-height: 80vh; overflow-y: auto; padding: 24px;
+  }
+  .modal h2 { font-size: 16px; color: var(--accent-blue); margin-bottom: 16px; }
+  .modal .close-btn {
+    float: right; background: none; border: none; color: var(--text-secondary);
+    font-size: 20px; cursor: pointer;
+  }
+  .modal .close-btn:hover { color: var(--text-primary); }
+
+  /* Power state visual */
+  .power-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+  .power-cell {
+    text-align: center; padding: 12px 8px; border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .power-cell.deep-sleep { background: var(--power-sleep-bg); border-color: var(--power-sleep-border); }
+  .power-cell.normal { background: var(--power-normal-bg); border-color: var(--power-normal-border); }
+  .power-cell .state { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; }
+  .power-cell .pw { font-size: 16px; font-weight: 700; margin-top: 4px; }
+  .power-cell.deep-sleep .pw { color: var(--text-muted); }
+  .power-cell.normal .pw { color: var(--accent-blue); }
+
+  /* Gauge */
+  .gauge-row { display: flex; gap: 16px; margin-top: 12px; }
+  .gauge {
+    flex: 1; text-align: center; padding: 12px;
+    background: var(--bg-gauge); border-radius: 6px;
+  }
+  .gauge .g-val { font-size: 22px; font-weight: 700; }
+  .gauge .g-lbl { font-size: 10px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Status bar */
+  .statusbar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--statusbar-bg); padding: 3px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 11px; color: var(--statusbar-text); z-index: 100;
+  }
+  .statusbar-left, .statusbar-right { display: flex; gap: 16px; align-items: center; }
+
+  /* Form inputs */
+  .form-input {
+    width: 100%; padding: 8px; background: var(--bg-input);
+    border: 1px solid var(--border); color: var(--text-primary); border-radius: 4px;
+  }
+  .form-label { color: var(--text-secondary); font-size: 11px; display: block; margin-bottom: 4px; }
+
+  /* Page views */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* Topology Detail Page */
+  .topo-full-svg { width: 100%; height: 520px; }
+
+  .topo-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;
+  }
+  .topo-grid-3 {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px;
+  }
+
+  .nf-detail-card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+    padding: 16px; cursor: pointer; transition: all 0.15s;
+  }
+  .nf-detail-card:hover { border-color: var(--accent-blue); transform: translateY(-1px); }
+  .nf-detail-card.selected { border-color: var(--accent-blue); border-width: 2px; }
+  .nf-detail-card .nf-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .nf-detail-card .nf-uuid { font-size: 10px; font-family: 'Consolas', monospace; color: var(--text-muted); }
+  .nf-detail-card .nf-info { font-size: 11px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6; }
+  .nf-detail-card .nf-endpoint {
+    font-size: 10px; font-family: 'Consolas', monospace;
+    background: var(--bg-gauge); padding: 4px 8px; border-radius: 4px;
+    margin-top: 6px; color: var(--accent-cyan);
+  }
+
+  .intf-table { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 8px; }
+  .intf-table th { text-align: left; padding: 6px 8px; color: var(--accent-blue); border-bottom: 1px solid var(--border); font-weight: 500; font-size: 10px; }
+  .intf-table td { padding: 5px 8px; border-bottom: 1px solid var(--border); }
+  .intf-table code { font-family: 'Consolas', monospace; font-size: 10px; color: var(--accent-cyan); }
+
+  .flow-arrow-box {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; margin-bottom: 6px; border-radius: 6px;
+    background: var(--bg-action); font-size: 12px;
+    border-left: 3px solid var(--accent-blue);
+    transition: all 0.15s;
+  }
+  .flow-arrow-box:hover { background: var(--bg-hover); }
+  .flow-arrow-box .flow-num { font-weight: 700; color: var(--text-muted); width: 24px; font-size: 11px; }
+  .flow-arrow-box .flow-src, .flow-arrow-box .flow-dst { font-weight: 600; width: 50px; }
+  .flow-arrow-box .flow-desc { flex: 1; color: var(--text-secondary); font-size: 11px; }
+  .flow-arrow-box .flow-api { font-family: 'Consolas', monospace; font-size: 10px; color: var(--accent-cyan); }
+  .flow-arrow-box.ctrl { border-left-color: var(--accent-red); }
+  .flow-arrow-box.ana { border-left-color: var(--accent-green); }
+
+  /* Pulse animation for live nodes */
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+  .pulse-dot { animation: pulse 2s infinite; }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <h1>NCOF <span>Network Control &amp; Optimization Function v0.3</span></h1>
+  <div class="topbar-right">
+    <div><span class="status-dot"></span> NCOF Core Connected</div>
+    <div><span class="status-dot"></span> UPF-001 (10.0.1.100)</div>
+    <div><span class="status-dot warn"></span> RICF Sync</div>
+    <div style="color:var(--text-muted)">|</div>
+    <div>PoC: 6G-I2P ETRI-DoDo1</div>
+    <div style="color:var(--text-muted)">2026-03-27 14:32:05</div>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="section-label">Overview</div>
+    <a href="#" class="active" onclick="showPage('dashboard', this)" data-page="dashboard"><span class="icon">&#9707;</span> Dashboard</a>
+    <a href="#" onclick="showPage('topology', this)" data-page="topology"><span class="icon">&#9741;</span> Topology</a>
+
+    <div class="section-label">Subscriptions</div>
+    <a href="#"><span class="icon">&#9993;</span> Event Subscriptions</a>
+    <a href="#"><span class="icon">&#8644;</span> Notification Log</a>
+
+    <div class="section-label">Control Actions</div>
+    <a href="#"><span class="icon">&#9889;</span> Cell Power Control</a>
+    <a href="#"><span class="icon">&#9881;</span> QoS Policy Assist</a>
+
+    <div class="section-label">Analytics</div>
+    <a href="#"><span class="icon">&#9670;</span> Service Experience</a>
+    <a href="#"><span class="icon">&#9672;</span> E2E Data Volume</a>
+    <a href="#"><span class="icon">&#9678;</span> WLAN Performance</a>
+    <a href="#"><span class="icon">&#9632;</span> User Data Usage</a>
+
+    <div class="section-label">Management</div>
+    <a href="#"><span class="icon">&#9783;</span> UE / Slice Mgmt</a>
+    <a href="#"><span class="icon">&#9881;</span> Settings</a>
+
+    <!-- Theme Selector -->
+    <div class="theme-selector">
+      <label>Theme</label>
+      <div class="theme-option selected" onclick="setTheme('light')" id="theme-light">
+        <div class="theme-preview preview-light"></div>
+        <span>VS Code Light</span>
+        <span class="theme-check" id="check-light">&#10003;</span>
+      </div>
+      <div class="theme-option" onclick="setTheme('dark')" id="theme-dark">
+        <div class="theme-preview preview-dark"></div>
+        <span>VS Code Dark</span>
+        <span class="theme-check" id="check-dark"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main" style="margin-bottom: 28px;">
+
+  <!-- ==================== PAGE: Dashboard ==================== -->
+  <div class="page active" id="page-dashboard">
+
+    <!-- KPI Row -->
+    <div class="kpi-row" style="margin-bottom:16px">
+      <div class="kpi">
+        <div class="value" style="color:var(--accent-blue)">12</div>
+        <div class="label">Active Subscriptions</div>
+        <div class="trend up">+3 today</div>
+      </div>
+      <div class="kpi">
+        <div class="value" style="color:var(--accent-red)">4</div>
+        <div class="label">Pending Control Actions</div>
+        <div class="trend">2 Cell Power / 2 QoS</div>
+      </div>
+      <div class="kpi">
+        <div class="value" style="color:var(--accent-green)">847</div>
+        <div class="label">Notifications (24h)</div>
+        <div class="trend up">+12% vs yesterday</div>
+      </div>
+      <div class="kpi">
+        <div class="value" style="color:var(--accent-yellow)">4</div>
+        <div class="label">Monitored UEs</div>
+        <div class="label" style="font-size:10px; margin-top:2px">IMSI-001~004</div>
+      </div>
+      <div class="kpi">
+        <div class="value" style="color:var(--accent-green)">4</div>
+        <div class="label">Active Slices</div>
+        <div class="label" style="font-size:10px; margin-top:2px">S-NSSAI x4</div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+
+      <!-- Topology Card -->
+      <div class="card topology-card">
+        <div class="card-header">
+          <h3>Network Component Topology</h3>
+          <span class="badge">Live</span>
+        </div>
+        <svg class="topology-svg" viewBox="0 0 500 260">
+          <!-- PCF -->
+          <g class="node-box" transform="translate(20,20)">
+            <rect width="70" height="36" rx="4" fill="var(--node-fill)" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <text x="35" y="15" text-anchor="middle" fill="var(--accent-blue)" font-size="11" font-weight="600">PCF</text>
+            <text x="35" y="28" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Policy Control</text>
+          </g>
+          <!-- AF -->
+          <g class="node-box" transform="translate(20,80)">
+            <rect width="70" height="36" rx="4" fill="var(--node-fill)" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <text x="35" y="15" text-anchor="middle" fill="var(--accent-blue)" font-size="11" font-weight="600">AF</text>
+            <text x="35" y="28" text-anchor="middle" fill="var(--text-secondary)" font-size="8">App Function</text>
+          </g>
+          <!-- NCOF (center) -->
+          <g class="node-box" transform="translate(180,50)">
+            <rect width="120" height="60" rx="6" fill="var(--node-ncof-fill)" stroke="var(--accent-ncof)" stroke-width="2.5"/>
+            <text x="60" y="22" text-anchor="middle" fill="var(--accent-ncof)" font-size="14" font-weight="700">NCOF</text>
+            <text x="60" y="36" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Control &amp;</text>
+            <text x="60" y="46" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Optimization</text>
+          </g>
+          <!-- UPF -->
+          <g class="node-box" transform="translate(400,20)">
+            <rect width="70" height="36" rx="4" fill="var(--node-upf-fill)" stroke="var(--accent-green)" stroke-width="1.5"/>
+            <text x="35" y="15" text-anchor="middle" fill="var(--accent-green)" font-size="11" font-weight="600">UPF</text>
+            <text x="35" y="28" text-anchor="middle" fill="var(--text-secondary)" font-size="8">User Plane</text>
+          </g>
+          <!-- RICF -->
+          <g class="node-box" transform="translate(400,80)">
+            <rect width="70" height="36" rx="4" fill="var(--node-ricf-fill)" stroke="var(--accent-red)" stroke-width="1.5"/>
+            <text x="35" y="15" text-anchor="middle" fill="var(--accent-red)" font-size="11" font-weight="600">RICF</text>
+            <text x="35" y="28" text-anchor="middle" fill="var(--text-secondary)" font-size="8">RAN Intell.</text>
+          </g>
+
+          <!-- Flow lines -->
+          <line x1="90" y1="38" x2="180" y2="65" stroke="var(--accent-blue)" stroke-width="1.5" class="flow-line"/>
+          <text x="125" y="45" fill="var(--accent-blue)" font-size="7">Subscribe</text>
+          <line x1="90" y1="98" x2="180" y2="85" stroke="var(--accent-blue)" stroke-width="1.5" class="flow-line"/>
+          <text x="125" y="98" fill="var(--accent-blue)" font-size="7">Subscribe</text>
+          <line x1="300" y1="65" x2="400" y2="38" stroke="var(--accent-green)" stroke-width="1.5" class="flow-line"/>
+          <text x="340" y="43" fill="var(--accent-green)" font-size="7">EventExposure</text>
+          <line x1="400" y1="48" x2="300" y2="75" stroke="var(--accent-green)" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+          <text x="340" y="68" fill="var(--accent-green)" font-size="7" opacity="0.7">Notification</text>
+          <line x1="300" y1="90" x2="400" y2="98" stroke="var(--accent-red)" stroke-width="2" class="flow-line"/>
+          <text x="340" y="100" fill="var(--accent-red)" font-size="7" font-weight="600">Control Action</text>
+
+          <!-- gNB nodes -->
+          <g transform="translate(340,155)">
+            <rect width="55" height="28" rx="4" fill="var(--node-fill)" stroke="var(--text-muted)" stroke-width="1"/>
+            <text x="28" y="12" text-anchor="middle" fill="var(--accent-cyan)" font-size="9">gNB-001</text>
+            <text x="28" y="22" text-anchor="middle" fill="var(--text-muted)" font-size="7">2580MHz</text>
+          </g>
+          <g transform="translate(410,155)">
+            <rect width="55" height="28" rx="4" fill="var(--node-fill)" stroke="var(--text-muted)" stroke-width="1"/>
+            <text x="28" y="12" text-anchor="middle" fill="var(--accent-cyan)" font-size="9">gNB-002</text>
+            <text x="28" y="22" text-anchor="middle" fill="var(--text-muted)" font-size="7">2580MHz</text>
+          </g>
+          <line x1="435" y1="116" x2="367" y2="155" stroke="var(--text-muted)" stroke-width="0.8"/>
+          <line x1="435" y1="116" x2="437" y2="155" stroke="var(--text-muted)" stroke-width="0.8"/>
+
+          <!-- N3IWF nodes -->
+          <g transform="translate(340,200)">
+            <rect width="55" height="28" rx="4" fill="var(--node-fill)" stroke="var(--text-muted)" stroke-width="1"/>
+            <text x="28" y="12" text-anchor="middle" fill="var(--text-secondary)" font-size="9">N3IWF-01</text>
+            <text x="28" y="22" text-anchor="middle" fill="var(--text-muted)" font-size="7">WLAN</text>
+          </g>
+          <g transform="translate(410,200)">
+            <rect width="55" height="28" rx="4" fill="var(--node-fill)" stroke="var(--text-muted)" stroke-width="1"/>
+            <text x="28" y="12" text-anchor="middle" fill="var(--text-secondary)" font-size="9">N3IWF-02</text>
+            <text x="28" y="22" text-anchor="middle" fill="var(--text-muted)" font-size="7">WLAN</text>
+          </g>
+
+          <!-- UE icons -->
+          <g transform="translate(30,160)">
+            <rect width="100" height="80" rx="4" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+            <text x="50" y="15" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Monitored UEs</text>
+            <text x="50" y="32" text-anchor="middle" fill="var(--accent-blue)" font-size="9">IMSI-001 (NR)</text>
+            <text x="50" y="44" text-anchor="middle" fill="var(--accent-green)" font-size="9">IMSI-002 (WLAN)</text>
+            <text x="50" y="56" text-anchor="middle" fill="var(--accent-blue)" font-size="9">IMSI-003 (NR)</text>
+            <text x="50" y="68" text-anchor="middle" fill="var(--accent-green)" font-size="9">IMSI-004 (WLAN)</text>
+          </g>
+
+          <!-- Slice indicators -->
+          <g transform="translate(160,155)">
+            <rect width="130" height="80" rx="4" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+            <text x="65" y="14" text-anchor="middle" fill="var(--text-secondary)" font-size="8">Active Slices (S-NSSAI)</text>
+            <rect x="8" y="20" width="54" height="14" rx="3" fill="var(--tag-periodic-bg)"/>
+            <text x="35" y="30" text-anchor="middle" fill="var(--accent-blue)" font-size="8">01-000001</text>
+            <rect x="68" y="20" width="54" height="14" rx="3" fill="var(--tag-ana-bg)"/>
+            <text x="95" y="30" text-anchor="middle" fill="var(--accent-green)" font-size="8">01-000002</text>
+            <rect x="8" y="40" width="54" height="14" rx="3" fill="var(--tag-ctrl-bg)"/>
+            <text x="35" y="50" text-anchor="middle" fill="var(--accent-purple)" font-size="8">01-000003</text>
+            <rect x="68" y="40" width="54" height="14" rx="3" fill="var(--tag-event-bg)"/>
+            <text x="95" y="50" text-anchor="middle" fill="var(--accent-orange)" font-size="8">01-000004</text>
+            <text x="65" y="70" text-anchor="middle" fill="var(--text-muted)" font-size="7">DNN: 6g-i2p.etri.re.kr</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Active Subscriptions Table -->
+      <div class="card sub-card">
+        <div class="card-header">
+          <h3>Active Event Subscriptions</h3>
+          <button class="btn-sm btn-apply" onclick="document.getElementById('newSubModal').classList.add('show')">+ New</button>
+        </div>
+        <table>
+          <tr>
+            <th>ID</th><th>Event</th><th>Type</th><th>From</th><th>Method</th><th>Status</th>
+          </tr>
+          <tr>
+            <td style="font-family:'Consolas',monospace;color:var(--text-muted)">SUB-001</td>
+            <td>_CELL_POWER_CTRL</td>
+            <td><span class="tag tag-ctrl">CTRL</span></td>
+            <td>PCF</td>
+            <td><span class="tag tag-periodic">PERIODIC 60s</span></td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-family:'Consolas',monospace;color:var(--text-muted)">SUB-002</td>
+            <td>QOS_POLICY_ASSIST</td>
+            <td><span class="tag tag-ctrl">CTRL</span></td>
+            <td>PCF</td>
+            <td><span class="tag tag-periodic">PERIODIC 60s</span></td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-family:'Consolas',monospace;color:var(--text-muted)">SUB-003</td>
+            <td>SERVICE_EXPERIENCE</td>
+            <td><span class="tag tag-ana">ANA</span></td>
+            <td>PCF</td>
+            <td><span class="tag tag-periodic">PERIODIC 60s</span></td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-family:'Consolas',monospace;color:var(--text-muted)">SUB-004</td>
+            <td>E2E_DATA_VOL_TRANS</td>
+            <td><span class="tag tag-ana">ANA</span></td>
+            <td>AF</td>
+            <td><span class="tag tag-event">EVENT</span></td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-family:'Consolas',monospace;color:var(--text-muted)">SUB-005</td>
+            <td>WLAN_PERFORMANCE</td>
+            <td><span class="tag tag-ana">ANA</span></td>
+            <td>RICF</td>
+            <td><span class="tag tag-periodic">PERIODIC 60s</span></td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-family:'Consolas',monospace;color:var(--text-muted)">SUB-006</td>
+            <td>USER_DATA_USAGE</td>
+            <td><span class="tag tag-ana">ANA</span></td>
+            <td>RICF</td>
+            <td><span class="tag tag-periodic">PERIODIC 10s</span></td>
+            <td><span class="status-dot warn"></span>Paused</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Control Actions Panel -->
+      <div class="card ctrl-card">
+        <div class="card-header">
+          <h3>Pending Control Actions</h3>
+          <span class="badge ctrl">Requires Action</span>
+        </div>
+
+        <div class="action-item">
+          <div class="action-icon">&#9889;</div>
+          <div class="action-info">
+            <h4>Cell Power Control - gNB-002</h4>
+            <p>Recommend: DEEP_SLEEP | TX Power: 20dBm | Strategy: GRADIENT</p>
+            <p style="color:var(--text-muted); font-size:10px">Target: gNBValue=000002 | Freq: 2580MHz | Valid: 14:30~14:31</p>
+          </div>
+          <div class="score">
+            <div class="val">0.95</div>
+            <div class="lbl">Confidence</div>
+          </div>
+          <div>
+            <button class="btn-sm btn-apply">Apply to RICF</button>
+            <button class="btn-sm btn-reject">Reject</button>
+          </div>
+        </div>
+
+        <div class="action-item">
+          <div class="action-icon">&#9881;</div>
+          <div class="action-info">
+            <h4>QoS Policy Adjustment - Slice 01-000001</h4>
+            <p>NR: GBR 500Mbps / MBR 1000Mbps | WLAN: GBR 200Mbps / MBR 800Mbps</p>
+            <p style="color:var(--text-muted); font-size:10px">UE: IMSI-001,003 | RAT: NR+WLAN | QoE Target: 1.0</p>
+          </div>
+          <div class="score">
+            <div class="val">1.00</div>
+            <div class="lbl">OptScore</div>
+          </div>
+          <div>
+            <button class="btn-sm btn-apply">Apply to PCF</button>
+            <button class="btn-sm btn-reject">Reject</button>
+          </div>
+        </div>
+
+        <!-- Power State Visual -->
+        <div style="margin-top:12px">
+          <div style="font-size:11px; color:var(--text-secondary); margin-bottom:6px">Cell Power State Map (gNB-001 ~ 002)</div>
+          <div class="power-grid">
+            <div class="power-cell normal">
+              <div class="state">gNB-001</div>
+              <div class="pw">NORMAL</div>
+              <div style="font-size:9px; color:var(--text-muted); margin-top:4px">TX: 20dBm</div>
+            </div>
+            <div class="power-cell deep-sleep">
+              <div class="state">gNB-002</div>
+              <div class="pw">DEEP SLEEP</div>
+              <div style="font-size:9px; color:var(--text-muted); margin-top:4px">TX: 0dBm</div>
+            </div>
+            <div class="power-cell normal">
+              <div class="state">N3IWF-01</div>
+              <div class="pw">ACTIVE</div>
+              <div style="font-size:9px; color:var(--text-muted); margin-top:4px">WLAN OK</div>
+            </div>
+            <div class="power-cell normal">
+              <div class="state">N3IWF-02</div>
+              <div class="pw">ACTIVE</div>
+              <div style="font-size:9px; color:var(--text-muted); margin-top:4px">WLAN OK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-time Metrics -->
+      <div class="card ue-card">
+        <div class="card-header">
+          <h3>UE Performance Metrics (Real-time)</h3>
+          <span class="badge analytics">60s refresh</span>
+        </div>
+        <div class="tabs">
+          <div class="tab active">QoS Monitoring</div>
+          <div class="tab">Data Volume</div>
+          <div class="tab">WLAN</div>
+        </div>
+        <table>
+          <tr>
+            <th>UE</th><th>RAT</th><th>DL Delay</th><th>UL Delay</th><th>DL Tput</th><th>UL Tput</th><th>Congestion</th>
+          </tr>
+          <tr>
+            <td><span style="color:var(--accent-blue)">IMSI-001</span></td>
+            <td><span class="tag tag-periodic">NR</span></td>
+            <td>12.5 ms</td><td>8.3 ms</td>
+            <td style="color:var(--accent-green)">450 Mbps</td><td>120 Mbps</td>
+            <td><span style="color:var(--accent-green)">3%</span></td>
+          </tr>
+          <tr>
+            <td><span style="color:var(--accent-green)">IMSI-002</span></td>
+            <td><span class="tag tag-event">WLAN</span></td>
+            <td>25.1 ms</td><td>18.7 ms</td>
+            <td style="color:var(--accent-yellow)">180 Mbps</td><td>60 Mbps</td>
+            <td><span style="color:var(--accent-yellow)">15%</span></td>
+          </tr>
+          <tr>
+            <td><span style="color:var(--accent-blue)">IMSI-003</span></td>
+            <td><span class="tag tag-periodic">NR</span></td>
+            <td>10.2 ms</td><td>7.1 ms</td>
+            <td style="color:var(--accent-green)">520 Mbps</td><td>135 Mbps</td>
+            <td><span style="color:var(--accent-green)">2%</span></td>
+          </tr>
+          <tr>
+            <td><span style="color:var(--accent-green)">IMSI-004</span></td>
+            <td><span class="tag tag-event">WLAN</span></td>
+            <td>30.8 ms</td><td>22.4 ms</td>
+            <td style="color:var(--accent-red)">95 Mbps</td><td>35 Mbps</td>
+            <td><span style="color:var(--accent-red)">28%</span></td>
+          </tr>
+        </table>
+
+        <div class="gauge-row">
+          <div class="gauge">
+            <div class="g-val" style="color:var(--accent-green)">312</div>
+            <div class="g-lbl">Avg DL Throughput (Mbps)</div>
+          </div>
+          <div class="gauge">
+            <div class="g-val" style="color:var(--accent-blue)">87.5</div>
+            <div class="g-lbl">Avg UL Throughput (Mbps)</div>
+          </div>
+          <div class="gauge">
+            <div class="g-val" style="color:var(--accent-yellow)">12%</div>
+            <div class="g-lbl">Avg Congestion</div>
+          </div>
+          <div class="gauge">
+            <div class="g-val" style="color:var(--accent-red)">19.7</div>
+            <div class="g-lbl">Avg DL Delay (ms)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Notification Log -->
+      <div class="card log-card">
+        <div class="card-header">
+          <h3>Event Notification Log</h3>
+          <div style="display:flex;gap:8px">
+            <span class="badge">Last 20</span>
+            <select class="form-input" style="width:auto; padding:2px 6px; font-size:11px">
+              <option>All Events</option>
+              <option>Control Only</option>
+              <option>Analytics Only</option>
+            </select>
+          </div>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:32:01</span>
+          <span class="from" style="color:var(--accent-red)">NCOF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-red)">RICF</span>
+          <span class="msg"><span class="tag tag-ctrl">CTRL</span> _CELL_POWER_CTRL notification | gNB-002 DEEP_SLEEP | optScore=1.0</span>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:32:00</span>
+          <span class="from" style="color:var(--accent-green)">UPF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-ncof)">NCOF</span>
+          <span class="msg"><span class="tag tag-ana">ANA</span> QOS_MONITORING x4 UEs | USER_DATA_USAGE_MEASURES x2 flows</span>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:31:59</span>
+          <span class="from" style="color:var(--accent-ncof)">NCOF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-blue)">PCF</span>
+          <span class="msg"><span class="tag tag-ctrl">CTRL</span> QOS_POLICY_ASSIST notification | 4 paramSets | NR+WLAN</span>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:31:58</span>
+          <span class="from" style="color:var(--accent-ncof)">NCOF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-blue)">PCF</span>
+          <span class="msg"><span class="tag tag-ana">ANA</span> SERVICE_EXPERIENCE notification | DNN: 6g-i2p.etri.re.kr</span>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:31:55</span>
+          <span class="from" style="color:var(--accent-blue)">AF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-ncof)">NCOF</span>
+          <span class="msg"><span class="tag tag-ana">ANA</span> NefEventExposureNotif | app-server-1, app-server-2</span>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:31:01</span>
+          <span class="from" style="color:var(--accent-red)">RICF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-ncof)">NCOF</span>
+          <span class="msg"><span class="tag tag-ana">ANA</span> NefEventExposureNotif | WLAN SSID: ETRI-WLAN-001,002</span>
+        </div>
+        <div class="log-entry">
+          <span class="time">2026-03-27 14:31:00</span>
+          <span class="from" style="color:var(--accent-blue)">PCF</span>
+          <span class="arrow">&#8594;</span>
+          <span class="to" style="color:var(--accent-ncof)">NCOF</span>
+          <span class="msg">POST /nncof-eventssubscription/v1/subscriptions | _CELL_POWER_CTRL, QOS_POLICY_ASSIST</span>
+        </div>
+      </div>
+
+    </div><!-- /dashboard-grid -->
+  </div><!-- /page-dashboard -->
+
+  <!-- ==================== PAGE: Topology ==================== -->
+  <div class="page" id="page-topology">
+
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px">
+      <div>
+        <h2 style="font-size:18px; color:var(--accent-blue); font-weight:600">Network Component Topology</h2>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:4px">6G-I2P PoC &mdash; ETRI-DoDo1 &nbsp;|&nbsp; PLMN: 01-999 &nbsp;|&nbsp; TAC: 0001 &nbsp;|&nbsp; DNN: 6g-i2p.etri.re.kr</p>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center">
+        <span class="badge" style="background:var(--tag-ana-bg); color:var(--tag-ana-text)"><span class="status-dot" style="margin-right:4px"></span>Live</span>
+        <span style="font-size:11px; color:var(--text-muted)">Network Set: 6G-I2P_POC_2</span>
+      </div>
+    </div>
+
+    <!-- Full Topology SVG -->
+    <div class="card" style="padding:24px">
+      <svg class="topo-full-svg" viewBox="0 0 960 500">
+        <!-- ===== Layer Labels ===== -->
+        <text x="20" y="20" fill="var(--text-muted)" font-size="9" font-weight="600" text-transform="uppercase" letter-spacing="1">CONSUMER NFs</text>
+        <text x="380" y="20" fill="var(--text-muted)" font-size="9" font-weight="600" letter-spacing="1">NCOF (CORE)</text>
+        <text x="700" y="20" fill="var(--text-muted)" font-size="9" font-weight="600" letter-spacing="1">PRODUCER / RAN</text>
+
+        <!-- Vertical dividers -->
+        <line x1="300" y1="30" x2="300" y2="480" stroke="var(--border)" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="650" y1="30" x2="650" y2="480" stroke="var(--border)" stroke-width="1" stroke-dasharray="4 4"/>
+
+        <!-- ===== PCF Node ===== -->
+        <g class="node-box" transform="translate(40,50)">
+          <rect width="200" height="80" rx="6" fill="var(--node-fill)" stroke="var(--accent-blue)" stroke-width="2"/>
+          <circle cx="180" cy="16" r="5" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="16" y="24" fill="var(--accent-blue)" font-size="14" font-weight="700">PCF</text>
+          <text x="16" y="40" fill="var(--text-secondary)" font-size="9">Policy Control Function</text>
+          <text x="16" y="56" fill="var(--text-muted)" font-size="8">UUID: pcf-uuid-001</text>
+          <text x="16" y="68" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">notifURI: .../poc2/pcf/</text>
+        </g>
+
+        <!-- ===== AF Node ===== -->
+        <g class="node-box" transform="translate(40,160)">
+          <rect width="200" height="80" rx="6" fill="var(--node-fill)" stroke="var(--accent-blue)" stroke-width="2"/>
+          <circle cx="180" cy="16" r="5" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="16" y="24" fill="var(--accent-blue)" font-size="14" font-weight="700">AF</text>
+          <text x="16" y="40" fill="var(--text-secondary)" font-size="9">Application Function</text>
+          <text x="16" y="56" fill="var(--text-muted)" font-size="8">UUID: af-uuid-001</text>
+          <text x="16" y="68" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">notifURI: .../poc2/af/</text>
+        </g>
+
+        <!-- ===== RICF Node (Consumer side) ===== -->
+        <g class="node-box" transform="translate(40,270)">
+          <rect width="200" height="80" rx="6" fill="var(--node-ricf-fill)" stroke="var(--accent-red)" stroke-width="2"/>
+          <circle cx="180" cy="16" r="5" fill="var(--accent-yellow)" class="pulse-dot"/>
+          <text x="16" y="24" fill="var(--accent-red)" font-size="14" font-weight="700">RICF</text>
+          <text x="16" y="40" fill="var(--text-secondary)" font-size="9">RAN Intelligent Controller Function</text>
+          <text x="16" y="56" fill="var(--text-muted)" font-size="8">UUID: ricf-uuid-001</text>
+          <text x="16" y="68" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">notifURI: .../poc2/ricf/</text>
+        </g>
+
+        <!-- ===== NCOF Center Node ===== -->
+        <g class="node-box" transform="translate(350,120)">
+          <rect width="240" height="120" rx="10" fill="var(--node-ncof-fill)" stroke="var(--accent-ncof)" stroke-width="3"/>
+          <circle cx="220" cy="16" r="5" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="120" y="30" text-anchor="middle" fill="var(--accent-ncof)" font-size="20" font-weight="700">NCOF</text>
+          <text x="120" y="48" text-anchor="middle" fill="var(--text-secondary)" font-size="10">Network Control &amp; Optimization Function</text>
+          <text x="120" y="64" text-anchor="middle" fill="var(--text-muted)" font-size="9">UUID: ncof-uuid-001</text>
+          <text x="120" y="80" text-anchor="middle" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">ncof.6g-i2p.etri.re.kr (10.0.0.100)</text>
+          <text x="120" y="94" text-anchor="middle" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">/nncof-eventssubscription/v1</text>
+          <line x1="20" y1="105" x2="220" y2="105" stroke="var(--border)" stroke-width="0.5"/>
+          <text x="120" y="116" text-anchor="middle" fill="var(--text-muted)" font-size="8">Analytics + Control Engine</text>
+        </g>
+
+        <!-- ===== SMF Node ===== -->
+        <g class="node-box" transform="translate(380,280)">
+          <rect width="170" height="60" rx="6" fill="var(--node-fill)" stroke="var(--accent-purple)" stroke-width="1.5"/>
+          <text x="14" y="20" fill="var(--accent-purple)" font-size="12" font-weight="700">SMF</text>
+          <text x="14" y="34" fill="var(--text-secondary)" font-size="8">Session Management Function</text>
+          <text x="14" y="48" fill="var(--accent-cyan)" font-size="7" font-family="Consolas, monospace">/nsmf-event-exposure/v1</text>
+        </g>
+
+        <!-- ===== UPF Node ===== -->
+        <g class="node-box" transform="translate(700,50)">
+          <rect width="210" height="90" rx="6" fill="var(--node-upf-fill)" stroke="var(--accent-green)" stroke-width="2"/>
+          <circle cx="190" cy="16" r="5" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="16" y="24" fill="var(--accent-green)" font-size="14" font-weight="700">UPF</text>
+          <text x="16" y="40" fill="var(--text-secondary)" font-size="9">User Plane Function</text>
+          <text x="16" y="56" fill="var(--text-muted)" font-size="8">ID: upf-001 | 10.0.1.100</text>
+          <text x="16" y="68" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">upf-001.6g-i2p.etri.re.kr</text>
+          <text x="16" y="80" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">/nupf-ee/v1/ee-subscriptions</text>
+        </g>
+
+        <!-- ===== gNB Nodes ===== -->
+        <g class="node-box" transform="translate(700,180)">
+          <rect width="100" height="56" rx="4" fill="var(--node-fill)" stroke="var(--text-secondary)" stroke-width="1.5"/>
+          <circle cx="84" cy="12" r="4" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="12" y="18" fill="var(--text-primary)" font-size="11" font-weight="600">gNB-001</text>
+          <text x="12" y="32" fill="var(--text-muted)" font-size="8">gNBValue: 000001</text>
+          <text x="12" y="44" fill="var(--text-muted)" font-size="8">2580 MHz | NR</text>
+        </g>
+        <g class="node-box" transform="translate(820,180)">
+          <rect width="100" height="56" rx="4" fill="var(--node-fill)" stroke="var(--text-secondary)" stroke-width="1.5"/>
+          <circle cx="84" cy="12" r="4" fill="var(--accent-yellow)" class="pulse-dot"/>
+          <text x="12" y="18" fill="var(--text-primary)" font-size="11" font-weight="600">gNB-002</text>
+          <text x="12" y="32" fill="var(--text-muted)" font-size="8">gNBValue: 000002</text>
+          <text x="12" y="44" fill="var(--text-muted)" font-size="8">2580 MHz | NR</text>
+        </g>
+
+        <!-- ===== N3IWF Nodes ===== -->
+        <g class="node-box" transform="translate(700,260)">
+          <rect width="100" height="56" rx="4" fill="var(--node-fill)" stroke="var(--text-secondary)" stroke-width="1.5"/>
+          <circle cx="84" cy="12" r="4" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="12" y="18" fill="var(--text-primary)" font-size="11" font-weight="600">N3IWF-01</text>
+          <text x="12" y="32" fill="var(--text-muted)" font-size="8">NON_3GPP</text>
+          <text x="12" y="44" fill="var(--text-muted)" font-size="8">WLAN</text>
+        </g>
+        <g class="node-box" transform="translate(820,260)">
+          <rect width="100" height="56" rx="4" fill="var(--node-fill)" stroke="var(--text-secondary)" stroke-width="1.5"/>
+          <circle cx="84" cy="12" r="4" fill="var(--accent-green)" class="pulse-dot"/>
+          <text x="12" y="18" fill="var(--text-primary)" font-size="11" font-weight="600">N3IWF-02</text>
+          <text x="12" y="32" fill="var(--text-muted)" font-size="8">NON_3GPP</text>
+          <text x="12" y="44" fill="var(--text-muted)" font-size="8">WLAN</text>
+        </g>
+
+        <!-- ===== WLAN APs ===== -->
+        <g class="node-box" transform="translate(720,340)">
+          <rect width="90" height="40" rx="4" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+          <text x="45" y="16" text-anchor="middle" fill="var(--text-secondary)" font-size="9">ETRI-WLAN-001</text>
+          <text x="45" y="30" text-anchor="middle" fill="var(--text-muted)" font-size="8">802.11ax</text>
+        </g>
+        <g class="node-box" transform="translate(830,340)">
+          <rect width="90" height="40" rx="4" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+          <text x="45" y="16" text-anchor="middle" fill="var(--text-secondary)" font-size="9">ETRI-WLAN-002</text>
+          <text x="45" y="30" text-anchor="middle" fill="var(--text-muted)" font-size="8">802.11ax</text>
+        </g>
+
+        <!-- ===== App Servers ===== -->
+        <g class="node-box" transform="translate(700,400)">
+          <rect width="220" height="70" rx="4" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+          <text x="14" y="16" fill="var(--text-secondary)" font-size="9" font-weight="600">Application Servers</text>
+          <text x="14" y="32" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">app-server-1-1 (192.168.1.100)</text>
+          <text x="14" y="44" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">app-server-1-2 (192.168.1.101)</text>
+          <text x="14" y="56" fill="var(--accent-cyan)" font-size="8" font-family="Consolas, monospace">app-server-2-1 (192.168.1.102)</text>
+        </g>
+
+        <!-- ===== UE Block ===== -->
+        <g transform="translate(350,370)">
+          <rect width="240" height="110" rx="6" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+          <text x="120" y="18" text-anchor="middle" fill="var(--text-secondary)" font-size="9" font-weight="600">Monitored UEs (4)</text>
+          <line x1="10" y1="24" x2="230" y2="24" stroke="var(--border)" stroke-width="0.5"/>
+          <text x="14" y="40" fill="var(--accent-blue)" font-size="9">IMSI-001</text>
+          <text x="90" y="40" fill="var(--text-muted)" font-size="8">NR (gNB1) + WLAN (N3IWF)</text>
+          <text x="14" y="56" fill="var(--accent-blue)" font-size="9">IMSI-002</text>
+          <text x="90" y="56" fill="var(--text-muted)" font-size="8">NR (gNB2) + WLAN (N3IWF)</text>
+          <text x="14" y="72" fill="var(--accent-blue)" font-size="9">IMSI-003</text>
+          <text x="90" y="72" fill="var(--text-muted)" font-size="8">NR (gNB1) + WLAN (N3IWF)</text>
+          <text x="14" y="88" fill="var(--accent-blue)" font-size="9">IMSI-004</text>
+          <text x="90" y="88" fill="var(--text-muted)" font-size="8">NR (gNB2) + WLAN (N3IWF)</text>
+          <text x="120" y="106" text-anchor="middle" fill="var(--text-muted)" font-size="7">3GPP_ACCESS + NON_3GPP_ACCESS | GPSI: msisdn-00101000000000x</text>
+        </g>
+
+        <!-- ===== Flow Lines ===== -->
+        <!-- 1. PCF -> NCOF: Subscription -->
+        <line x1="240" y1="90" x2="350" y2="155" stroke="var(--accent-blue)" stroke-width="2" class="flow-line"/>
+        <rect x="255" y="100" width="80" height="16" rx="3" fill="var(--tag-periodic-bg)" opacity="0.9"/>
+        <text x="295" y="112" text-anchor="middle" fill="var(--accent-blue)" font-size="8" font-weight="600">① Subscribe</text>
+
+        <!-- 2. AF -> NCOF: Subscription -->
+        <line x1="240" y1="200" x2="350" y2="185" stroke="var(--accent-blue)" stroke-width="2" class="flow-line"/>
+        <rect x="255" y="182" width="80" height="16" rx="3" fill="var(--tag-periodic-bg)" opacity="0.9"/>
+        <text x="295" y="194" text-anchor="middle" fill="var(--accent-blue)" font-size="8" font-weight="600">② Subscribe</text>
+
+        <!-- 3. RICF -> NCOF: Subscription -->
+        <line x1="240" y1="300" x2="350" y2="230" stroke="var(--accent-red)" stroke-width="2" class="flow-line"/>
+        <rect x="250" y="258" width="80" height="16" rx="3" fill="var(--tag-ctrl-bg)" opacity="0.9"/>
+        <text x="290" y="270" text-anchor="middle" fill="var(--accent-red)" font-size="8" font-weight="600">② Subscribe</text>
+
+        <!-- 4. NCOF -> UPF: EventExposure via SMF -->
+        <line x1="590" y1="160" x2="700" y2="95" stroke="var(--accent-green)" stroke-width="2" class="flow-line"/>
+        <rect x="610" y="110" width="90" height="16" rx="3" fill="var(--tag-ana-bg)" opacity="0.9"/>
+        <text x="655" y="122" text-anchor="middle" fill="var(--accent-green)" font-size="8" font-weight="600">③ EventExpo</text>
+
+        <!-- 5. UPF -> NCOF: Notification -->
+        <line x1="700" y1="105" x2="590" y2="175" stroke="var(--accent-green)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+        <rect x="610" y="134" width="90" height="16" rx="3" fill="var(--tag-ana-bg)" opacity="0.7"/>
+        <text x="655" y="146" text-anchor="middle" fill="var(--accent-green)" font-size="8">⑥ Notification</text>
+
+        <!-- 6. NCOF -> AF: NefEventExposure -->
+        <line x1="590" y1="200" x2="700" y2="280" stroke="var(--accent-blue)" stroke-width="1.5" class="flow-line"/>
+        <rect x="615" y="230" width="74" height="16" rx="3" fill="var(--tag-periodic-bg)" opacity="0.9"/>
+        <text x="652" y="242" text-anchor="middle" fill="var(--accent-blue)" font-size="8">④⑤ NEF</text>
+
+        <!-- 7. NCOF -> PCF: Notification (QoS / Service) -->
+        <line x1="350" y1="145" x2="240" y2="80" stroke="var(--accent-blue)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+        <rect x="248" y="92" width="86" height="14" rx="3" fill="var(--tag-event-bg)" opacity="0.7"/>
+        <text x="291" y="102" text-anchor="middle" fill="var(--accent-yellow)" font-size="7">⑨ Notify PCF</text>
+
+        <!-- 8. NCOF -> RICF: Control Action -->
+        <line x1="350" y1="225" x2="240" y2="290" stroke="var(--accent-red)" stroke-width="2.5" class="flow-line"/>
+        <rect x="246" y="250" width="90" height="16" rx="3" fill="var(--tag-ctrl-bg)" opacity="0.9"/>
+        <text x="291" y="262" text-anchor="middle" fill="var(--accent-red)" font-size="8" font-weight="700">⑩ CTRL Action</text>
+
+        <!-- NCOF -> SMF -->
+        <line x1="470" y1="240" x2="465" y2="280" stroke="var(--accent-purple)" stroke-width="1.5" class="flow-line"/>
+        <text x="476" y="264" fill="var(--accent-purple)" font-size="7">nsmf</text>
+
+        <!-- RICF -> gNBs -->
+        <line x1="240" y1="320" x2="700" y2="200" stroke="var(--accent-red)" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+        <line x1="240" y1="320" x2="820" y2="200" stroke="var(--accent-red)" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+
+        <!-- N3IWF -> WLAN -->
+        <line x1="750" y1="316" x2="765" y2="340" stroke="var(--text-muted)" stroke-width="0.8"/>
+        <line x1="870" y1="316" x2="875" y2="340" stroke="var(--text-muted)" stroke-width="0.8"/>
+
+        <!-- Legend -->
+        <g transform="translate(20,420)">
+          <rect width="260" height="60" rx="4" fill="var(--bg-gauge)" stroke="var(--border)" stroke-width="1"/>
+          <text x="10" y="14" fill="var(--text-muted)" font-size="8" font-weight="600">LEGEND</text>
+          <line x1="10" y1="24" x2="60" y2="24" stroke="var(--accent-blue)" stroke-width="2" class="flow-line"/>
+          <text x="66" y="27" fill="var(--text-secondary)" font-size="8">Subscription</text>
+          <line x1="130" y1="24" x2="180" y2="24" stroke="var(--accent-blue)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="186" y="27" fill="var(--text-secondary)" font-size="8">Notification</text>
+          <line x1="10" y1="42" x2="60" y2="42" stroke="var(--accent-red)" stroke-width="2.5" class="flow-line"/>
+          <text x="66" y="45" fill="var(--text-secondary)" font-size="8">Control Action</text>
+          <line x1="130" y1="42" x2="180" y2="42" stroke="var(--accent-green)" stroke-width="2" class="flow-line"/>
+          <text x="186" y="45" fill="var(--text-secondary)" font-size="8">Event Exposure</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- NF Component Details -->
+    <h3 style="font-size:14px; color:var(--accent-blue); margin-top:24px; margin-bottom:12px">NF Component Details</h3>
+    <div class="topo-grid-3">
+
+      <div class="nf-detail-card">
+        <div class="nf-name" style="color:var(--accent-ncof)">NCOF</div>
+        <div class="nf-uuid">ncof-uuid-001</div>
+        <div class="nf-info">
+          Network Control &amp; Optimization Function<br>
+          IP: 10.0.0.100<br>
+          FQDN: ncof.6g-i2p.etri.re.kr
+        </div>
+        <div class="nf-endpoint">/nncof-eventssubscription/v1/subscriptions</div>
+        <table class="intf-table" style="margin-top:10px">
+          <tr><th>Interface</th><th>Role</th></tr>
+          <tr><td>Nncof</td><td>Producer (Subscription)</td></tr>
+          <tr><td>Nsmf</td><td>Consumer (EventExposure)</td></tr>
+          <tr><td>Nnef</td><td>Consumer (EventExposure)</td></tr>
+          <tr><td>Nupf</td><td>Consumer (EE-Subscription)</td></tr>
+        </table>
+      </div>
+
+      <div class="nf-detail-card">
+        <div class="nf-name" style="color:var(--accent-blue)">PCF</div>
+        <div class="nf-uuid">pcf-uuid-001</div>
+        <div class="nf-info">
+          Policy Control Function<br>
+          Subscribes: QOS_POLICY_ASSIST, SERVICE_EXPERIENCE, WLAN_PERFORMANCE
+        </div>
+        <div class="nf-endpoint">notifURI: .../poc2/pcf/</div>
+        <table class="intf-table" style="margin-top:10px">
+          <tr><th>Event</th><th>Method</th></tr>
+          <tr><td>QOS_POLICY_ASSIST</td><td><span class="tag tag-periodic">PERIODIC 60s</span></td></tr>
+          <tr><td>SERVICE_EXPERIENCE</td><td><span class="tag tag-periodic">PERIODIC 60s</span></td></tr>
+          <tr><td>WLAN_PERFORMANCE</td><td><span class="tag tag-periodic">PERIODIC 60s</span></td></tr>
+        </table>
+      </div>
+
+      <div class="nf-detail-card">
+        <div class="nf-name" style="color:var(--accent-red)">RICF</div>
+        <div class="nf-uuid">ricf-uuid-001</div>
+        <div class="nf-info">
+          RAN Intelligent Controller Function<br>
+          Receives: _CELL_POWER_CTRL (Control Actions)
+        </div>
+        <div class="nf-endpoint">notifURI: .../poc2/ricf/</div>
+        <table class="intf-table" style="margin-top:10px">
+          <tr><th>Event</th><th>Type</th></tr>
+          <tr><td>_CELL_POWER_CTRL</td><td><span class="tag tag-ctrl">CTRL</span></td></tr>
+          <tr><td>USER_DATA_USAGE</td><td><span class="tag tag-ana">ANA</span></td></tr>
+        </table>
+      </div>
+
+      <div class="nf-detail-card">
+        <div class="nf-name" style="color:var(--accent-green)">UPF</div>
+        <div class="nf-uuid">upf-uuid-001</div>
+        <div class="nf-info">
+          User Plane Function<br>
+          ID: upf-001 | IP: 10.0.1.100<br>
+          FQDN: upf-001.6g-i2p.etri.re.kr
+        </div>
+        <div class="nf-endpoint">/nupf-ee/v1/ee-subscriptions</div>
+        <table class="intf-table" style="margin-top:10px">
+          <tr><th>Event</th><th>Granularity</th></tr>
+          <tr><td>QOS_MONITORING</td><td>PER_FLOW (10s)</td></tr>
+          <tr><td>USER_DATA_USAGE</td><td>PER_FLOW</td></tr>
+        </table>
+      </div>
+
+      <div class="nf-detail-card">
+        <div class="nf-name" style="color:var(--accent-blue)">AF</div>
+        <div class="nf-uuid">af-uuid-001</div>
+        <div class="nf-info">
+          Application Function<br>
+          Subscribes: E2E_DATA_VOL_TRANS_TIME
+        </div>
+        <div class="nf-endpoint">notifURI: .../poc2/af/</div>
+        <table class="intf-table" style="margin-top:10px">
+          <tr><th>Event</th><th>Method</th></tr>
+          <tr><td>E2E_DATA_VOL_TRANS</td><td><span class="tag tag-event">EVENT</span></td></tr>
+        </table>
+      </div>
+
+      <div class="nf-detail-card">
+        <div class="nf-name" style="color:var(--accent-purple)">SMF</div>
+        <div class="nf-uuid">smf-uuid-001</div>
+        <div class="nf-info">
+          Session Management Function<br>
+          Mediates NCOF ↔ UPF event exposure
+        </div>
+        <div class="nf-endpoint">/nsmf-event-exposure/v1/subscriptions</div>
+        <table class="intf-table" style="margin-top:10px">
+          <tr><th>Role</th><th>Description</th></tr>
+          <tr><td>Proxy</td><td>UPF Event Exposure relay</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Message Flow Sequence -->
+    <h3 style="font-size:14px; color:var(--accent-blue); margin-top:24px; margin-bottom:12px">SBI Message Flow Sequence</h3>
+    <div class="card">
+      <div class="topo-grid">
+        <!-- Subscription Phase -->
+        <div>
+          <div style="font-size:12px; font-weight:600; color:var(--accent-blue); margin-bottom:10px">Subscription Phase</div>
+          <div class="flow-arrow-box">
+            <span class="flow-num">①</span>
+            <span class="flow-src" style="color:var(--accent-blue)">PCF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-ncof)">NCOF</span>
+            <span class="flow-desc">NncofEventsSubscription</span>
+            <span class="flow-api">POST /subscriptions</span>
+          </div>
+          <div class="flow-arrow-box">
+            <span class="flow-num">②</span>
+            <span class="flow-src" style="color:var(--accent-red)">RICF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-ncof)">NCOF</span>
+            <span class="flow-desc">NncofEventsSubscription</span>
+            <span class="flow-api">POST /subscriptions</span>
+          </div>
+          <div class="flow-arrow-box">
+            <span class="flow-num">③</span>
+            <span class="flow-src" style="color:var(--accent-ncof)">NCOF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-green)">UPF</span>
+            <span class="flow-desc">NsmfEventExposure (via SMF)</span>
+            <span class="flow-api">POST /ee-subscriptions</span>
+          </div>
+          <div class="flow-arrow-box">
+            <span class="flow-num">④</span>
+            <span class="flow-src" style="color:var(--accent-ncof)">NCOF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-blue)">AF</span>
+            <span class="flow-desc">NefEventExposure</span>
+            <span class="flow-api">POST /subscriptions</span>
+          </div>
+          <div class="flow-arrow-box">
+            <span class="flow-num">⑤</span>
+            <span class="flow-src" style="color:var(--accent-ncof)">NCOF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-red)">RICF</span>
+            <span class="flow-desc">NefEventExposure</span>
+            <span class="flow-api">POST /subscriptions</span>
+          </div>
+        </div>
+
+        <!-- Notification Phase -->
+        <div>
+          <div style="font-size:12px; font-weight:600; color:var(--accent-green); margin-bottom:10px">Notification Phase</div>
+          <div class="flow-arrow-box ana">
+            <span class="flow-num">⑥</span>
+            <span class="flow-src" style="color:var(--accent-green)">UPF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-ncof)">NCOF</span>
+            <span class="flow-desc">QOS_MONITORING, USER_DATA_USAGE</span>
+            <span class="flow-api">POST notifUri</span>
+          </div>
+          <div class="flow-arrow-box ana">
+            <span class="flow-num">⑦</span>
+            <span class="flow-src" style="color:var(--accent-blue)">AF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-ncof)">NCOF</span>
+            <span class="flow-desc">NefEventExposureNotif</span>
+            <span class="flow-api">POST notifUri</span>
+          </div>
+          <div class="flow-arrow-box ana">
+            <span class="flow-num">⑧</span>
+            <span class="flow-src" style="color:var(--accent-red)">RICF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-ncof)">NCOF</span>
+            <span class="flow-desc">NefEventExposureNotif (WLAN)</span>
+            <span class="flow-api">POST notifUri</span>
+          </div>
+          <div class="flow-arrow-box ctrl">
+            <span class="flow-num">⑨</span>
+            <span class="flow-src" style="color:var(--accent-ncof)">NCOF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-blue)">PCF</span>
+            <span class="flow-desc">QOS_POLICY_ASSIST, SERVICE_EXP</span>
+            <span class="flow-api">POST notifUri</span>
+          </div>
+          <div class="flow-arrow-box ctrl">
+            <span class="flow-num">⑩</span>
+            <span class="flow-src" style="color:var(--accent-ncof)">NCOF</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span class="flow-dst" style="color:var(--accent-red)">RICF</span>
+            <span class="flow-desc">_CELL_POWER_CTRL (Control)</span>
+            <span class="flow-api">POST notifUri</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RAN Infrastructure -->
+    <h3 style="font-size:14px; color:var(--accent-blue); margin-top:24px; margin-bottom:12px">RAN Infrastructure &amp; Network Area</h3>
+    <div class="topo-grid">
+      <div class="card">
+        <div class="card-header"><h3>Base Stations (NR)</h3><span class="badge">3GPP_ACCESS</span></div>
+        <table class="intf-table">
+          <tr><th>ID</th><th>gNBValue</th><th>Freq</th><th>RAT</th><th>Cell</th><th>Status</th></tr>
+          <tr>
+            <td style="font-weight:600">gNB-001</td><td><code>000001</code></td><td>2580 MHz</td><td>NR</td><td>cell-001</td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600">gNB-002</td><td><code>000002</code></td><td>2580 MHz</td><td>NR</td><td>cell-002</td>
+            <td><span class="status-dot warn"></span>Deep Sleep</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>Non-3GPP Access (WLAN)</h3><span class="badge">NON_3GPP_ACCESS</span></div>
+        <table class="intf-table">
+          <tr><th>ID</th><th>Type</th><th>SSID</th><th>Status</th></tr>
+          <tr>
+            <td style="font-weight:600">N3IWF-01</td><td>N3IWF</td><td>ETRI-WLAN-001</td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600">N3IWF-02</td><td>N3IWF</td><td>ETRI-WLAN-002</td>
+            <td><span class="status-dot"></span>Active</td>
+          </tr>
+        </table>
+        <div style="margin-top:12px; font-size:10px; color:var(--text-muted)">
+          PLMN: MCC=01, MNC=999 &nbsp;|&nbsp; TAC: 0001 &nbsp;|&nbsp; NID: 000000001
+        </div>
+      </div>
+    </div>
+
+    <!-- S-NSSAI / Slice Info -->
+    <h3 style="font-size:14px; color:var(--accent-blue); margin-top:24px; margin-bottom:12px">Slice Configuration (S-NSSAI)</h3>
+    <div class="card">
+      <table class="intf-table">
+        <tr><th>S-NSSAI</th><th>SST</th><th>SD</th><th>DNN</th><th>Access Type</th><th>UEs</th></tr>
+        <tr>
+          <td><span class="tag tag-periodic">01-000001</span></td><td>01</td><td>000001</td>
+          <td><code>6g-i2p.etri.re.kr</code></td><td>3GPP + NON_3GPP</td><td>IMSI-001, 003</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ana">01-000002</span></td><td>01</td><td>000002</td>
+          <td><code>6g-i2p.etri.re.kr</code></td><td>3GPP + NON_3GPP</td><td>IMSI-002, 004</td>
+        </tr>
+        <tr>
+          <td><span class="tag" style="background:var(--tag-ctrl-bg); color:var(--accent-purple)">01-000003</span></td><td>01</td><td>000003</td>
+          <td><code>6g-i2p.etri.re.kr</code></td><td>3GPP</td><td>IMSI-001~004</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-event">01-000004</span></td><td>01</td><td>000004</td>
+          <td><code>6g-i2p.etri.re.kr</code></td><td>NON_3GPP</td><td>IMSI-001~004</td>
+        </tr>
+      </table>
+    </div>
+
+  </div><!-- /page-topology -->
+
+  </div><!-- /main -->
+</div><!-- /layout -->
+
+<!-- VS Code style Status Bar -->
+<div class="statusbar">
+  <div class="statusbar-left">
+    <span>&#9745; master</span>
+    <span>&#8635; 0 &#9888; 0</span>
+    <span>NCOF v0.3</span>
+  </div>
+  <div class="statusbar-right">
+    <span>PoC: 6G-I2P ETRI-DoDo1</span>
+    <span>UTF-8</span>
+    <span>SBI API</span>
+  </div>
+</div>
+
+<!-- New Subscription Modal -->
+<div class="modal-overlay" id="newSubModal">
+  <div class="modal">
+    <button class="close-btn" onclick="document.getElementById('newSubModal').classList.remove('show')">&times;</button>
+    <h2>New Event Subscription</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
+      <div>
+        <label class="form-label">Event Type</label>
+        <select class="form-input">
+          <option>_CELL_POWER_CTRL (Control)</option>
+          <option>QOS_POLICY_ASSIST (Control)</option>
+          <option>SERVICE_EXPERIENCE (Analytics)</option>
+          <option>E2E_DATA_VOL_TRANS_TIME (Analytics)</option>
+          <option>WLAN_PERFORMANCE (Analytics)</option>
+          <option>USER_DATA_USAGE_MEASURES (Analytics)</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Consumer NF</label>
+        <select class="form-input">
+          <option>PCF</option>
+          <option>RICF</option>
+          <option>AF</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Notification Method</label>
+        <select class="form-input">
+          <option>PERIODIC</option>
+          <option>EVENT_TRIGGERED</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Repetition Period (sec)</label>
+        <input type="number" value="60" class="form-input">
+      </div>
+      <div>
+        <label class="form-label">Target UE (SUPI)</label>
+        <input type="text" placeholder="imsi-450080000000001" class="form-input">
+      </div>
+      <div>
+        <label class="form-label">DNN</label>
+        <input type="text" value="6g-i2p.etri.re.kr" class="form-input">
+      </div>
+      <div>
+        <label class="form-label">S-NSSAI (SST-SD)</label>
+        <input type="text" placeholder="01-000001" class="form-input">
+      </div>
+      <div>
+        <label class="form-label">Network Area (gNB ID)</label>
+        <input type="text" placeholder="000001" class="form-input">
+      </div>
+      <div style="grid-column: 1/-1; display:flex; gap:8px; justify-content:flex-end; margin-top:8px">
+        <button class="btn-sm btn-reject" onclick="document.getElementById('newSubModal').classList.remove('show')">Cancel</button>
+        <button class="btn-sm btn-apply">Create Subscription</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function showPage(pageId, el) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  // Show target page
+  var target = document.getElementById('page-' + pageId);
+  if (target) target.classList.add('active');
+  // Update sidebar active state
+  document.querySelectorAll('.sidebar a[data-page]').forEach(function(a) { a.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  // Scroll main to top
+  document.querySelector('.main').scrollTop = 0;
+}
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  // Update selector UI
+  document.getElementById('theme-light').classList.toggle('selected', theme === 'light');
+  document.getElementById('theme-dark').classList.toggle('selected', theme === 'dark');
+  document.getElementById('check-light').textContent = theme === 'light' ? '\u2713' : '';
+  document.getElementById('check-dark').textContent = theme === 'dark' ? '\u2713' : '';
+  // Save preference
+  localStorage.setItem('ncof-theme', theme);
+}
+
+// Load saved theme on startup
+(function() {
+  var saved = localStorage.getItem('ncof-theme') || 'light';
+  setTheme(saved);
+})();
+</script>
+
+</body>
+</html>

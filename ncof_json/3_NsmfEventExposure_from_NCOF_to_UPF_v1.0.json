@@ -1,0 +1,339 @@
+{
+  "subId": "sub-001",
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ncof/",
+  "altNotifFqdns": [
+    "ncof.6g-i2p.etri.re.kr"
+  ],
+  "altNotifIpv4Addrs": [
+    "10.0.0.100"
+  ],
+  "nfId": "ncof-uuid-001",
+  "notifMethod": "PERIODIC",
+  "repPeriod": 60,
+  "maxReportNbr": 0,
+  "expiry": "2026-03-08T12:00:00+09:00",
+  "ImmeRep": false,
+  "sampRatio": 100,
+  "serviveName": "nsmf-event-exposure",
+  "supportedFeatures": "FF",
+  "defQosSupp": false,
+  "qosMonPending": false,
+  "udrRestartInd": false,
+  "anyUeInd": false,
+  "groupId": "group-id-001",
+  "dnn": "6g-i2p.etri.re.kr",
+  "upfId": "upf-001",
+  "guami": {
+    "plmnId": {
+      "mcc": "999",
+      "mnc": "01",
+      "nid": "000000001"
+    },
+    "amfId": "amf-001"
+  },
+  "eventSubs": [
+    {
+      "event": "UPF_EVENT",
+      "targetPeriod": {
+        "startTime": "2026-03-01T12:00:00+09:00",
+        "stopTime": "2026-03-08T12:00:00+09:00"
+      },
+      "tws": [
+        {
+          "startTime": "2026-03-01T12:00:00+09:00",
+          "stopTime": "2026-03-08T12:00:00+09:00"
+        }
+      ],
+      "networkArea": {
+        "gRanNodeIds": [
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000001"
+            },
+            "nid": "000000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "gNbId": {
+              "bitLength": 24,
+              "gNBValue": "000002"
+            }
+          },
+          {
+            "plmnId": {
+              "mnc": "999",
+              "mcc": "01"
+            },
+            "n3IwfId": "000001"
+          }
+        ]
+      },
+      "transacDispInd": true,
+      "upfEvents": [
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-001",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-001",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "192.168.1.100",
+          "remotePortNumber": 80,
+          "ipDomain": "6g-i2p.etri.re.kr",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "NR"
+          ]
+        },
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-002",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-002",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "192.168.1.101",
+          "remotePortNumber": 80,
+          "ipDomain": "6g-i2p.etri.re.kr",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "WLAN"
+          ]
+        },
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-003",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-003",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "192.168.1.102",
+          "remotePortNumber": 80,
+          "ipDomain": "6g-i2p.etri.re.kr",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "NR"
+          ]
+        },
+        {
+          "type": "QOS_MONITORING",
+          "immediateFlag": false,
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-004",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-004",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remoteIpv4Addr": "192.168.1.103",
+          "remotePortNumber": 80,
+          "ipDomain": "6g-i2p.etri.re.kr",
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "WLAN"
+          ]
+        },
+        {
+          "type": "USER_DATA_USAGE_MEASURES",
+          "immediateFlag": false,
+          "measurementTypes": [
+            "APPLICATION_RELATED_INFO",
+            "HROUGHPUT_MEASUREMENT",
+            "VOLUME_MEASUREMENT"
+          ],
+          "appIds": [
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-001",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-001",
+              "flowDirection": "BIDIRECTIONAL"
+            },
+            {
+              "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-002",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-002",
+              "flowDirection": "BIDIRECTIONAL"
+            },
+            {
+              "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-003",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-003",
+              "flowDirection": "BIDIRECTIONAL"
+            },
+            {
+              "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
+              "packFiltId": "filter-004",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-004",
+              "flowDirection": "BIDIRECTIONAL"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "NR",
+            "WLAN",
+            "NR",
+            "WLAN"
+          ]
+        }
+      ]
+    }
+  ]
+}
