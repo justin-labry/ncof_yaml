@@ -94,21 +94,27 @@
           ],
           "trafficFilters": [
             {
-              "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-001",
+              "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.100/32 80",
+              "packFiltId": "filter-001-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-001",
-              "flowDirection": "BIDIRECTIONAL"
-            }
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.100/32 80",
+              "packFiltId": "filter-001-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-001",
+              "flowDirection": "DOWNLINK"
+            }            
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
             "reportingUrgency": "DELAY_TOLERANT",
             "reportingTimeInfo": 10
           },
-          "remoteIpv4Addr": "192.168.1.100",
-          "remotePortNumber": 80,
           "ipDomain": "6g-i2p.etri.re.kr",
           "remainingDataReports": "DISCARD",
           "skipReportingInstruction": {
@@ -137,21 +143,27 @@
           ],
           "trafficFilters": [
             {
-              "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-002",
+              "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.101/32 80",
+              "packFiltId": "filter-002-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-002",
-              "flowDirection": "BIDIRECTIONAL"
-            }
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.101/32 80",
+              "packFiltId": "filter-002-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-002",
+              "flowDirection": "DOWNLINK"
+            }            
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
             "reportingUrgency": "DELAY_TOLERANT",
             "reportingTimeInfo": 10
           },
-          "remoteIpv4Addr": "192.168.1.101",
-          "remotePortNumber": 80,
           "ipDomain": "6g-i2p.etri.re.kr",
           "remainingDataReports": "DISCARD",
           "skipReportingInstruction": {
@@ -180,21 +192,27 @@
           ],
           "trafficFilters": [
             {
-              "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-003",
+              "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.102/32 80",
+              "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-003",
-              "flowDirection": "BIDIRECTIONAL"
-            }
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.102/32 80",
+              "packFiltId": "filter-003-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-003",
+              "flowDirection": "DOWNLINK"
+            }            
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
             "reportingUrgency": "DELAY_TOLERANT",
             "reportingTimeInfo": 10
           },
-          "remoteIpv4Addr": "192.168.1.102",
-          "remotePortNumber": 80,
           "ipDomain": "6g-i2p.etri.re.kr",
           "remainingDataReports": "DISCARD",
           "skipReportingInstruction": {
@@ -223,21 +241,27 @@
           ],
           "trafficFilters": [
             {
-              "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-004",
+              "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.103/32 80",
+              "packFiltId": "filter-004-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-004",
-              "flowDirection": "BIDIRECTIONAL"
-            }
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.103/32 80",
+              "packFiltId": "filter-004-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-004",
+              "flowDirection": "DOWNLINK"
+            }            
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
             "reportingUrgency": "DELAY_TOLERANT",
             "reportingTimeInfo": 10
           },
-          "remoteIpv4Addr": "192.168.1.103",
-          "remotePortNumber": 80,
           "ipDomain": "6g-i2p.etri.re.kr",
           "remainingDataReports": "DISCARD",
           "skipReportingInstruction": {
@@ -274,36 +298,68 @@
           ],
           "trafficFilters": [
             {
-              "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-001",
+              "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.100/32 80",
+              "packFiltId": "filter-001-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-001",
-              "flowDirection": "BIDIRECTIONAL"
+              "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-002",
+              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.100/32 80",
+              "packFiltId": "filter-001-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-001",
+              "flowDirection": "DOWNLINK"
+            },    
+            {
+              "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.101/32 80",
+              "packFiltId": "filter-002-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-002",
-              "flowDirection": "BIDIRECTIONAL"
+              "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-003",
+              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.101/32 80",
+              "packFiltId": "filter-002-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-002",
+              "flowDirection": "DOWNLINK"
+            },  
+            {
+              "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.102/32 80",
+              "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-003",
-              "flowDirection": "BIDIRECTIONAL"
+              "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
-              "packFiltId": "filter-004",
+              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.102/32 80",
+              "packFiltId": "filter-003-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-003",
+              "flowDirection": "DOWNLINK"
+            },
+            {
+              "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.103/32 80",
+              "packFiltId": "filter-004-ul",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-004",
-              "flowDirection": "BIDIRECTIONAL"
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.103/32 80",
+              "packFiltId": "filter-004-dl",
+              "packetFilterUsage": false,
+              "tosTrafficClass": "0x00",
+              "spi": "spi-004",
+              "flowDirection": "DOWNLINK"
             }
           ],
           "granularityOfMeasurement": "PER_FLOW",
