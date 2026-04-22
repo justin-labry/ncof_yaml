@@ -1,0 +1,97 @@
+{
+  "description": "Bootstrap mapping table for 6G-I2P PoC. Loaded at startup and refreshed on QFI_ALLOC or QOS_FLOW_CHANGE events. Key (supi, dnn, snssai, appId, accessType) maps 1:N to (pduSeId, qfi, flowInfo).",
+  "cacheKey": [
+    "supi",
+    "dnn",
+    "snssai",
+    "appId",
+    "accessType"
+  ],
+  "cacheValue": [
+    "pduSeId",
+    "qfi",
+    "flowInfo"
+  ],
+  "refreshTriggers": [
+    "QFI_ALLOC",
+    "QOS_FLOW_CHANGE"
+  ],
+  "mappings": [
+    {
+      "supi": "imsi-001010000000001",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": {
+        "sst": 1,
+        "sd": "000001"
+      },
+      "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+      "accessType": "3GPP_ACCESS",
+      "pduSeId": 10,
+      "qfi": 5,
+      "flowInfo": {
+        "sip": "192.168.1.10",
+        "dip": "10.0.0.50",
+        "sp": 1001,
+        "dp": 22,
+        "proto": "TCP"
+      }
+    },
+    {
+      "supi": "imsi-001010000000001",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": {
+        "sst": 1,
+        "sd": "000002"
+      },
+      "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+      "accessType": "3GPP_ACCESS",
+      "pduSeId": 11,
+      "qfi": 7,
+      "flowInfo": {
+        "sip": "192.168.1.10",
+        "dip": "10.0.0.50",
+        "sp": 1002,
+        "dp": 22,
+        "proto": "TCP"
+      }
+    },
+    {
+      "supi": "imsi-001010000000003",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": {
+        "sst": 1,
+        "sd": "000003"
+      },
+      "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+      "accessType": "3GPP_ACCESS",
+      "pduSeId": 20,
+      "qfi": 9,
+      "flowInfo": {
+        "sip": "192.168.1.13",
+        "dip": "10.0.0.50",
+        "sp": 1001,
+        "dp": 22,
+        "proto": "TCP"
+      }
+    },
+    {
+      "supi": "imsi-001010000000003",
+      "dnn": "6g-i2p.etri.re.kr",
+      "snssai": {
+        "sst": 1,
+        "sd": "000004"
+      },
+      "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+      "accessType": "3GPP_ACCESS",
+      "pduSeId": 21,
+      "qfi": 11,
+      "flowInfo": {
+        "sip": "192.168.1.13",
+        "dip": "10.0.0.50",
+        "sp": 1002,
+        "dp": 22,
+        "proto": "TCP"
+      }
+    }
+  ]
+}
