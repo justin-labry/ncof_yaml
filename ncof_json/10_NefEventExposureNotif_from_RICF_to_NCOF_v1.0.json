@@ -123,22 +123,22 @@
               "ncgi": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "nrCellId": "cell-001",
-                "nid": "000000001"
+                "nid": "00000000001"
               },
               "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "gNbId": {
                   "bitLength": 24,
                   "gNBValue": "000001"
                 },
-                "nid": "000000001"
+                "nid": "00000000001"
               }
             }
           },
@@ -179,22 +179,22 @@
               "ncgi": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "nrCellId": "cell-002",
-                "nid": "000000001"
+                "nid": "00000000001"
               },
               "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "gNbId": {
                   "bitLength": 24,
                   "gNBValue": "000002"
                 },
-                "nid": "000000001"
+                "nid": "00000000001"
               }
             }
           },
@@ -236,16 +236,16 @@
               "ncgi": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "nrCellId": "cell-001",
-                "nid": "000000001"
+                "nid": "00000000001"
               },
               "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "gNbId": {
                   "bitLength": 24,
@@ -279,16 +279,16 @@
               "ncgi": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "nrCellId": "cell-002",
-                "nid": "000000001"
+                "nid": "00000000001"
               },
               "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
-                  "mcc": "01"
+                  "mcc": "001"
                 },
                 "gNbId": {
                   "bitLength": 24,

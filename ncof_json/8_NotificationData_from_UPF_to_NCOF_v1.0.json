@@ -8,20 +8,25 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.10",
-      "ueMacAddr": "aa:bb:cc:dd:ee:01",
+      "ueMacAddr": "aa-bb-cc-dd-ee-01",
       "dnn": "6g-i2p.etri.re.kr",
-      "snssai": "01000001",
+      "snssai": {
+        "sst": 1,
+        "sd": "000001"
+      },
       "supi": "imsi-001010000000001",
       "ratType": "NR",
-      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
       "qosMonitoringMeasurement": {
         "dlPacketDelay": 5,
         "ulPacketDelay": 5,
         "rtrPacketDelay": 10,
-        "dlAveThroughput": "150Mbps",
-        "ulAveThroughput": "50Mbps",
-        "dlAvailableBitrate": "200Mbps",
-        "ulAvailableBitrate": "100Mbps",
+        "dlAveThroughput": "150 Mbps",
+        "ulAveThroughput": "50 Mbps",
+        "dlAvailableBitrate": "200 Mbps",
+        "ulAvailableBitrate": "100 Mbps",
         "defaultQoSFlowInd": false,
         "_dlMinPacketDelay": 2,
         "_ulMinPacketDelay": 2,
@@ -38,21 +43,26 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.11",
-      "ueMacAddr": "aa:bb:cc:dd:ee:02",
+      "ueMacAddr": "aa-bb-cc-dd-ee-02",
       "dnn": "6g-i2p.etri.re.kr",
-      "snssai": "01000002",
+      "snssai": {
+        "sst": 1,
+        "sd": "000002"
+      },
       "gpsi": "msisdn-001010000000002",
       "supi": "imsi-001010000000002",
       "ratType": "WLAN",
-      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
       "qosMonitoringMeasurement": {
         "dlPacketDelay": 5,
         "ulPacketDelay": 5,
         "rtrPacketDelay": 10,
-        "dlAveThroughput": "150Mbps",
-        "ulAveThroughput": "50Mbps",
-        "dlAvailableBitrate": "300Mbps",
-        "ulAvailableBitrate": "100Mbps",
+        "dlAveThroughput": "150 Mbps",
+        "ulAveThroughput": "50 Mbps",
+        "dlAvailableBitrate": "300 Mbps",
+        "ulAvailableBitrate": "100 Mbps",
         "defaultQoSFlowInd": false,
         "_dlMinPacketDelay": 2,
         "_ulMinPacketDelay": 2,
@@ -69,21 +79,26 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.12",
-      "ueMacAddr": "aa:bb:cc:dd:ee:03",
+      "ueMacAddr": "aa-bb-cc-dd-ee-03",
       "dnn": "6g-i2p.etri.re.kr",
-      "snssai": "01000003",
+      "snssai": {
+        "sst": 1,
+        "sd": "000003"
+      },
       "gpsi": "msisdn-001010000000003",
       "supi": "imsi-001010000000003",
       "ratType": "NR",
-      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
       "qosMonitoringMeasurement": {
         "dlPacketDelay": 5,
         "ulPacketDelay": 5,
         "rtrPacketDelay": 10,
-        "dlAveThroughput": "150Mbps",
-        "ulAveThroughput": "50Mbps",
-        "dlAvailableBitrate": "300Mbps",
-        "ulAvailableBitrate": "100Mbps",
+        "dlAveThroughput": "150 Mbps",
+        "ulAveThroughput": "50 Mbps",
+        "dlAvailableBitrate": "300 Mbps",
+        "ulAvailableBitrate": "100 Mbps",
         "defaultQoSFlowInd": false,
         "_dlMinPacketDelay": 2,
         "_ulMinPacketDelay": 2,
@@ -100,21 +115,26 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.13",
-      "ueMacAddr": "aa:bb:cc:dd:ee:04",
+      "ueMacAddr": "aa-bb-cc-dd-ee-04",
       "dnn": "6g-i2p.etri.re.kr",
-      "snssai": "01000004",
+      "snssai": {
+        "sst": 1,
+        "sd": "000004"
+      },
       "gpsi": "msisdn-001010000000004",
       "supi": "imsi-001010000000004",
       "ratType": "WLAN",
-      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
       "qosMonitoringMeasurement": {
         "dlPacketDelay": 5,
         "ulPacketDelay": 5,
         "rtrPacketDelay": 10,
-        "dlAveThroughput": "150Mbps",
-        "ulAveThroughput": "50Mbps",
-        "dlAvailableBitrate": "300Mbps",
-        "ulAvailableBitrate": "100Mbps",
+        "dlAveThroughput": "150 Mbps",
+        "ulAveThroughput": "50 Mbps",
+        "dlAvailableBitrate": "300 Mbps",
+        "ulAvailableBitrate": "100 Mbps",
         "defaultQoSFlowInd": false,
         "_dlMinPacketDelay": 2,
         "_ulMinPacketDelay": 2,
@@ -131,122 +151,136 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "dnn": "6g-i2p.etri.re.kr",
-      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
       "userDataUsageMeasurements": [
         {
+          "flowInfo": {
+            "packFiltId": "filter-001-ul"
+          },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-          "flowInfo": {
-            "flowDescription": "UE1 - gNB1 경유 flow 식별을 위한 필터 문자열",
-            "packFiltId": "filter-001",
-            "packetFilterUsage": false,
-            "tosTrafficClass": "0x00",
-            "spi": "spi-001",
-            "flowDirection": "BIDIRECTIONAL"
-          },
           "volumeMeasurement": {
-            "totalVolume": "12GB",
-            "ulVolume": "3GB",
-            "dlVolume": "9GB",
-            "totalNbOfPackets": 12000,
-            "ulNbOfPackets": 6000,
-            "dlNbOfPackets": 6000
+            "ulVolume": "3 GB",
+            "ulNbOfPackets": 6000
           },
           "throughputStatisticsMeasurement": {
-            "ulAverageThroughput": "50Mbps",
-            "dlAverageThroughput": "150Mbps",
-            "ulPeakThroughput": "100Mbps",
-            "dlPeakThroughput": "300Mbps",
-            "ulAveragePacketThroughput": "50Kpps",
-            "dlAveragePacketThroughput": "500Kpps",
-            "ulPeakPacketThroughput": "100Kpps",
-            "dlPeakPacketThroughput": "300Kpps"
+            "ulAverageThroughput": "50 Mbps",
+            "ulPeakThroughput": "100 Mbps",
+            "ulAveragePacketThroughput": "50 kpps",
+            "ulPeakPacketThroughput": "100 kpps"
           }
         },
         {
+          "flowInfo": {
+            "packFiltId": "filter-001-dl"
+          },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-          "flowInfo": {
-            "flowDescription": "UE1 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
-            "packFiltId": "filter-002",
-            "packetFilterUsage": false,
-            "tosTrafficClass": "0x00",
-            "spi": "spi-002",
-            "flowDirection": "BIDIRECTIONAL"
-          },
           "volumeMeasurement": {
-            "totalVolume": "12GB",
-            "ulVolume": "3GB",
-            "dlVolume": "9GB",
-            "totalNbOfPackets": 12000,
-            "ulNbOfPackets": 6000,
+            "dlVolume": "9 GB",
             "dlNbOfPackets": 6000
           },
           "throughputStatisticsMeasurement": {
-            "ulAverageThroughput": "50Mbps",
-            "dlAverageThroughput": "150Mbps",
-            "ulPeakThroughput": "100Mbps",
-            "dlPeakThroughput": "300Mbps",
-            "ulAveragePacketThroughput": "50Kpps",
-            "dlAveragePacketThroughput": "500Kpps",
-            "ulPeakPacketThroughput": "100Kpps",
-            "dlPeakPacketThroughput": "300Kpps"
+            "dlAverageThroughput": "150 Mbps",
+            "dlPeakThroughput": "300 Mbps",
+            "dlAveragePacketThroughput": "500 kpps",
+            "dlPeakPacketThroughput": "300 kpps"
           }
         },
         {
-          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
           "flowInfo": {
-            "flowDescription": "UE2 - gNB2 경유 flow 식별을 위한 필터 문자열",
-            "packFiltId": "filter-003",
-            "packetFilterUsage": false,
-            "tosTrafficClass": "0x00",
-            "spi": "spi-003",
-            "flowDirection": "BIDIRECTIONAL"
+            "packFiltId": "filter-002-ul"
           },
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "volumeMeasurement": {
-            "totalVolume": "12GB",
-            "ulVolume": "3GB",
-            "dlVolume": "9GB",
-            "totalNbOfPackets": 12000,
-            "ulNbOfPackets": 6000,
-            "dlNbOfPackets": 6000
+            "ulVolume": "3 GB",
+            "ulNbOfPackets": 6000
           },
           "throughputStatisticsMeasurement": {
-            "ulAverageThroughput": "50Mbps",
-            "dlAverageThroughput": "150Mbps",
-            "ulPeakThroughput": "100Mbps",
-            "dlPeakThroughput": "300Mbps",
-            "ulAveragePacketThroughput": "50Kpps",
-            "dlAveragePacketThroughput": "500Kpps",
-            "ulPeakPacketThroughput": "100Kpps",
-            "dlPeakPacketThroughput": "300Kpps"
+            "ulAverageThroughput": "50 Mbps",
+            "ulPeakThroughput": "100 Mbps",
+            "ulAveragePacketThroughput": "50 kpps",
+            "ulPeakPacketThroughput": "100 kpps"
           }
         },
         {
-          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
           "flowInfo": {
-            "flowDescription": "UE2 - Non-3GPP access 경유 flow 식별을 위한 필터 문자열",
-            "packFiltId": "filter-004",
-            "packetFilterUsage": false,
-            "tosTrafficClass": "0x00",
-            "spi": "spi-004",
-            "flowDirection": "BIDIRECTIONAL"
+            "packFiltId": "filter-002-dl"
           },
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "volumeMeasurement": {
-            "totalVolume": "12GB",
-            "ulVolume": "3GB",
-            "dlVolume": "9GB",
-            "totalNbOfPackets": 12000,
-            "ulNbOfPackets": 6000,
+            "dlVolume": "9 GB",
             "dlNbOfPackets": 6000
           },
           "throughputStatisticsMeasurement": {
-            "ulAverageThroughput": "50Mbps",
-            "dlAverageThroughput": "150Mbps",
-            "ulPeakThroughput": "100Mbps",
-            "dlPeakThroughput": "300Mbps",
-            "ulAveragePacketThroughput": "50Kpps",
-            "dlAveragePacketThroughput": "500Kpps",
-            "ulPeakPacketThroughput": "100Kpps",
-            "dlPeakPacketThroughput": "300Kpps"
+            "dlAverageThroughput": "150 Mbps",
+            "dlPeakThroughput": "300 Mbps",
+            "dlAveragePacketThroughput": "500 kpps",
+            "dlPeakPacketThroughput": "300 kpps"
+          }
+        },
+        {
+          "flowInfo": {
+            "packFiltId": "filter-003-ul"
+          },
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "volumeMeasurement": {
+            "ulVolume": "3 GB",
+            "ulNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50 Mbps",
+            "ulPeakThroughput": "100 Mbps",
+            "ulAveragePacketThroughput": "50 kpps",
+            "ulPeakPacketThroughput": "100 kpps"
+          }
+        },
+        {
+          "flowInfo": {
+            "packFiltId": "filter-003-dl"
+          },
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "volumeMeasurement": {
+            "dlVolume": "9 GB",
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "dlAverageThroughput": "150 Mbps",
+            "dlPeakThroughput": "300 Mbps",
+            "dlAveragePacketThroughput": "500 kpps",
+            "dlPeakPacketThroughput": "300 kpps"
+          }
+        },
+        {
+          "flowInfo": {
+            "packFiltId": "filter-004-ul"
+          },
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "volumeMeasurement": {
+            "ulVolume": "3 GB",
+            "ulNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50 Mbps",
+            "ulPeakThroughput": "100 Mbps",
+            "ulAveragePacketThroughput": "50 kpps",
+            "ulPeakPacketThroughput": "100 kpps"
+          }
+        },
+        {
+          "flowInfo": {
+            "packFiltId": "filter-004-dl"
+          },
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+          "volumeMeasurement": {
+            "dlVolume": "9 GB",
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "dlAverageThroughput": "150 Mbps",
+            "dlPeakThroughput": "300 Mbps",
+            "dlAveragePacketThroughput": "500 kpps",
+            "dlPeakPacketThroughput": "300 kpps"
           }
         }
       ]
@@ -256,36 +290,40 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "dnn": "6g-i2p.etri.re.kr",
-      "skippedReportInfo": "SKIP_OUTSIDE_VALIDITY_TIME",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
       "userDataUsageMeasurements": [
         {
           "flowInfo": {
-            "flowDescription": "Non-3GPP access 경유 traffic (total) 식별을 위한 필터 문자열",
-            "packFiltId": "filter-005",
-            "packetFilterUsage": false,
-            "tosTrafficClass": "0x00",
-            "spi": "spi-005",
-            "flowDirection": "BIDIRECTIONAL"
+            "packFiltId": "filter-005-ul"
           },
           "volumeMeasurement": {
-            "totalVolume": "12GB",
-            "ulVolume": "3GB",
-            "dlVolume": "9GB",
-            "totalNbOfPackets": 12000,
-            "ulNbOfPackets": 6000,
+            "ulVolume": "3 GB",
+            "ulNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50 Mbps",
+            "ulPeakThroughput": "100 Mbps",
+            "ulAveragePacketThroughput": "50 kpps",
+            "ulPeakPacketThroughput": "100 kpps"
+          }
+        },
+        {
+          "flowInfo": {
+            "packFiltId": "filter-005-dl"
+          },
+          "volumeMeasurement": {
+            "dlVolume": "9 GB",
             "dlNbOfPackets": 6000
           },
           "throughputStatisticsMeasurement": {
-            "ulAverageThroughput": "50Mbps",
-            "dlAverageThroughput": "150Mbps",
-            "ulPeakThroughput": "100Mbps",
-            "dlPeakThroughput": "300Mbps",
-            "ulAveragePacketThroughput": "50Kpps",
-            "dlAveragePacketThroughput": "500Kpps",
-            "ulPeakPacketThroughput": "100Kpps",
-            "dlPeakPacketThroughput": "300Kpps"
+            "dlAverageThroughput": "150 Mbps",
+            "dlPeakThroughput": "300 Mbps",
+            "dlAveragePacketThroughput": "500 kpps",
+            "dlPeakPacketThroughput": "300 kpps"
           }
-        }
+        }        
       ]
     }
   ]

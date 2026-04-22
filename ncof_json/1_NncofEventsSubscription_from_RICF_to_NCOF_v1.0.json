@@ -17,10 +17,10 @@
       {
         "plmnId": {
           "mnc": "999",
-          "mcc": "01"
+          "mcc": "001"
         },
         "tac": "0001",
-        "nid": "0000000001"
+        "nid": "00000000001"
       }
     ]
   },
@@ -43,13 +43,13 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000002"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           }
         ]
       },
@@ -91,12 +91,30 @@
       ],
       "anySlice": false,
       "snssaia": [
-        "01000001",
-        "01000003"
+        {
+          "sst": 1,
+          "sd": "000001"
+        },
+        {
+          "sst": 1,
+          "sd": "000003"
+        }
       ],
       "nsiIdInfos": [
-        "nsi-ue1-gnb1-001",
-        "nsi-ue2-gnb2-001"
+        {
+          "nsiId": "nsi-ue1-gnb1-001",
+          "snssai": {
+            "sst": 1,
+            "sd": "000001"
+          }
+        },
+        {
+          "nsiId": "nsi-ue2-gnb2-001",
+          "snssai": {
+            "sst": 1,
+            "sd": "000003"
+          }
+        }
       ],
       "appIds": [
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -107,24 +125,24 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000001"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000002"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           }
         ]
       },
@@ -142,7 +160,7 @@
         "upfId": "upf-001",
         "upfAddr": {
           "ipAddr": {
-            "ipv4Addr": "10.0.1.100"
+            "ipv4Addr": "192.168.1.100"
           },
           "fqdn": "upf-001.6g-i2p.etri.re.kr"
         }
@@ -151,12 +169,16 @@
         {
           "pduSessType": "IPV4",
           "sscMode": "SSC_MODE_1",
-          "accessTypes": "3GPP_ACCESS"
+          "accessTypes": [
+            "3GPP_ACCESS"
+          ]
         },
         {
           "pduSessType": "IPV4",
           "sscMode": "SSC_MODE_1",
-          "accessTypes": "3GPP_ACCESS"
+          "accessTypes": [
+            "3GPP_ACCESS"
+          ]
         }
       ],
       "ratFreqs": [
@@ -191,12 +213,30 @@
       ],
       "anySlice": false,
       "snssaia": [
-        "01000001",
-        "01000003"
+        {
+          "sst": 1,
+          "sd": "000001"
+        },
+        {
+          "sst": 1,
+          "sd": "000003"
+        }
       ],
       "nsiIdInfos": [
-        "nsi-ue1-gnb1-001",
-        "nsi-ue2-gnb2-001"
+        {
+          "nsiId": "nsi-ue1-gnb1-001",
+          "snssai": {
+            "sst": 1,
+            "sd": "000001"
+          }
+        },
+        {
+          "nsiId": "nsi-ue2-gnb2-001",
+          "snssai": {
+            "sst": 1,
+            "sd": "000003"
+          }
+        }
       ],
       "appIds": [
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -207,24 +247,24 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000001"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000002"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           }
         ]
       },
@@ -242,7 +282,7 @@
         "upfId": "upf-001",
         "upfAddr": {
           "ipAddr": {
-            "ipv4Addr": "10.0.1.100"
+            "ipv4Addr": "192.168.1.100"
           },
           "fqdn": "upf-001.6g-i2p.etri.re.kr"
         }
@@ -251,12 +291,16 @@
         {
           "pduSessType": "IPV4",
           "sscMode": "SSC_MODE_1",
-          "accessTypes": "3GPP_ACCESS"
+          "accessTypes": [
+            "3GPP_ACCESS"
+          ]
         },
         {
           "pduSessType": "IPV4",
           "sscMode": "SSC_MODE_1",
-          "accessTypes": "3GPP_ACCESS"
+          "accessTypes": [
+            "3GPP_ACCESS"
+          ]
         }
       ],
       "ratFreqs": [
@@ -291,12 +335,30 @@
       ],
       "anySlice": false,
       "snssaia": [
-        "01000002",
-        "01000004"
+        {
+          "sst": 1,
+          "sd": "000002"
+        },
+        {
+          "sst": 1,
+          "sd": "000004"
+        }
       ],
       "nsiIdInfos": [
-        "nsi-ue1-non3gpp-001",
-        "nsi-ue2-non3gpp-001"
+        {
+          "nsiId": "nsi-ue1-non3gpp-001",
+          "snssai": {
+            "sst": 1,
+            "sd": "000002"
+          }
+        },
+        {
+          "nsiId": "nsi-ue2-non3gpp-001",
+          "snssai": {
+            "sst": 1,
+            "sd": "000004"
+          }
+        }
       ],
       "appIds": [
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -315,14 +377,14 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "n3IwfId": "000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "n3IwfId": "000001"
           }
@@ -342,7 +404,7 @@
         "upfId": "upf-001",
         "upfAddr": {
           "ipAddr": {
-            "ipv4Addr": "10.0.1.100"
+            "ipv4Addr": "192.168.1.100"
           },
           "fqdn": "upf-001.6g-i2p.etri.re.kr"
         }
@@ -351,12 +413,16 @@
         {
           "pduSessType": "IPV4",
           "sscMode": "SSC_MODE_1",
-          "accessTypes": "NON_3GPP_ACCESS"
+          "accessTypes": [
+            "NON_3GPP_ACCESS"
+          ]
         },
         {
           "pduSessType": "IPV4",
           "sscMode": "SSC_MODE_1",
-          "accessTypes": "NON_3GPP_ACCESS"
+          "accessTypes": [
+            "NON_3GPP_ACCESS"
+          ]
         }
       ],
       "ratFreqs": [

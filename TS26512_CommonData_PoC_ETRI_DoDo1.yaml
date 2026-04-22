@@ -30,11 +30,11 @@ components:
       type: object
       properties:
         sliceInfo:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Snssai'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Snssai'
         dataNetworkName:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Dnn'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Dnn'
         location:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/TypedLocation'
+          $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/TypedLocation'
 
     MediaStreamingSessionIdentification:
       type: object
@@ -42,7 +42,7 @@ components:
         - sessionId
       properties:
         sessionId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/MediaDeliverySessionId'
+          $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/MediaDeliverySessionId'
 
     MediaStreamingAccess:
       type: object
@@ -55,9 +55,9 @@ components:
         - processingLatency
       properties:
         mediaStreamHandlerEndpointAddress:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/EndpointAddress'
+          $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/EndpointAddress'
         applicationServerEndpointAddress:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/EndpointAddress'
+          $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/EndpointAddress'
         requestMessage:
           type: object
           required:
@@ -70,15 +70,15 @@ components:
             method:
               type: string
             url:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/AbsoluteUrl'
+              $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/AbsoluteUrl'
             protocolVersion:
               type: string
             range:
               type: string
             size:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
             bodySize:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
             contentType:
               type: string
             userAgent:
@@ -86,7 +86,7 @@ components:
             userIdentity:
               type: string
             referer:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/AbsoluteUrl'
+              $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/AbsoluteUrl'
         cacheStatus:
           $ref: '#/components/schemas/CacheStatus'
         responseMessage:
@@ -97,15 +97,15 @@ components:
             - bodySize
           properties:
             responseCode:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
             size:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
             bodySize:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
             contentType:
               type: string
         processingLatency:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Float'
         connectionMetrics:
           type: object
           required:
@@ -114,25 +114,25 @@ components:
             - congestionWindowSize
           properties:
             meanNetworkRoundTripTime:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Float'
             networkRoundTripTimeVariation:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Float'
             congestionWindowSize:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
 
     NetworkAssistanceInvocation:
       description: Common properties of a single Network Assistance invocation.
       type: object
       properties:
         policyTemplateId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/ResourceId'
+          $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ResourceId'
         applicationFlowDescriptions:
           type: array
           minItems: 1
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/ApplicationFlowDescription'
+            $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationFlowDescription'
         requestedQoS:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS26510_CommonData_PoC_ETRI_DoDo1/1.1.0#/components/schemas/UnidirectionalQoSSpecification'
+          $ref: 'TS26510_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/UnidirectionalQoSSpecification'
         # The network QoS parameters (if any) requested by the Media Session Handler.
         recommendedQoS:
           type: object
@@ -142,9 +142,9 @@ components:
             - minimumBitRate
           properties:
             maximumBitRate:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/BitRate'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/BitRate'
             minimumBitRate:
-              $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/BitRate'
+              $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/BitRate'
 
     #####################################
     # Clause 6.4.4: Enumerated data types

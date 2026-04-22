@@ -21,16 +21,16 @@
   "qosMonPending": false,
   "udrRestartInd": false,
   "anyUeInd": false,
-  "groupId": "group-id-001",
+  "groupId": "00000001-001-01-0001",
   "dnn": "6g-i2p.etri.re.kr",
   "upfId": "upf-001",
   "guami": {
     "plmnId": {
       "mcc": "999",
-      "mnc": "01",
-      "nid": "000000001"
+      "mnc": "001",
+      "nid": "00000000001"
     },
-    "amfId": "amf-001"
+    "amfId": "000001"
   },
   "eventSubs": [
     {
@@ -50,25 +50,25 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000001"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "n3IwfId": "000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
@@ -78,7 +78,7 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "n3IwfId": "000001"
           }
@@ -95,15 +95,19 @@
           ],
           "trafficFilters": [
             {
-              "flowDescription": "Non-3GPP access 경유 traffic (total) 식별을 위한 필터 문자열",
-              "packFiltId": "filter-005",
+              "flowDescription": "permit in ip from any to any",
+              "packFiltId": "filter-005-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-005",
-              "flowDirection": "BIDIRECTIONAL"
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit in ip from any to any",
+              "packFiltId": "filter-005-dl",
+              "packetFilterUsage": false,
+              "flowDirection": "DOWNLINK"
             }
           ],
-          "granularityOfMeasurement": "???",
+          "granularityOfMeasurement":"PER_FLOW",
           "reportingSuggestionInfo": {
             "reportingUrgency": "DELAY_TOLERANT",
             "reportingTimeInfo": 10

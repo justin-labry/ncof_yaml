@@ -57,29 +57,29 @@ paths:
               schema:
                 type: string
         '400':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/400'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/400'
         '401':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/401'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/401'
         '403':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/403'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/403'
         '404':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/404'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/404'
         '411':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/411'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/411'
         '413':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/413'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/413'
         '415':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/415'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/415'
         '429':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/429'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/429'
         '500':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/500'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/500'
         '502':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/502'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/502'
         '503':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/503'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/503'
         default:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/default'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/default'
       callbacks:
         myNotification:
           '{$request.body#/notifUri}': 
@@ -94,33 +94,33 @@ paths:
                 '204':
                   description: No Content, Notification was succesfull
                 '307':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/307'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/307'
                 '308':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/308'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/308'
                 '400':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/400'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/400'
                 '401':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/401'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/401'
                 '403':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/403'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/403'
                 '404':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/404'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/404'
                 '411':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/411'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/411'
                 '413':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/413'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/413'
                 '415':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/415'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/415'
                 '429':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/429'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/429'
                 '500':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/500'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/500'
                 '502':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/502'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/502'
                 '503':
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/503'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/503'
                 default:
-                  $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/default'
+                  $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/default'
 
   /subscriptions/{subscriptionId}:
     get:
@@ -140,7 +140,7 @@ paths:
           description: Features supported by the NF service consumer
           required: false
           schema:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/SupportedFeatures'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/SupportedFeatures'
       responses:
         '200':
           description: OK. Resource representation is returned
@@ -149,29 +149,29 @@ paths:
               schema:
                 $ref: '#/components/schemas/NefEventExposureSubsc'
         '307':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/307'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/307'
         '308':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/308'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/308'
         '400':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/400'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/400'
         '401':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/401'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/401'
         '403':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/403'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/403'
         '404':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/404'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/404'
         '406':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/406'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/406'
         '429':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/429'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/429'
         '500':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/500'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/500'
         '502':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/502'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/502'
         '503':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/503'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/503'
         default:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/default'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/default'
 
     put:
       summary: update subscription
@@ -201,33 +201,33 @@ paths:
         '204':
           description: No Content. Resource was succesfully modified
         '307':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/307'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/307'
         '308':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/308'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/308'
         '400':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/400'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/400'
         '401':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/401'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/401'
         '403':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/403'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/403'
         '404':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/404'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/404'
         '411':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/411'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/411'
         '413':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/413'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/413'
         '415':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/415'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/415'
         '429':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/429'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/429'
         '500':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/500'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/500'
         '502':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/502'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/502'
         '503':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/503'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/503'
         default:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/default'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/default'
 
     delete:
       summary: unsubscribe from notifications
@@ -245,27 +245,27 @@ paths:
         '204':
           description: No Content. Resource was succesfully deleted
         '307':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/307'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/307'
         '308':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/308'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/308'
         '400':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/400'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/400'
         '401':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/401'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/401'
         '403':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/403'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/403'
         '404':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/404'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/404'
         '429':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/429'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/429'
         '500':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/500'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/500'
         '502':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/502'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/502'
         '503':
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/503'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/503'
         default:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/responses/default'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/responses/default'
 
 
 components:
@@ -292,10 +292,10 @@ components:
           minItems: 1
         eventsRepInfo:
           ##### Reference is moved from TS29523_Npcf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/ReportingInformation'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/ReportingInformation'
           ######################################################################################################################################
         notifUri:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uri'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uri'
         notifId:
           type: string
         eventNotifs:
@@ -304,7 +304,7 @@ components:
             $ref: '#/components/schemas/NefEventNotification'
           minItems: 1
         suppFeat:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/SupportedFeatures'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/SupportedFeatures'
       required:
         - eventsSubs
         - notifId
@@ -334,7 +334,7 @@ components:
         event:
           $ref: '#/components/schemas/NefEvent'
         timeStamp:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
         svcExprcInfos:
           type: array
           items:
@@ -361,7 +361,7 @@ components:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/UserDataCongestionCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/UserDataCongestionCollection'
             #####################################################################################################################################
           minItems: 1
         perfDataInfos:
@@ -373,35 +373,35 @@ components:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/DispersionCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/DispersionCollection'
             #####################################################################################################################################
           minItems: 1
         collBhvrInfs:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/CollectiveBehaviourInfo'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/CollectiveBehaviourInfo'
             #####################################################################################################################################
           minItems: 1
         msQoeMetrInfos:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/MsQoeMetricsCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/MsQoeMetricsCollection'
             #####################################################################################################################################
           minItems: 1
           deprecated: true
         msQoeMetrics:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/QoEMetricsCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/QoEMetricsCollection'
           minItems: 1
           description: Represents the Media Streaming QoE metrics event notification.
         msConsumpInfos:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/MsConsumptionCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/MsConsumptionCollection'
             #####################################################################################################################################
           minItems: 1
           deprecated: true
@@ -409,7 +409,7 @@ components:
           type: array
           items:
             ##### Reference is moved from TS26512_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/ConsumptionReportingUnitsCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/ConsumptionReportingUnitsCollection'
             #################################################################################################################################
           minItems: 1
           description: Represents the Media Streaming Consumption event notification.
@@ -427,7 +427,7 @@ components:
           type: array
           items:
             ##### Reference is moved from TS26512_EventExposure.yaml to SupplementaryData_PoC_ETRI_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/NetworkAssistanceInvocationsCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/NetworkAssistanceInvocationsCollection'
             ######################################################################################################################################
           minItems: 1
           description: >
@@ -446,7 +446,7 @@ components:
           type: array
           items:
             ##### Reference is moved from TS26512_EventExposure.yaml to SupplementaryData_PoC_ETRI_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/DynamicPolicyInvocationsCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/DynamicPolicyInvocationsCollection'
             ######################################################################################################################################
           minItems: 1
           description: Represents the Media Streaming Dynamic Policy Invocations event notification.
@@ -464,7 +464,7 @@ components:
           type: array
           items:
             ##### Reference is moved from TS26512_EventExposure.yaml to SupplementaryData_PoC_ETRI_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/MediaStreamingAccessesCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/MediaStreamingAccessesCollection'
             ######################################################################################################################################
           minItems: 1
           description: Represents the Media Streaming access event notification.
@@ -474,20 +474,20 @@ components:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/DatVolTransTimeCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/DatVolTransTimeCollection'
             #####################################################################################################################################
           minItems: 1
         appActiveTimeInfos:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/AppActiveTimeInfo'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/AppActiveTimeInfo'
             #####################################################################################################################################
           minItems: 1
         sigInfos:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/NfSignallingInfo'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/NfSignallingInfo'
           minItems: 1
         ##### Newly added variables (= unstandardized) for 6G-I2P project #####
         _rfSignalInfos:
@@ -515,7 +515,7 @@ components:
           $ref: '#/components/schemas/NefEventFilter'
         eventRepInfo:
           ##### Reference is moved from TS29523_Npcf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/ReportingInformation'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/ReportingInformation'
           ######################################################################################################################################
       required:
         - event
@@ -529,23 +529,23 @@ components:
         appIds:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
           minItems: 1
         locArea:
           ##### Reference is moved from TS29554_Npcf_BDTPolicyControl.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/NetworkAreaInfo'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/NetworkAreaInfo'
           #########################################################################################################################################
         collAttrs:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/CollectiveBehaviourFilter'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/CollectiveBehaviourFilter'
             #####################################################################################################################################
           minItems: 1
         tws:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29122_CommonData_PoC_ETRI_DoDo1/1.4.0-alpha.1#/components/schemas/TimeWindow'
+            $ref: 'TS29122_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/TimeWindow'
           minItems: 1
       required:
         - tgtUe
@@ -557,40 +557,40 @@ components:
         supis:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Supi'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Supi'
           minItems: 1
         interGroupIds:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/GroupId'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/GroupId'
           minItems: 1
         anyUeId:
           type: boolean
         ueIpAddr:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/IpAddr'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/IpAddr'
 
     ServiceExperienceInfo:
       description: Contains service experience information associated with an application.
       type: object
       properties:
         appId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
         supis:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Supi'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Supi'
           minItems: 1
         svcExpPerFlows:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/ServiceExperienceInfoPerFlow'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/ServiceExperienceInfoPerFlow'
             #####################################################################################################################################
           minItems: 1
         contrWeights:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Uinteger'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Uinteger'
           minItems: 1
       required:
         - svcExpPerFlows
@@ -603,9 +603,9 @@ components:
       type: object
       properties:
         supi:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Supi'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Supi'
         appId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
         ueTrajs:
           type: array
           items:
@@ -615,7 +615,7 @@ components:
           type: array
           items:
             ##### Reference is moved from TS29554_Npcf_BDTPolicyControl.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/NetworkAreaInfo'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/NetworkAreaInfo'
             #########################################################################################################################################
           minItems: 1
       required:
@@ -627,16 +627,16 @@ components:
       type: object
       properties:
         supi:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Supi'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Supi'
         interGroupId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/GroupId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/GroupId'
         appId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
         comms:
           type: array
           items:
             ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/CommunicationCollection'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/CommunicationCollection'
             #####################################################################################################################################
           minItems: 1
       required:
@@ -647,9 +647,9 @@ components:
       type: object
       properties:
         ts:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
         location:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/UserLocation'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/UserLocation'
       required:
         - ts
         - location
@@ -659,28 +659,28 @@ components:
       type: object
       properties:
         appId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
         ueIpAddr:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/IpAddr'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/IpAddr'
         ipTrafficFilter:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29122_CommonData_PoC_ETRI_DoDo1/1.4.0-alpha.1#/components/schemas/FlowInfo'
+          $ref: 'TS29122_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/FlowInfo'
         userLoc:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/UserLocation'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/UserLocation'
         appLocs:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Dnai'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Dnai'
           minItems: 1
         asAddr:
           ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/AddrFqdn'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/AddrFqdn'
           #####################################################################################################################################
         perfData:
           ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/PerformanceData'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/PerformanceData'
           #####################################################################################################################################
         timeStamp:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
       required:
         - perfData
         - timeStamp
@@ -695,7 +695,7 @@ components:
           $ref: '#/components/schemas/GNSSServArea'
         sourceInfo:
           ##### Reference is moved from TS29572_Nlmf_Location.yaml to SupplementaryData_PoC_ETRI_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/GeographicalCoordinates'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/GeographicalCoordinates'
           ######################################################################################################################################
       required:
         - gnssAssistData
@@ -707,12 +707,12 @@ components:
       properties:
         geographicalArea:
           ##### Reference is moved from TS29572_Nlmf_Location.yaml to SupplementaryData_PoC_ETRI_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/GeographicArea'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/GeographicArea'
           ######################################################################################################################################
         taiList:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Tai'
+            $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Tai'
           minItems: 1
       oneOf:
         - required: [geographicalArea]
@@ -724,24 +724,24 @@ components:
       type: object
       properties:
         _timestamp:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
         _supi:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Supi'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Supi'
         _gpsi:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Gpsi'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Gpsi'
         _appId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
         _ueIpAddr:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/IpAddr'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/IpAddr'
         _nodeAddrs:
           ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/AddrFqdn'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/AddrFqdn'
           #####################################################################################################################################
         _loc:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/UserLocation'        
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/UserLocation'        
         _locArea:
           ##### Reference is moved from TS29554_Npcf_BDTPolicyControl.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/NetworkAreaInfo'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/NetworkAreaInfo'
           #########################################################################################################################################
         _rfSignalData:
           $ref: '#/components/schemas/_RfSignalData'
@@ -754,9 +754,9 @@ components:
       type: object
       properties:
         _startTime: 
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
         _duration:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DurationSec'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DurationSec'
         _refSignalMeasurements:
           type: array
           items:
@@ -768,7 +768,7 @@ components:
       type: object
       properties:
         _ratType:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/RatType'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/RatType'
         _refSignalType:
           $ref: '#/components/schemas/_RefSignalType'
         _blockType:
@@ -780,7 +780,7 @@ components:
         _sinr:
           type: string
         _bler:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Float'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Float'
         _connectivity:
           $ref: '#/components/schemas/_ConnectivityType'
     
@@ -865,26 +865,26 @@ components:
       type: object
       properties:
         _timestamp:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
         _supi:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Supi'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Supi'
         _gpsi:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/Gpsi'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/Gpsi'
         _interGroupId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/GroupId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/GroupId'
         _appId:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/ApplicationId'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/ApplicationId'
         _ueIpAddr:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/IpAddr'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/IpAddr'
         _nodeAddrs:
           ##### Reference is moved from TS29517_Naf_EventExposure.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/AddrFqdn'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/AddrFqdn'
           #####################################################################################################################################
         _loc:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/UserLocation'        
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/UserLocation'        
         _locArea:
           ##### Reference is moved from TS29554_Npcf_BDTPolicyControl.yaml to SupplementaryData_PoC_DoDo1.yaml for implementation convenience #####
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/NetworkAreaInfo'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/NetworkAreaInfo'
           #########################################################################################################################################
         _powerEnergyConsData:
           $ref: '#/components/schemas/_PowerEnergyConsData'
@@ -897,9 +897,9 @@ components:
       type: object
       properties:
         _startTime: 
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DateTime'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DateTime'
         _duration:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/DurationSec'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/DurationSec'
         _power:
           type: string
         _minPower:

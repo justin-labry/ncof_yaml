@@ -146,7 +146,7 @@ components:
           minItems: 1
           maxItems: 2
         tosTC:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/TosTrafficClass'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/TosTrafficClass'
       required:
         - flowId
 
@@ -207,13 +207,13 @@ components:
         geographicAreas:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/GeographicArea'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/GeographicArea'
           minItems: 1
           description: Identifies a list of geographic area of the user where the UE is located.
         civicAddresses:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/CivicAddress'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/CivicAddress'
           minItems: 1
           description: Identifies a list of civic addresses of the user where the UE is located.
 
@@ -224,17 +224,17 @@ components:
         geographicAreas:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/GeographicArea'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/GeographicArea'
           minItems: 0
           description: Identifies a list of geographic area of the user where the UE is located.
         civicAddresses:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/CivicAddress'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/CivicAddress'
           minItems: 0
           description: Identifies a list of civic addresses of the user where the UE is located.
         nwAreaInfo:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/NetworkAreaInfo'
+          $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/NetworkAreaInfo'
 
     ProblemDetails:
       description: Represents additional information and details on an error response.
@@ -269,7 +269,7 @@ components:
           description: >
             Description of invalid parameters, for a request rejected due to invalid parameters.
         supportedFeatures:
-          $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/TS29571_CommonData_PoC_ETRI_DoDo1/1.6.0-alpha.5#/components/schemas/SupportedFeatures'
+          $ref: 'TS29571_CommonData_PoC_ETRI_DoDo1.yaml#/components/schemas/SupportedFeatures'
 
     InvalidParam:
       description: >
@@ -520,7 +520,7 @@ components:
         ethFlowDescriptions:
           type: array
           items:
-            $ref: 'https://api.swaggerhub.com/domains/ETRI_INRS_TEAM/SupplementaryData_PoC_ETRI_DoDo1/0.1.0#/components/schemas/EthFlowDescription'
+            $ref: 'SupplementaryData_PoC_ETRI_DoDo1.yaml#/components/schemas/EthFlowDescription'
           description: >
             Indicates the packet filters of the Ethernet flow. It shall contain UL and/or DL
             Ethernet flow description.

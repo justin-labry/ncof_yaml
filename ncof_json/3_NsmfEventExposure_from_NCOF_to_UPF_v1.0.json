@@ -21,16 +21,16 @@
   "qosMonPending": false,
   "udrRestartInd": false,
   "anyUeInd": false,
-  "groupId": "group-id-001",
+  "groupId": "00000001-001-01-0001",
   "dnn": "6g-i2p.etri.re.kr",
   "upfId": "upf-001",
   "guami": {
     "plmnId": {
       "mcc": "999",
-      "mnc": "01",
-      "nid": "000000001"
+      "mnc": "001",
+      "nid": "00000000001"
     },
-    "amfId": "amf-001"
+    "amfId": "000001"
   },
   "eventSubs": [
     {
@@ -50,25 +50,25 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000001"
             },
-            "nid": "000000001"
+            "nid": "00000000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "n3IwfId": "000001"
           },
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "gNbId": {
               "bitLength": 24,
@@ -78,7 +78,7 @@
           {
             "plmnId": {
               "mnc": "999",
-              "mcc": "01"
+              "mcc": "001"
             },
             "n3IwfId": "000001"
           }
@@ -108,7 +108,7 @@
               "tosTrafficClass": "0x00",
               "spi": "spi-001",
               "flowDirection": "DOWNLINK"
-            }            
+            }
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
@@ -157,7 +157,7 @@
               "tosTrafficClass": "0x00",
               "spi": "spi-002",
               "flowDirection": "DOWNLINK"
-            }            
+            }
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
@@ -206,7 +206,7 @@
               "tosTrafficClass": "0x00",
               "spi": "spi-003",
               "flowDirection": "DOWNLINK"
-            }            
+            }
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
@@ -255,7 +255,7 @@
               "tosTrafficClass": "0x00",
               "spi": "spi-004",
               "flowDirection": "DOWNLINK"
-            }            
+            }
           ],
           "granularityOfMeasurement": "PER_FLOW",
           "reportingSuggestionInfo": {
@@ -312,7 +312,7 @@
               "tosTrafficClass": "0x00",
               "spi": "spi-001",
               "flowDirection": "DOWNLINK"
-            },    
+            },
             {
               "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.101/32 80",
               "packFiltId": "filter-002-ul",
@@ -328,7 +328,7 @@
               "tosTrafficClass": "0x00",
               "spi": "spi-002",
               "flowDirection": "DOWNLINK"
-            },  
+            },
             {
               "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.102/32 80",
               "packFiltId": "filter-003-ul",
@@ -384,11 +384,62 @@
           "inclRatType": true,
           "ratTypeList": [
             "NR",
+            "NR",
+            "WLAN",
             "WLAN",
             "NR",
+            "NR",
+            "WLAN",
             "WLAN"
           ]
-        }
+        },
+        {
+          "type": "USER_DATA_USAGE_MEASURES",
+          "immediateFlag": false,
+          "measurementTypes": [
+            "APPLICATION_RELATED_INFO",
+            "HROUGHPUT_MEASUREMENT",
+            "VOLUME_MEASUREMENT"
+          ],
+          "trafficFilters": [
+            {
+              "flowDescription": "permit in ip from 192.168.1.1/32 to 192.168.1.2/32",
+              "packFiltId": "filter-005-ul",
+              "packetFilterUsage": false,
+              "flowDirection": "UPLINK"
+            },
+            {
+              "flowDescription": "permit out ip from 192.168.1.1/32 to 192.168.1.2/32",
+              "packFiltId": "filter-005-dl",
+              "packetFilterUsage": false,
+              "flowDirection": "DOWNLINK"
+            }
+          ],
+          "granularityOfMeasurement": "PER_FLOW",
+          "reportingSuggestionInfo": {
+            "reportingUrgency": "DELAY_TOLERANT",
+            "reportingTimeInfo": 10
+          },
+          "remainingDataReports": "DISCARD",
+          "skipReportingInstruction": {
+            "skipReportCond": [
+              "SKIP_OUTSIDE_VALIDITY_TIME"
+            ]
+          },
+          "validityTimes": [
+            {
+              "recurTimeWindow": {
+                "startTime": "2026-03-01T12:00:00+09:00",
+                "endTime": "2026-03-08T12:00:00+09:00"
+              }
+            }
+          ],
+          "inclRatType": true,
+          "ratTypeList": [
+            "WLAN",
+            "WLAN"
+          ]
+        }        
       ]
     }
   ]
