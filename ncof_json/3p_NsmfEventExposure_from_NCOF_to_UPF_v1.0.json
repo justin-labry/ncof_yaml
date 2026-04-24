@@ -74,13 +74,6 @@
               "bitLength": 24,
               "gNBValue": "000002"
             }
-          },
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "n3IwfId": "000001"
           }
         ]
       },
@@ -139,55 +132,6 @@
           "type": "QOS_MONITORING",
           "immediateFlag": false,
           "appIds": [
-            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1"
-          ],
-          "trafficFilters": [
-            {
-              "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.22/32 80",
-              "packFiltId": "filter-002-ul",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
-              "flowDirection": "UPLINK"
-            },
-            {
-              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.21/32 80",
-              "packFiltId": "filter-002-dl",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
-              "flowDirection": "DOWNLINK"
-            }
-          ],
-          "granularityOfMeasurement": "PER_FLOW",
-          "reportingSuggestionInfo": {
-            "reportingUrgency": "DELAY_TOLERANT",
-            "reportingTimeInfo": 10
-          },
-          "ipDomain": "6g-i2p.etri.re.kr",
-          "remainingDataReports": "DISCARD",
-          "skipReportingInstruction": {
-            "skipReportCond": [
-              "SKIP_OUTSIDE_VALIDITY_TIME"
-            ]
-          },
-          "validityTimes": [
-            {
-              "recurTimeWindow": {
-                "startTime": "2026-03-01T12:00:00+09:00",
-                "endTime": "2026-03-08T12:00:00+09:00"
-              }
-            }
-          ],
-          "inclRatType": true,
-          "ratTypeList": [
-            "WLAN"
-          ]
-        },
-        {
-          "type": "QOS_MONITORING",
-          "immediateFlag": false,
-          "appIds": [
             "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
           ],
           "trafficFilters": [
@@ -234,66 +178,15 @@
           ]
         },
         {
-          "type": "QOS_MONITORING",
-          "immediateFlag": false,
-          "appIds": [
-            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
-          ],
-          "trafficFilters": [
-            {
-              "flowDescription": "permit in 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
-              "packFiltId": "filter-004-ul",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
-              "flowDirection": "UPLINK"
-            },
-            {
-              "flowDescription": "permit out 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
-              "packFiltId": "filter-004-dl",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
-              "flowDirection": "DOWNLINK"
-            }
-          ],
-          "granularityOfMeasurement": "PER_FLOW",
-          "reportingSuggestionInfo": {
-            "reportingUrgency": "DELAY_TOLERANT",
-            "reportingTimeInfo": 10
-          },
-          "ipDomain": "6g-i2p.etri.re.kr",
-          "remainingDataReports": "DISCARD",
-          "skipReportingInstruction": {
-            "skipReportCond": [
-              "SKIP_OUTSIDE_VALIDITY_TIME"
-            ]
-          },
-          "validityTimes": [
-            {
-              "recurTimeWindow": {
-                "startTime": "2026-03-01T12:00:00+09:00",
-                "endTime": "2026-03-08T12:00:00+09:00"
-              }
-            }
-          ],
-          "inclRatType": true,
-          "ratTypeList": [
-            "WLAN"
-          ]
-        },
-        {
           "type": "USER_DATA_USAGE_MEASURES",
           "immediateFlag": false,
           "measurementTypes": [
             "APPLICATION_RELATED_INFO",
-            "HROUGHPUT_MEASUREMENT",
+            "THROUGHPUT_MEASUREMENT",
             "VOLUME_MEASUREMENT"
           ],
           "appIds": [
             "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-            "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-            "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
             "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
           ],
           "trafficFilters": [
@@ -314,22 +207,6 @@
               "flowDirection": "DOWNLINK"
             },
             {
-              "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.22/32 80",
-              "packFiltId": "filter-002-ul",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
-              "flowDirection": "UPLINK"
-            },
-            {
-              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.22/32 80",
-              "packFiltId": "filter-002-dl",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
-              "flowDirection": "DOWNLINK"
-            },
-            {
               "flowDescription": "permit in 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
               "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
@@ -343,22 +220,6 @@
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
               "spi": "spi-003",
-              "flowDirection": "DOWNLINK"
-            },
-            {
-              "flowDescription": "permit in 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
-              "packFiltId": "filter-004-ul",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
-              "flowDirection": "UPLINK"
-            },
-            {
-              "flowDescription": "permit out 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
-              "packFiltId": "filter-004-dl",
-              "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
               "flowDirection": "DOWNLINK"
             }
           ],
@@ -385,12 +246,8 @@
           "ratTypeList": [
             "NR",
             "NR",
-            "WLAN",
-            "WLAN",
             "NR",
-            "NR",
-            "WLAN",
-            "WLAN"
+            "NR"
           ]
         }       
       ]

@@ -13,15 +13,13 @@
   "suppFeat": "FF",
   "eventsSubs": [
     {
-      "event": "DISPERSION",
+      "event": "PERF_DATA",
       "eventFilter": {
         "tgtUe": {
           "anyUe": false,
           "supis": [
             "imsi-001010000000001",
-            "imsi-001010000000002",
-            "imsi-001010000000003",
-            "imsi-001010000000004"
+            "imsi-001010000000003"
           ],
           "intGroupId": [
             "group-id-001"
@@ -29,8 +27,6 @@
         },
         "appIds": [
           "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-          "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-          "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
           "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
         ],
         "locArea": {

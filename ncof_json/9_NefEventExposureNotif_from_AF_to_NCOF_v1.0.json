@@ -9,7 +9,7 @@
           "timeStamp": "2026-03-01T12:01:00+09:00",
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "ueIpAddr": {
-            "ipv4Addr": "192.168.1.10"
+            "ipv4Addr": "192.168.1.11"
           },
           "appLocs": [
             "dnai-ue1-gnb1-001"
@@ -47,7 +47,7 @@
           "timeStamp": "2026-03-01T12:01:00+09:00",
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "ueIpAddr": {
-            "ipv4Addr": "192.168.1.11"
+            "ipv4Addr": "192.168.1.12"
           },
           "ipTrafficFilter": {
             "flowId": 10002,
@@ -93,7 +93,7 @@
           "timeStamp": "2026-03-01T12:01:00+09:00",
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "ueIpAddr": {
-            "ipv4Addr": "192.168.1.12"
+            "ipv4Addr": "192.168.1.13"
           },
           "appLocs": [
             "dnai-ue2-gnb2-001"
@@ -131,7 +131,7 @@
           "timeStamp": "2026-03-01T12:01:00+09:00",
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "ueIpAddr": {
-            "ipv4Addr": "192.168.1.13"
+            "ipv4Addr": "192.168.1.14"
           },
           "appLocs": [
             "dnai-ue2-non3gpp-001"

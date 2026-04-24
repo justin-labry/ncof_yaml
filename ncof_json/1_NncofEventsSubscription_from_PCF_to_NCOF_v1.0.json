@@ -351,11 +351,13 @@
       ],
       "nfInstanceIds": [
         "upf-uuid-001",
-        "af-uuid-001"
+        "af-uuid-001",
+        "ricf-uuid-001"
       ],
       "nfTypes": [
         "UPF",
-        "AF"
+        "AF",
+        "RICF"
       ],
       "networkArea": {
         "gRanNodeIds": [
@@ -539,7 +541,7 @@
         "upfId": "upf-001",
         "upfAddr": {
           "ipAddr": {
-            "ipv4Addr": "10.0.1.100"
+            "ipv4Addr": "192.168.1.100"
           },
           "fqdn": "upf-001.6g-i2p.etri.re.kr"
         }
