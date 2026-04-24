@@ -1,0 +1,216 @@
+{
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ricf/",
+  "eventNotifs": [
+    {
+      "event": "_RF_SIGNAL",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "_rfSignalInfos": [
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_supi": "imsi-001010000000001",
+          "_gpsi": "msisdn-001010000000001",
+          "_ueIpAddr": {
+            "ipv4Addr": "192.168.1.11"
+          },
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "192.168.1.1"
+              },
+              "fqdn": "gnb-001.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "nrCellId": "cell-001",
+                "nid": "00000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                },
+                "nid": "00000000001"
+              }
+            }
+          },
+          "_rfSignalData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_refSignalMeasurements": [
+              {
+                "_ratType": "NR",
+                "_refSignalType": "SS",
+                "_blockType": "TB",
+                "_rsrp": "85dBm",
+                "_rsrq": "-10dB",
+                "_sinr": "13dB",
+                "_bler": 0.999,
+                "_connectivity": "EXCELLENT"
+              }
+            ]
+          }
+        },
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_supi": "imsi-001010000000003",
+          "_gpsi": "msisdn-001010000000003",
+          "_ueIpAddr": {
+            "ipv4Addr": "192.168.1.13"
+          },
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "192.168.1.2"
+              },
+              "fqdn": "gnb-002.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "nrCellId": "cell-002",
+                "nid": "00000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                },
+                "nid": "00000000001"
+              }
+            }
+          },
+          "_rfSignalData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_refSignalMeasurements": [
+              {
+                "_ratType": "NR",
+                "_refSignalType": "SS",
+                "_blockType": "TB",
+                "_rsrp": "85dBm",
+                "_rsrq": "-10dB",
+                "_sinr": "13dB",
+                "_bler": 0.999,
+                "_connectivity": "EXCELLENT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "event": "_POWER_ENERGY_CONSUMPTION",
+      "timestamp": "2026-03-01T12:01:00+09:00",
+      "_powerEnergyConsInfos": [
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "192.168.1.1"
+              },
+              "fqdn": "gnb-001.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "nrCellId": "cell-001",
+                "nid": "00000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000001"
+                }
+              }
+            }
+          },
+          "_powerEnergyConsData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_power": "20mW",
+            "_minPower": "0mW",
+            "_peakPower": "50mW",
+            "_energy": "1.2J",
+            "_powerState": "ACTIVE"
+          }
+        },
+        {
+          "_timestamp": "2026-03-01T12:01:00+09:00",
+          "_nodeAddrs": [
+            {
+              "ipAddr": {
+                "ipv4Addr": "192.168.1.2"
+              },
+              "fqdn": "gnb-002.6g-i2p.etri.re.kr"
+            }
+          ],
+          "_loc": {
+            "nrLocation": {
+              "ncgi": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "nrCellId": "cell-002",
+                "nid": "00000000001"
+              },
+              "ignoreNcgi": false,
+              "globalGnbId": {
+                "plmnId": {
+                  "mnc": "999",
+                  "mcc": "001"
+                },
+                "gNbId": {
+                  "bitLength": 24,
+                  "gNBValue": "000002"
+                }
+              }
+            }
+          },
+          "_powerEnergyConsData": {
+            "_startTime": "2026-03-01T12:00:00+09:00",
+            "_duration": 60,
+            "_power": "20mW",
+            "_minPower": "0mW",
+            "_peakPower": "50mW",
+            "_energy": "1.2J",
+            "_powerState": "ACTIVE"
+          }
+        }
+      ]
+    }    
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/af/",
   "eventNotifs": [
     {
       "event": "PERF_DATA",

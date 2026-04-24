@@ -100,12 +100,8 @@
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
       ],
       "nfInstanceIds": [
-        "upf-uuid-001",
-        "af-uuid-001"
       ],
       "nfTypes": [
-        "UPF",
-        "AF"
       ],
       "networkArea": {
         "gRanNodeIds": [
@@ -502,12 +498,10 @@
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
       ],
       "nfInstanceIds": [
-        "upf-uuid-001",
-        "af-uuid-001"
+        "upf-uuid-001"
       ],
       "nfTypes": [
-        "UPF",
-        "AF"
+        "UPF"
       ],
       "networkArea": {
         "gRanNodeIds": [
