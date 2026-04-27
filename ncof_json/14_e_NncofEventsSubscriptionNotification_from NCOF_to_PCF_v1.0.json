@@ -55,15 +55,7 @@
                   "dnn": "6g-i2p.etri.re.kr",
                   "fDescs": [
                     {
-                      "ipTrafficFilter": "192.168.1.10:8080 -> 192.168.1.100:80",
-                      "ethTrafficFilter": {
-                        "ethType": "0800",
-                        "sourceMacAdddr": "aa:bb:cc:dd:ee:01",
-                        "destMacAdddr": "aa:bb:cc:dd:ee:02",
-                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:01",
-                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:02",
-                        "fDir": "BIDIRECTIONAL"
-                      }
+                      "ipTrafficFilter": "permit ip from 192.168.1.11 8080 to 192.168.1.21 80"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -108,15 +100,7 @@
                   "dnn": "6g-i2p.etri.re.kr",
                   "fDescs": [
                     {
-                      "ipTrafficFilter": "192.168.1.11:8080 -> 192.168.1.101:80",
-                      "ethTrafficFilter": {
-                        "ethType": "0800",
-                        "sourceMacAdddr": "aa:bb:cc:dd:ee:03",
-                        "destMacAdddr": "aa:bb:cc:dd:ee:04",
-                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:03",
-                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:04",
-                        "fDir": "BIDIRECTIONAL"
-                      }
+                      "ipTrafficFilter": "permit ip from 192.168.1.12 8080 to 192.168.1.22 80"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -157,15 +141,7 @@
                   "dnn": "6g-i2p.etri.re.kr",
                   "fDescs": [
                     {
-                      "ipTrafficFilter": "192.168.1.12:8080 -> 192.168.1.102:80",
-                      "ethTrafficFilter": {
-                        "ethType": "0800",
-                        "sourceMacAdddr": "aa:bb:cc:dd:ee:05",
-                        "destMacAdddr": "aa:bb:cc:dd:ee:06",
-                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:05",
-                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:06",
-                        "fDir": "BIDIRECTIONAL"
-                      }
+                      "ipTrafficFilter": "permit ip from 192.168.1.13 8080 to 192.168.1.23 80"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
@@ -210,15 +186,7 @@
                   "dnn": "6g-i2p.etri.re.kr",
                   "fDescs": [
                     {
-                      "ipTrafficFilter": "192.168.1.13:8080 -> 192.168.1.103:80",
-                      "ethTrafficFilter": {
-                        "ethType": "0800",
-                        "sourceMacAdddr": "aa:bb:cc:dd:ee:07",
-                        "destMacAdddr": "aa:bb:cc:dd:ee:08",
-                        "srcMacAdddrEnd": "aa:bb:cc:dd:ee:07",
-                        "destMacAdddrEnd": "aa:bb:cc:dd:ee:08",
-                        "fDir": "BIDIRECTIONAL"
-                      }
+                      "ipTrafficFilter": "permit ip from 192.168.1.14 8080 to 192.168.1.24 80"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",

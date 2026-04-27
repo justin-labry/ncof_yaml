@@ -11,8 +11,16 @@
           "gpsi": "msisdn-001010000000001",
           "supi": "imsi-001010000000001",
           "ueAddr": {
-            "ipv4Addr": "192.168.1.10"
+            "ipv4Addr": "192.168.1.11"
           },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.11 8080 to 192.168.1.21 80",
+              "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
+            ],
+            "tosTC": "0x00"
+          },          
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "dnais": [
             "dnai-ue1-gnb1-001"
@@ -27,52 +35,22 @@
         },
         {
           "timeStamp": "2026-03-01T12:01:00+09:00",
-          "gpsi": "msisdn-001010000000002",
-          "supi": "imsi-001010000000002",
-          "ueAddr": {
-            "ipv4Addr": "192.168.1.11"
-          },
-          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-          "dnais": [
-            "dnai-ue1-non3gpp-001"
-          ],
-          "appDur": 60,
-          "dataUsage": {
-            "duration": 60,
-            "totalVolume": 12000000000,
-            "downlinkVolume": 9000000000,
-            "uplinkVolume": 3000000000
-          }
-        },
-        {
-          "timeStamp": "2026-03-01T12:01:00+09:00",
           "gpsi": "msisdn-001010000000003",
           "supi": "imsi-001010000000003",
           "ueAddr": {
-            "ipv4Addr": "192.168.1.12"
+            "ipv4Addr": "192.168.1.13"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10002,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.13 8080 to 192.168.1.23 80",
+              "permit ip from 192.168.1.23 80 to 192.168.1.13 8080"
+            ],
+            "tosTC": "0x00"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
           "dnais": [
             "dnai-ue2-gnb2-001"
-          ],
-          "appDur": 60,
-          "dataUsage": {
-            "duration": 60,
-            "totalVolume": 12000000000,
-            "downlinkVolume": 9000000000,
-            "uplinkVolume": 3000000000
-          }
-        },
-        {
-          "timeStamp": "2026-03-01T12:01:00+09:00",
-          "gpsi": "msisdn-001010000000004",
-          "supi": "imsi-001010000000004",
-          "ueAddr": {
-            "ipv4Addr": "192.168.1.13"
-          },
-          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
-          "dnais": [
-            "dnai-ue2-non3gpp-001"
           ],
           "appDur": 60,
           "dataUsage": {

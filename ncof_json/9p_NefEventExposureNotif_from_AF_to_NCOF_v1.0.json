@@ -1,22 +1,22 @@
 {
   "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
-  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ricf/",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/af/",
   "eventNotifs": [
     {
       "event": "PERF_DATA",
-      "timestamp": "2026-03-01T12:01:00+09:00",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
       "perfDataInfos": [
         {
           "timeStamp": "2026-03-01T12:01:00+09:00",
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "ueIpAddr": {
-            "ipv4Addr": "192.168.1.10"
+            "ipv4Addr": "192.168.1.11"
           },
           "ipTrafficFilter": {
             "flowId": 10001,
             "flowDescriptions": [
-              "192.168.1.10:8080 -> 192.168.1.100:80",
-              "192.168.1.100:80 -> 192.168.1.10:8080"
+              "permit ip from 192.168.1.11 8080 to 192.168.1.21 80",
+              "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
             ],
             "tosTC": "0x00"
           },
@@ -25,7 +25,7 @@
           ],
           "asAddr": {
             "ipAddr": {
-              "ipv4Addr": "192.168.1.100"
+              "ipv4Addr": "192.168.1.21"
             },
             "fqdn": "app-server-1.6g-i2p.etri.re.kr"
           },
@@ -38,12 +38,12 @@
             "plrDl": 1,
             "maxPlrUl": 3,
             "maxPlrDl": 3,
-            "thrputUl": "50Mbps",
-            "maxThrputUl": "100Mbps",
-            "minThrputUl": "100Mbps",
-            "thrputDl": "150Mps",
-            "maxThrputDl": "300Mbps",
-            "minThrputDl": "300Mbps",
+            "thrputUl": "50 Mbps",
+            "maxThrputUl": "100 Mbps",
+            "minThrputUl": "100 Mbps",
+            "thrputDl": "150 Mbps",
+            "maxThrputDl": "300 Mbps",
+            "minThrputDl": "300 Mbps",
             "_minRtt": 5,
             "_maxRtt": 20,
             "_delayUl": 5,
@@ -56,13 +56,13 @@
           "timeStamp": "2026-03-01T12:01:00+09:00",
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
           "ueIpAddr": {
-            "ipv4Addr": "192.168.1.12"
+            "ipv4Addr": "192.168.1.13"
           },
           "ipTrafficFilter": {
-            "flowId": 10003,
+            "flowId": 10002,
             "flowDescriptions": [
-              "192.168.1.12:8080 -> 192.168.1.102:80",
-              "192.168.1.102:80 -> 192.168.1.12:8080"
+              "permit ip from 192.168.1.13 8080 to 192.168.1.102 80",
+              "permit ip from 192.168.1.102 80 to 192.168.1.13 8080"
             ],
             "tosTC": "0x00"
           },
@@ -71,9 +71,9 @@
           ],
           "asAddr": {
             "ipAddr": {
-              "ipv4Addr": "192.168.1.102"
+              "ipv4Addr": "192.168.1.23"
             },
-            "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+            "fqdn": "app-server-3.6g-i2p.etri.re.kr"
           },
           "perfData": {
             "pdb": 10,
@@ -84,12 +84,12 @@
             "plrDl": 1,
             "maxPlrUl": 3,
             "maxPlrDl": 3,
-            "thrputUl": "50Mbps",
-            "maxThrputUl": "100Mbps",
-            "minThrputUl": "100Mbps",
-            "thrputDl": "150Mps",
-            "maxThrputDl": "300Mbps",
-            "minThrputDl": "300Mbps",
+            "thrputUl": "50 Mbps",
+            "maxThrputUl": "100 Mbps",
+            "minThrputUl": "100 Mbps",
+            "thrputDl": "150 Mbps",
+            "maxThrputDl": "300 Mbps",
+            "minThrputDl": "300 Mbps",
             "_minRtt": 5,
             "_maxRtt": 20,
             "_delayUl": 5,

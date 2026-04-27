@@ -7,7 +7,7 @@
       "eventType": "QOS_MONITORING",
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
-      "ueIpv4Addr": "192.168.1.10",
+      "ueIpv4Addr": "192.168.1.11",
       "ueMacAddr": "aa-bb-cc-dd-ee-01",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
@@ -42,7 +42,7 @@
       "eventType": "QOS_MONITORING",
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
-      "ueIpv4Addr": "192.168.1.11",
+      "ueIpv4Addr": "192.168.1.12",
       "ueMacAddr": "aa-bb-cc-dd-ee-02",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
@@ -78,7 +78,7 @@
       "eventType": "QOS_MONITORING",
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
-      "ueIpv4Addr": "192.168.1.12",
+      "ueIpv4Addr": "192.168.1.13",
       "ueMacAddr": "aa-bb-cc-dd-ee-03",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
@@ -114,7 +114,7 @@
       "eventType": "QOS_MONITORING",
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
-      "ueIpv4Addr": "192.168.1.13",
+      "ueIpv4Addr": "192.168.1.14",
       "ueMacAddr": "aa-bb-cc-dd-ee-04",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
@@ -157,6 +157,7 @@
       "userDataUsageMeasurements": [
         {
           "flowInfo": {
+            "flowDescription": "permit in 6 from 192.168.1.21/32 8080 to 192.168.1.11/32 80",
             "packFiltId": "filter-001-ul"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -173,6 +174,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit out 6 from 192.168.1.11/32 80 to 192.168.1.21/32 8080",
             "packFiltId": "filter-001-dl"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -189,6 +191,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit in 6 from 192.168.1.22/32 8080 to 192.168.1.12/32 80",
             "packFiltId": "filter-002-ul"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -205,6 +208,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit out 6 from 192.168.1.12/32 80 to 192.168.1.22/32 8080",
             "packFiltId": "filter-002-dl"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -221,6 +225,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit in 6 from 192.168.1.23/32 8080 to 192.168.1.13/32 80",
             "packFiltId": "filter-003-ul"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
@@ -237,6 +242,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit out 6 from 192.168.1.13/32 80 to 192.168.1.23/32 8080",
             "packFiltId": "filter-003-dl"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
@@ -253,6 +259,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit in 6 from 192.168.1.24/32 8080 to 192.168.1.14/32 80",
             "packFiltId": "filter-004-ul"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
@@ -269,6 +276,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit out 6 from 192.168.1.14/32 80 to 192.168.1.24/32 8080",
             "packFiltId": "filter-004-dl"
           },
           "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",

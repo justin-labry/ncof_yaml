@@ -1,0 +1,50 @@
+{
+  "correlationId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "eventNotifyUri": "https://6g-i2p.etri.re.kr/poc2/upf/",
+  "achievedSampRatio": 100,
+  "notificationItems": [
+    {
+      "eventType": "USER_DATA_USAGE_MEASURES",
+      "timeStamp": "2026-03-01T12:01:00+09:00",
+      "startTime": "2026-03-01T12:01:00+09:00",
+      "dnn": "6g-i2p.etri.re.kr",
+      "skippedReportInfo": [
+        "SKIP_OUTSIDE_VALIDITY_TIME"
+      ],
+      "userDataUsageMeasurements": [
+        {
+          "flowInfo": {
+            "flowDescription": "permit in ip from any to any",
+            "packFiltId": "filter-005-ul"
+          },
+          "volumeMeasurement": {
+            "ulVolume": "3 GB",
+            "ulNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "ulAverageThroughput": "50 Mbps",
+            "ulPeakThroughput": "100 Mbps",
+            "ulAveragePacketThroughput": "50 kpps",
+            "ulPeakPacketThroughput": "100 kpps"
+          }
+        },
+        {
+          "flowInfo": {
+            "flowDescription": "permit in ip from any to any",
+            "packFiltId": "filter-005-dl"
+          },
+          "volumeMeasurement": {
+            "dlVolume": "9 GB",
+            "dlNbOfPackets": 6000
+          },
+          "throughputStatisticsMeasurement": {
+            "dlAverageThroughput": "150 Mbps",
+            "dlPeakThroughput": "300 Mbps",
+            "dlAveragePacketThroughput": "500 kpps",
+            "dlPeakPacketThroughput": "300 kpps"
+          }
+        }        
+      ]
+    }
+  ]
+}

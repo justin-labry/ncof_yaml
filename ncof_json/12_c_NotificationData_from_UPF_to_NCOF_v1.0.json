@@ -14,6 +14,7 @@
       "userDataUsageMeasurements": [
         {
           "flowInfo": {
+            "flowDescription": "permit in ip from any to any",
             "packFiltId": "filter-005-ul"
           },
           "volumeMeasurement": {
@@ -29,6 +30,7 @@
         },
         {
           "flowInfo": {
+            "flowDescription": "permit in ip from any to any",
             "packFiltId": "filter-005-dl"
           },
           "volumeMeasurement": {

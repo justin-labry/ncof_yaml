@@ -98,8 +98,6 @@
               "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
               "packFiltId": "filter-001-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-001",
               "flowDirection": "DOWNLINK"
             }
           ],

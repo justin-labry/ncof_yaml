@@ -98,12 +98,12 @@
             "_supi": "imsi-001010000000001",
             "_gpsi": "msisdn-001010000000001",
             "_ueIpAddr": {
-              "ipv4Addr": "192.168.1.10"
+              "ipv4Addr": "192.168.1.11"
             },
             "_nodeAddrs": [
               {
                 "ipAddr": {
-                  "ipv4Addr": "10.0.1.1"
+                  "ipv4Addr": "192.168.1.11"
                 },
                 "fqdn": "gnb-001.6g-i2p.etri.re.kr"
               }
@@ -159,7 +159,7 @@
             "_nodeAddrs": [
               {
                 "ipAddr": {
-                  "ipv4Addr": "10.0.1.2"
+                  "ipv4Addr": "192.168.1.22"
                 },
                 "fqdn": "gnb-002.6g-i2p.etri.re.kr"
               }
@@ -216,7 +216,7 @@
             "_nodeAddrs": [
               {
                 "ipAddr": {
-                  "ipv4Addr": "10.0.1.1"
+                  "ipv4Addr": "192.168.1.11"
                 },
                 "fqdn": "gnb-001.6g-i2p.etri.re.kr"
               }
@@ -259,7 +259,7 @@
             "_nodeAddrs": [
               {
                 "ipAddr": {
-                  "ipv4Addr": "10.0.1.2"
+                  "ipv4Addr": "192.168.1.12"
                 },
                 "fqdn": "gnb-002.6g-i2p.etri.re.kr"
               }
