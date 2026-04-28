@@ -20,4 +20,13 @@ java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
   -i /home/labry/git/ncof_yaml/TS29591_Nnef_EventExposure_PoC_ETRI_DoDo1.yaml \
   -g python-fastapi -o /home/labry/git/ncof_generated/nnef --package-name nnef
 
-Domain YAML들(TS29571_CommonData, SupplementaryData 등)은 $ref로 자동 참조되므로 별도 실행 불필요합니다.  
+Domain YAML들(TS29571_CommonData, SupplementaryData 등)은 $ref로 자동 참조되므로 별도 실행 불필요합니다.
+
+# Callback Receiver (소비자 측 server stub)
+OpenAPI Generator는 OpenAPI `callbacks:` 섹션에 대해 server stub을 생성하지 않으므로,
+콜백을 받는 NF(예: Nncof의 경우 PCF/RICF)가 구현해야 할 endpoint를 별도 spec으로 작성하여 생성합니다.
+
+# Nncof Callback Receiver (PCF/RICF가 구현)
+java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
+  -i /home/labry/git/ncof_yaml/callbacks/Nncof_EventsSubscriptionNotification_Callback_PoC_ETRI_DoDo1.yaml \
+  -g python-fastapi -o /home/labry/git/ncof_generated/nncof_cb --package-name nncof_cb
