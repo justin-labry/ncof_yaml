@@ -21,15 +21,14 @@
           "dataStatProps": [
             "NO_OUTLIERS",
             "NO_OUTLIERS",
-            "NO_OUTLIERS",
             "NO_OUTLIERS"
           ],
           "strategy": "GRADIENT",
           "_optScore": 1.0,
           "nfIds": [
-            "smf-uuid-001",
             "upf-uuid-001",
-            "af-uuid-001"
+            "af-uuid-001",
+            "ricf-uuid-001"
           ]
         },
         "pauseInd": false,
