@@ -12,12 +12,20 @@
           "ueIpAddr": {
             "ipv4Addr": "192.168.1.11"
           },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.11 8080 to 192.168.1.21 80",
+              "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
+            ],
+            "tosTC": "0x00"
+          },          
           "appLocs": [
             "dnai-ue1-gnb1-001"
           ],
           "asAddr": {
             "ipAddr": {
-              "ipv4Addr": "192.168.1.100"
+              "ipv4Addr": "192.168.1.21"
             },
             "fqdn": "app-server-1.6g-i2p.etri.re.kr"
           },
@@ -53,8 +61,8 @@
           "ipTrafficFilter": {
             "flowId": 10002,
             "flowDescriptions": [
-              "192.168.1.11:8080 -> 192.168.1.101:80",
-              "192.168.1.101:80 -> 192.168.1.11:8080"
+              "permit ip from 192.168.1.12 8080 to 192.168.1.22 80",
+              "permit ip from 192.168.1.22 80 to 192.168.1.12 8080"
             ],
             "tosTC": "0x00"
           },
@@ -63,7 +71,7 @@
           ],
           "asAddr": {
             "ipAddr": {
-              "ipv4Addr": "192.168.1.101"
+              "ipv4Addr": "192.168.1.22"
             },
             "fqdn": "app-server-1.6g-i2p.etri.re.kr"
           },
@@ -96,12 +104,20 @@
           "ueIpAddr": {
             "ipv4Addr": "192.168.1.13"
           },
+          "ipTrafficFilter": {
+            "flowId": 10003,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.13 8080 to 192.168.1.23 80",
+              "permit ip from 192.168.1.23 80 to 192.168.1.13 8080"
+            ],
+            "tosTC": "0x00"
+          },
           "appLocs": [
             "dnai-ue2-gnb2-001"
           ],
           "asAddr": {
             "ipAddr": {
-              "ipv4Addr": "192.168.1.102"
+              "ipv4Addr": "192.168.1.23"
             },
             "fqdn": "app-server-2.6g-i2p.etri.re.kr"
           },
@@ -134,12 +150,20 @@
           "ueIpAddr": {
             "ipv4Addr": "192.168.1.14"
           },
+          "ipTrafficFilter": {
+            "flowId": 10004,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.14 8080 to 192.168.1.24 80",
+              "permit ip from 192.168.1.24 80 to 192.168.1.14 8080"
+            ],
+            "tosTC": "0x00"
+          },          
           "appLocs": [
             "dnai-ue2-non3gpp-001"
           ],
           "asAddr": {
             "ipAddr": {
-              "ipv4Addr": "192.168.1.103"
+              "ipv4Addr": "192.168.1.24"
             },
             "fqdn": "app-server-2.6g-i2p.etri.re.kr"
           },

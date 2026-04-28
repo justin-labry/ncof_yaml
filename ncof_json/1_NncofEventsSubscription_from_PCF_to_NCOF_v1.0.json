@@ -159,7 +159,7 @@
         "upfId": "upf-001",
         "upfAddr": {
           "ipAddr": {
-            "ipv4Addr": "10.0.1.100"
+            "ipv4Addr": "192.168.1.100"
           },
           "fqdn": "upf-001.6g-i2p.etri.re.kr"
         }
@@ -411,7 +411,7 @@
         "upfId": "upf-001",
         "upfAddr": {
           "ipAddr": {
-            "ipv4Addr": "10.0.1.100"
+            "ipv4Addr": "192.168.1.100"
           },
           "fqdn": "upf-001.6g-i2p.etri.re.kr"
         }

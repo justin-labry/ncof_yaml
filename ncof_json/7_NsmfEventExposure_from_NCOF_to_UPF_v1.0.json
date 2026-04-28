@@ -1,13 +1,6 @@
 {
-  "subId": "sub-001",
   "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
   "notifUri": "https://6g-i2p.etri.re.kr/poc2/ncof/",
-  "altNotifFqdns": [
-    "ncof.6g-i2p.etri.re.kr"
-  ],
-  "altNotifIpv4Addrs": [
-    "10.0.0.100"
-  ],
   "nfId": "ncof-uuid-001",
   "notifMethod": "PERIODIC",
   "repPeriod": 60,
@@ -39,42 +32,8 @@
         "startTime": "2026-03-01T12:00:00+09:00",
         "stopTime": "2026-03-08T12:00:00+09:00"
       },
-      "tws": [
-        {
-          "startTime": "2026-03-01T12:00:00+09:00",
-          "stopTime": "2026-03-08T12:00:00+09:00"
-        }
-      ],
       "networkArea": {
         "gRanNodeIds": [
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "gNbId": {
-              "bitLength": 24,
-              "gNBValue": "000001"
-            },
-            "nid": "00000000001"
-          },
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "n3IwfId": "000001"
-          },
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "gNbId": {
-              "bitLength": 24,
-              "gNBValue": "000002"
-            }
-          },
           {
             "plmnId": {
               "mnc": "999",

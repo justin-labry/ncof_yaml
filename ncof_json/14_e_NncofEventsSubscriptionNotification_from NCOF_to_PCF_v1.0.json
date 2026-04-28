@@ -21,15 +21,14 @@
           "dataStatProps": [
             "NO_OUTLIERS",
             "NO_OUTLIERS",
-            "NO_OUTLIERS",
             "NO_OUTLIERS"
           ],
           "strategy": "GRADIENT",
           "_optScore": 1.0,
           "nfIds": [
-            "smf-uuid-001",
             "upf-uuid-001",
-            "af-uuid-001"
+            "af-uuid-001",
+            "ricf-uuid-001"
           ]
         },
         "pauseInd": false,
@@ -56,6 +55,9 @@
                   "fDescs": [
                     {
                       "ipTrafficFilter": "permit ip from 192.168.1.11 8080 to 192.168.1.21 80"
+                    },
+                    {
+                      "ipTrafficFilter": "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -101,6 +103,9 @@
                   "fDescs": [
                     {
                       "ipTrafficFilter": "permit ip from 192.168.1.12 8080 to 192.168.1.22 80"
+                    },
+                    {
+                      "ipTrafficFilter": "permit ip from 192.168.1.22 80 to 192.168.1.12 8080"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
@@ -142,6 +147,9 @@
                   "fDescs": [
                     {
                       "ipTrafficFilter": "permit ip from 192.168.1.13 8080 to 192.168.1.23 80"
+                    },
+                    {
+                      "ipTrafficFilter": "permit ip from 192.168.1.23 80 to 192.168.1.13 8080"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
@@ -187,6 +195,9 @@
                   "fDescs": [
                     {
                       "ipTrafficFilter": "permit ip from 192.168.1.14 8080 to 192.168.1.24 80"
+                    },
+                    {
+                      "ipTrafficFilter": "permit ip from 192.168.1.24 80 to 192.168.1.14 8080"
                     }
                   ],
                   "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",

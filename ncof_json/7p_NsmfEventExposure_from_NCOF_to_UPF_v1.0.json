@@ -39,42 +39,8 @@
         "startTime": "2026-03-01T12:00:00+09:00",
         "stopTime": "2026-03-08T12:00:00+09:00"
       },
-      "tws": [
-        {
-          "startTime": "2026-03-01T12:00:00+09:00",
-          "stopTime": "2026-03-08T12:00:00+09:00"
-        }
-      ],
       "networkArea": {
         "gRanNodeIds": [
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "gNbId": {
-              "bitLength": 24,
-              "gNBValue": "000001"
-            },
-            "nid": "00000000001"
-          },
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "n3IwfId": "000001"
-          },
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
-            "gNbId": {
-              "bitLength": 24,
-              "gNBValue": "000002"
-            }
-          },
           {
             "plmnId": {
               "mnc": "999",
