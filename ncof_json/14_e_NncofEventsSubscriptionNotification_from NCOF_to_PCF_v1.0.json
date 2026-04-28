@@ -37,200 +37,202 @@
         "_ctrlEventInd": true,
         "qosPolAssistInfos": [
           {
-            "qosPolAssistInfo": {
-              "tsStart": "2026-03-01T12:01:00+09:00",
-              "tsDuration": "60",
-              "_optScore": 1.0,
-              "qosPolAssistSets": [
-                {
-                  "qosPolTimeWin": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "validityPeriod": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "dnn": "6g-i2p.etri.re.kr",
-                  "fDescs": [
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.11 8080 to 192.168.1.21 80"
+            "qosPolAssistInfo": [
+              {
+                "tsStart": "2026-03-01T12:01:00+09:00",
+                "tsDuration": 60,
+                "_optScore": 1.0,
+                "qosPolAssistSets": [
+                  {
+                    "qosPolTimeWin": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
                     },
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
-                    }
-                  ],
-                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-                  "spatialValidity": {
-                    "gRanNodeIds": [
-                      {
-                        "plmnId": {
-                          "mnc": "999",
-                          "mcc": "001"
-                        },
-                        "gNbId": {
-                          "bitLength": 24,
-                          "gNBValue": "000001"
-                        },
-                        "nid": "00000000001"
-                      }
-                    ]
-                  },
-                  "ratTypes": [
-                    "NR"
-                  ],
-                  "qosParamSet": {
-                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_1",
-                    "gbrDl": "5.0Mbps",
-                    "mbrDl": "10.0Mbps"
-                  },
-                  "appDuration": 60,
-                  "predictedAvgQoe": 1.0,
-                  "predictedMaxQoe": 1.0,
-                  "predictedMinQoe": 1.0,
-                  "predictedQoeVariance": 1.0
-                },
-                {
-                  "qosPolTimeWin": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "validityPeriod": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "dnn": "6g-i2p.etri.re.kr",
-                  "fDescs": [
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.12 8080 to 192.168.1.22 80"
+                    "validityPeriod": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
                     },
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.22 80 to 192.168.1.12 8080"
-                    }
-                  ],
-                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
-                  "spatialValidity": {
-                    "gRanNodeIds": [
+                    "dnn": "6g-i2p.etri.re.kr",
+                    "fDescs": [
                       {
-                        "plmnId": {
-                          "mnc": "999",
-                          "mcc": "001"
-                        },
-                        "n3IwfId": "000001"
+                        "ipTrafficFilter": "permit ip from 192.168.1.11 8080 to 192.168.1.21 80"
+                      },
+                      {
+                        "ipTrafficFilter": "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
                       }
-                    ]
-                  },
-                  "ratTypes": [
-                    "WLAN"
-                  ],
-                  "qosParamSet": {
-                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_2",
-                    "gbrDl": "5.0Mbps",
-                    "mbrDl": "10.0Mbps"
-                  },
-                  "appDuration": 60,
-                  "predictedAvgQoe": 1.0,
-                  "predictedMaxQoe": 1.0,
-                  "predictedMinQoe": 1.0,
-                  "predictedQoeVariance": 1.0
-                },
-                {
-                  "qosPolTimeWin": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "validityPeriod": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "dnn": "6g-i2p.etri.re.kr",
-                  "fDescs": [
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.13 8080 to 192.168.1.23 80"
+                    ],
+                    "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+                    "spatialValidity": {
+                      "gRanNodeIds": [
+                        {
+                          "plmnId": {
+                            "mnc": "999",
+                            "mcc": "001"
+                          },
+                          "gNbId": {
+                            "bitLength": 24,
+                            "gNBValue": "000001"
+                          },
+                          "nid": "00000000001"
+                        }
+                      ]
                     },
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.23 80 to 192.168.1.13 8080"
-                    }
-                  ],
-                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
-                  "spatialValidity": {
-                    "gRanNodeIds": [
-                      {
-                        "plmnId": {
-                          "mnc": "999",
-                          "mcc": "001"
-                        },
-                        "gNbId": {
-                          "bitLength": 24,
-                          "gNBValue": "000002"
-                        },
-                        "nid": "00000000001"
-                      }
-                    ]
-                  },
-                  "ratTypes": [
-                    "NR"
-                  ],
-                  "qosParamSet": {
-                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_3",
-                    "gbrDl": "5.0Mbps",
-                    "mbrDl": "10.0Mbps"
-                  },
-                  "appDuration": 60,
-                  "predictedAvgQoe": 1.0,
-                  "predictedMaxQoe": 1.0,
-                  "predictedMinQoe": 1.0,
-                  "predictedQoeVariance": 1.0
-                },
-                {
-                  "qosPolTimeWin": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "validityPeriod": {
-                    "startTime": "2026-03-01T12:01:00+09:00",
-                    "stopTime": "2026-03-01T12:02:00+09:00"
-                  },
-                  "dnn": "6g-i2p.etri.re.kr",
-                  "fDescs": [
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.14 8080 to 192.168.1.24 80"
+                    "ratTypes": [
+                      "NR"
+                    ],
+                    "qosParamSet": {
+                      "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_1",
+                      "gbrDl": "5.0 Mbps",
+                      "mbrDl": "10.0 Mbps"
                     },
-                    {
-                      "ipTrafficFilter": "permit ip from 192.168.1.24 80 to 192.168.1.14 8080"
-                    }
-                  ],
-                  "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
-                  "spatialValidity": {
-                    "gRanNodeIds": [
+                    "appDuration": 60,
+                    "predictedAvgQoe": 1.0,
+                    "predictedMaxQoe": 1.0,
+                    "predictedMinQoe": 1.0,
+                    "predictedQoeVariance": 1.0
+                  },
+                  {
+                    "qosPolTimeWin": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
+                    },
+                    "validityPeriod": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
+                    },
+                    "dnn": "6g-i2p.etri.re.kr",
+                    "fDescs": [
                       {
-                        "plmnId": {
-                          "mnc": "999",
-                          "mcc": "001"
-                        },
-                        "n3IwfId": "000001"
+                        "ipTrafficFilter": "permit ip from 192.168.1.12 8080 to 192.168.1.22 80"
+                      },
+                      {
+                        "ipTrafficFilter": "permit ip from 192.168.1.22 80 to 192.168.1.12 8080"
                       }
-                    ]
+                    ],
+                    "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+                    "spatialValidity": {
+                      "gRanNodeIds": [
+                        {
+                          "plmnId": {
+                            "mnc": "999",
+                            "mcc": "001"
+                          },
+                          "n3IwfId": "000001"
+                        }
+                      ]
+                    },
+                    "ratTypes": [
+                      "WLAN"
+                    ],
+                    "qosParamSet": {
+                      "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_2",
+                      "gbrDl": "5.0 Mbps",
+                      "mbrDl": "10.0 Mbps"
+                    },
+                    "appDuration": 60,
+                    "predictedAvgQoe": 1.0,
+                    "predictedMaxQoe": 1.0,
+                    "predictedMinQoe": 1.0,
+                    "predictedQoeVariance": 1.0
                   },
-                  "ratTypes": [
-                    "WLAN"
-                  ],
-                  "qosParamSet": {
-                    "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_4",
-                    "gbrDl": "5.0Mbps",
-                    "mbrDl": "10.0Mbps"
+                  {
+                    "qosPolTimeWin": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
+                    },
+                    "validityPeriod": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
+                    },
+                    "dnn": "6g-i2p.etri.re.kr",
+                    "fDescs": [
+                      {
+                        "ipTrafficFilter": "permit ip from 192.168.1.13 8080 to 192.168.1.23 80"
+                      },
+                      {
+                        "ipTrafficFilter": "permit ip from 192.168.1.23 80 to 192.168.1.13 8080"
+                      }
+                    ],
+                    "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+                    "spatialValidity": {
+                      "gRanNodeIds": [
+                        {
+                          "plmnId": {
+                            "mnc": "999",
+                            "mcc": "001"
+                          },
+                          "gNbId": {
+                            "bitLength": 24,
+                            "gNBValue": "000002"
+                          },
+                          "nid": "00000000001"
+                        }
+                      ]
+                    },
+                    "ratTypes": [
+                      "NR"
+                    ],
+                    "qosParamSet": {
+                      "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_3",
+                      "gbrDl": "5.0 Mbps",
+                      "mbrDl": "10.0 Mbps"
+                    },
+                    "appDuration": 60,
+                    "predictedAvgQoe": 1.0,
+                    "predictedMaxQoe": 1.0,
+                    "predictedMinQoe": 1.0,
+                    "predictedQoeVariance": 1.0
                   },
-                  "appDuration": 60,
-                  "predictedAvgQoe": 1.0,
-                  "predictedMaxQoe": 1.0,
-                  "predictedMinQoe": 1.0,
-                  "predictedQoeVariance": 1.0
-                }
-              ]
-            }
+                  {
+                    "qosPolTimeWin": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
+                    },
+                    "validityPeriod": {
+                      "startTime": "2026-03-01T12:01:00+09:00",
+                      "stopTime": "2026-03-01T12:02:00+09:00"
+                    },
+                    "dnn": "6g-i2p.etri.re.kr",
+                    "fDescs": [
+                      {
+                        "ipTrafficFilter": "permit ip from 192.168.1.14 8080 to 192.168.1.24 80"
+                      },
+                      {
+                        "ipTrafficFilter": "permit ip from 192.168.1.24 80 to 192.168.1.14 8080"
+                      }
+                    ],
+                    "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
+                    "spatialValidity": {
+                      "gRanNodeIds": [
+                        {
+                          "plmnId": {
+                            "mnc": "999",
+                            "mcc": "001"
+                          },
+                          "n3IwfId": "000001"
+                        }
+                      ]
+                    },
+                    "ratTypes": [
+                      "WLAN"
+                    ],
+                    "qosParamSet": {
+                      "qosParamSetId": "QOS_PARAM_SET-2026-03-01T12:01:00+09:00_4",
+                      "gbrDl": "5.0 Mbps",
+                      "mbrDl": "10.0 Mbps"
+                    },
+                    "appDuration": 60,
+                    "predictedAvgQoe": 1.0,
+                    "predictedMaxQoe": 1.0,
+                    "predictedMinQoe": 1.0,
+                    "predictedQoeVariance": 1.0
+                  }
+                ]
+              }
+            ]
           }
         ]
-      }  
+      }
     ]
   }
 ]
