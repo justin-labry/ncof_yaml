@@ -4,7 +4,6 @@
   "eventNotifs": [
     {
       "event": "PERF_DATA",
-      "timestamp": "2026-03-01T12:01:00+09:00",
       "perfDataInfos": [
         {
           "timeStamp": "2026-03-01T12:01:00+09:00",
@@ -38,12 +37,12 @@
             "plrDl": 1,
             "maxPlrUl": 3,
             "maxPlrDl": 3,
-            "thrputUl": "50Mbps",
-            "maxThrputUl": "100Mbps",
-            "minThrputUl": "100Mbps",
-            "thrputDl": "150Mps",
-            "maxThrputDl": "300Mbps",
-            "minThrputDl": "300Mbps",
+            "thrputUl": "50 Mbps",
+            "maxThrputUl": "100 Mbps",
+            "minThrputUl": "100 Mbps",
+            "thrputDl": "150 Mbps",
+            "maxThrputDl": "300 Mbps",
+            "minThrputDl": "300 Mbps",
             "_minRtt": 5,
             "_maxRtt": 20,
             "_delayUl": 5,
@@ -84,12 +83,12 @@
             "plrDl": 1,
             "maxPlrUl": 3,
             "maxPlrDl": 3,
-            "thrputUl": "50Mbps",
-            "maxThrputUl": "100Mbps",
-            "minThrputUl": "100Mbps",
-            "thrputDl": "150Mps",
-            "maxThrputDl": "300Mbps",
-            "minThrputDl": "300Mbps",
+            "thrputUl": "50 Mbps",
+            "maxThrputUl": "100 Mbps",
+            "minThrputUl": "100 Mbps",
+            "thrputDl": "150 Mbps",
+            "maxThrputDl": "300 Mbps",
+            "minThrputDl": "300 Mbps",
             "_minRtt": 5,
             "_maxRtt": 20,
             "_delayUl": 5,
@@ -98,7 +97,8 @@
             "_jitter": 0.0
           }
         }
-      ]
+      ],
+      "timeStamp": "2026-03-01T12:01:00+09:00"
     }
   ]
 }
