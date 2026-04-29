@@ -22,6 +22,21 @@ java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
 
 Domain YAML들(TS29571_CommonData, SupplementaryData 등)은 $ref로 자동 참조되므로 별도 실행 불필요합니다.
 
+# Producer FastAPI artifact (권장: simplified spec 사용)
+openapi-generator + python-fastapi 조합에서 `oneOf`/`anyOf`/대형 integer bound 이슈를 피하기 위해,
+원본 YAML은 유지하고 `simplified/`에 생성 전용 YAML 세트를 만들어 빌드합니다.
+
+```bash
+# simplified/*.yaml 재생성
+python tools/build_simplified_specs.py
+
+# producer 4종(nncof/nupf/nnef/nsmf) artifacts 일괄 재생성
+python tools/build_producer_artifacts.py
+```
+
+`tools/build_producer_artifacts.py`는 반드시 `simplified/`를 기준으로 generator를 실행하여,
+상대 `$ref`가 원본이 아니라 simplified 공통 YAML을 참조하도록 강제합니다.
+
 # Callback Receiver (소비자 측 server stub)
 OpenAPI Generator는 OpenAPI `callbacks:` 섹션에 대해 server stub을 생성하지 않으므로,
 콜백을 받는 NF(예: Nncof의 경우 PCF/RICF)가 구현해야 할 endpoint를 별도 spec으로
