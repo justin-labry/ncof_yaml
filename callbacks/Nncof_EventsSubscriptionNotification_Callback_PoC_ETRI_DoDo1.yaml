@@ -9,23 +9,23 @@ info:
   description: |
     Callback receiver specification for the Nncof_EventsSubscription service.
 
-    This spec is consumed by NF service consumers (e.g., PCF, RICF) that subscribe
-    to NCOF events. Such consumers must implement an HTTP server that exposes the
-    endpoint defined here so that NCOF can deliver Subscription Notifications to it.
+    This spec is consumed by PCF/RICF (the NF service consumer) that subscribes
+    to NCOF events. The consumer must implement an HTTP server that exposes
+    the endpoint defined here so that NCOF can deliver notifications to it.
 
-    It is intentionally extracted from `Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml`
-    because OpenAPI Generator does not generate server stubs for the `callbacks:`
-    section of an OpenAPI document. Generating from this standalone spec yields a
-    ready-to-implement FastAPI server stub on the consumer side.
+    It is intentionally extracted from `Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml` because OpenAPI Generator does
+    not generate server stubs for the `callbacks:` section of an OpenAPI document.
+    Generating from this standalone spec yields a ready-to-implement FastAPI server
+    stub on the consumer side.
 
     Schema simplifications applied for code-generator compatibility (the original
-    Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml is unchanged):
+    `Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml` is unchanged):
       - `oneOf` constraints are dropped (validation deferred to business logic).
       - 3GPP forward-compatible enum pattern (`anyOf: [enum-string, free-string]`)
         is flattened to plain `type: string`.
       - All cross-file `$ref`s are inlined into this single document.
 
-    NCOF Event Exposure Service for 6G-I2P PoC Scenario.
+    6G-I2P ETRI-MoDuTec PoC Scenario.
 security:
 - {}
 - oAuth2ClientCredentials:

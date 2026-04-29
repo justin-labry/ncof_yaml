@@ -121,26 +121,36 @@ class CallbackSpec:
     request_min_items: int = 1
 
 
+def _description(service: str, source_file: str, consumer: str, producer: str) -> str:
+    """Compose a per-callback description with the same boilerplate."""
+    return (
+        f"Callback receiver specification for the {service} service.\n\n"
+        f"This spec is consumed by {consumer} (the NF service consumer) that subscribes\n"
+        f"to {producer} events. The consumer must implement an HTTP server that exposes\n"
+        f"the endpoint defined here so that {producer} can deliver notifications to it.\n\n"
+        f"It is intentionally extracted from `{source_file}` because OpenAPI Generator does\n"
+        f"not generate server stubs for the `callbacks:` section of an OpenAPI document.\n"
+        f"Generating from this standalone spec yields a ready-to-implement FastAPI server\n"
+        f"stub on the consumer side.\n\n"
+        f"Schema simplifications applied for code-generator compatibility (the original\n"
+        f"`{source_file}` is unchanged):\n"
+        f"  - `oneOf` constraints are dropped (validation deferred to business logic).\n"
+        f"  - 3GPP forward-compatible enum pattern (`anyOf: [enum-string, free-string]`)\n"
+        f"    is flattened to plain `type: string`.\n"
+        f"  - All cross-file `$ref`s are inlined into this single document.\n\n"
+        f"6G-I2P ETRI-MoDuTec PoC Scenario.\n"
+    )
+
+
 CALLBACKS: dict[str, CallbackSpec] = {
     "nncof": CallbackSpec(
         key="nncof",
         title="Nncof_EventsSubscriptionNotification (Callback Receiver)",
-        description=(
-            "Callback receiver specification for the Nncof_EventsSubscription service.\n\n"
-            "This spec is consumed by NF service consumers (e.g., PCF, RICF) that subscribe\n"
-            "to NCOF events. Such consumers must implement an HTTP server that exposes the\n"
-            "endpoint defined here so that NCOF can deliver Subscription Notifications to it.\n\n"
-            "It is intentionally extracted from `Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml`\n"
-            "because OpenAPI Generator does not generate server stubs for the `callbacks:`\n"
-            "section of an OpenAPI document. Generating from this standalone spec yields a\n"
-            "ready-to-implement FastAPI server stub on the consumer side.\n\n"
-            "Schema simplifications applied for code-generator compatibility (the original\n"
-            "Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml is unchanged):\n"
-            "  - `oneOf` constraints are dropped (validation deferred to business logic).\n"
-            "  - 3GPP forward-compatible enum pattern (`anyOf: [enum-string, free-string]`)\n"
-            "    is flattened to plain `type: string`.\n"
-            "  - All cross-file `$ref`s are inlined into this single document.\n\n"
-            "NCOF Event Exposure Service for 6G-I2P PoC Scenario.\n"
+        description=_description(
+            service="Nncof_EventsSubscription",
+            source_file="Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml",
+            consumer="PCF/RICF",
+            producer="NCOF",
         ),
         output_filename="Nncof_EventsSubscriptionNotification_Callback_PoC_ETRI_DoDo1.yaml",
         root_file="Nncof_EventsSubscription_PoC_ETRI_DoDo1.yaml",
@@ -153,10 +163,63 @@ CALLBACKS: dict[str, CallbackSpec] = {
         request_is_array=True,
         request_min_items=1,
     ),
-    # Future:
-    #   "nupf": CallbackSpec(...),
-    #   "nnef": CallbackSpec(...),
-    #   "nsmf": CallbackSpec(...),
+    "nupf": CallbackSpec(
+        key="nupf",
+        title="Nupf_EventExposure Notification (Callback Receiver)",
+        description=_description(
+            service="Nupf_EventExposure",
+            source_file="TS29564_Nupf_EventExposure_PoC_ETRI_DoDo1.yaml",
+            consumer="NCOF",
+            producer="UPF",
+        ),
+        output_filename="Nupf_EventExposure_Notification_Callback_PoC_ETRI_DoDo1.yaml",
+        root_file="TS29564_Nupf_EventExposure_PoC_ETRI_DoDo1.yaml",
+        root_schema="ExtNotificationData",
+        callback_path="/notifications",
+        operation_id="ReceiveUpfEventNotification",
+        tag="UPF Event Exposure Notification (Callback Receiver)",
+        auth_scope="nupf-ee",
+        auth_scope_description="Access to the Nupf_EventExposure API",
+        request_is_array=False,
+    ),
+    "nnef": CallbackSpec(
+        key="nnef",
+        title="Nnef_EventExposure Notification (Callback Receiver)",
+        description=_description(
+            service="Nnef_EventExposure",
+            source_file="TS29591_Nnef_EventExposure_PoC_ETRI_DoDo1.yaml",
+            consumer="NCOF",
+            producer="AF/RICF (acting as NEF in this PoC)",
+        ),
+        output_filename="Nnef_EventExposure_Notification_Callback_PoC_ETRI_DoDo1.yaml",
+        root_file="TS29591_Nnef_EventExposure_PoC_ETRI_DoDo1.yaml",
+        root_schema="NefEventExposureNotif",
+        callback_path="/notifications",
+        operation_id="ReceiveNefEventExposureNotif",
+        tag="NEF Event Exposure Notification (Callback Receiver)",
+        auth_scope="nnef-eventexposure",
+        auth_scope_description="Access to the Nnef_EventExposure API",
+        request_is_array=False,
+    ),
+    "nsmf": CallbackSpec(
+        key="nsmf",
+        title="Nsmf_EventExposure Notification (Callback Receiver)",
+        description=_description(
+            service="Nsmf_EventExposure",
+            source_file="TS29508_Nsmf_EventExposure_PoC_ETRI_DoDo1.yaml",
+            consumer="NCOF",
+            producer="SMF",
+        ),
+        output_filename="Nsmf_EventExposure_Notification_Callback_PoC_ETRI_DoDo1.yaml",
+        root_file="TS29508_Nsmf_EventExposure_PoC_ETRI_DoDo1.yaml",
+        root_schema="NsmfEventExposureNotification",
+        callback_path="/notifications",
+        operation_id="ReceiveNsmfEventExposureNotification",
+        tag="SMF Event Exposure Notification (Callback Receiver)",
+        auth_scope="nsmf-event-exposure",
+        auth_scope_description="Access to the Nsmf_EventExposure API",
+        request_is_array=False,
+    ),
 }
 
 
@@ -202,12 +265,49 @@ def _is_forward_compat_enum(node: dict) -> bool:
     )
 
 
+# Sibling keys that, together with `oneOf`, mean the schema is more than just a
+# polymorphic union (i.e. it has its own properties). When any of these is
+# present, we keep the siblings and drop only `oneOf`. When none is present, the
+# schema is a pure polymorphic union and we collapse it to its first branch.
+_SCHEMA_SHAPE_KEYS = ("type", "properties", "$ref", "allOf", "items", "enum")
+
+# pydantic v2 represents integer bounds as a signed 64-bit value internally; an
+# OpenAPI `maximum`/`minimum` outside this range silently wraps and produces
+# nonsensical validation errors (e.g. "Input should be <= -1" for a Uint64
+# whose maximum is 2^64-1). The 3GPP common data uses Uint64 for byte/packet
+# counters, so we drop bounds that fall outside the signed-int64 range. The
+# generated model still rejects negatives via `minimum: 0`.
+_INT64_MAX = 2**63 - 1
+_INT64_MIN = -(2**63)
+
+
+def _drop_overlarge_int_bounds(node: dict) -> dict:
+    if node.get("type") != "integer":
+        return node
+    if "maximum" in node and node["maximum"] > _INT64_MAX:
+        node = {k: v for k, v in node.items() if k != "maximum"}
+    if "minimum" in node and node["minimum"] < _INT64_MIN:
+        node = {k: v for k, v in node.items() if k != "minimum"}
+    return node
+
+
 def simplify(node: Any) -> Any:
     """Recursively simplify a schema for code-generator compatibility.
 
     See module docstring for which transformations are applied and why.
+    Two `oneOf` cases are handled:
+      - properties + oneOf  -> drop `oneOf`, keep properties (validation
+        deferred to business logic).
+      - `oneOf` is the only shape-defining key (a pure polymorphic union)
+        -> collapse to the first branch. The PoC always sends a single
+        notification per request, so the first branch (typically the
+        single-object form) is the right one.
     """
     if isinstance(node, dict):
+        if "oneOf" in node and not any(k in node for k in _SCHEMA_SHAPE_KEYS):
+            branches = node["oneOf"]
+            if isinstance(branches, list) and branches:
+                return simplify(branches[0])
         if "oneOf" in node:
             node = {k: v for k, v in node.items() if k != "oneOf"}
         if _is_forward_compat_enum(node):
@@ -215,6 +315,7 @@ def simplify(node: Any) -> Any:
             if "description" in node:
                 simplified["description"] = node["description"]
             return simplified
+        node = _drop_overlarge_int_bounds(node)
         return {k: simplify(v) for k, v in node.items()}
     if isinstance(node, list):
         return [simplify(x) for x in node]

@@ -38,3 +38,18 @@ python tools/build_callbacks.py nncof      # 특정 NF만
 java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
   -i /home/labry/git/ncof_yaml/callbacks/Nncof_EventsSubscriptionNotification_Callback_PoC_ETRI_DoDo1.yaml \
   -g python-fastapi -o /home/labry/git/ncof_generated/nncof_cb --package-name nncof_cb
+
+# Nupf Callback Receiver (NCOF가 구현)
+java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
+  -i /home/labry/git/ncof_yaml/callbacks/Nupf_EventExposure_Notification_Callback_PoC_ETRI_DoDo1.yaml \
+  -g python-fastapi -o /home/labry/git/ncof_generated/nupf_cb --package-name nupf_cb
+
+# Nnef Callback Receiver (NCOF가 구현)
+java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
+  -i /home/labry/git/ncof_yaml/callbacks/Nnef_EventExposure_Notification_Callback_PoC_ETRI_DoDo1.yaml \
+  -g python-fastapi -o /home/labry/git/ncof_generated/nnef_cb --package-name nnef_cb
+
+# Nsmf Callback Receiver (NCOF가 구현)
+java -jar /home/labry/openapi-tools/openapi-generator-cli-7.13.0.jar generate \
+  -i /home/labry/git/ncof_yaml/callbacks/Nsmf_EventExposure_Notification_Callback_PoC_ETRI_DoDo1.yaml \
+  -g python-fastapi -o /home/labry/git/ncof_generated/nsmf_cb --package-name nsmf_cb
