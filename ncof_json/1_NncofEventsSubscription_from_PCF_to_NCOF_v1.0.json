@@ -99,10 +99,6 @@
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-2",
         "https://6g-i2p.etri.re.kr/poc2/app-server/client-2"
       ],
-      "nfInstanceIds": [
-      ],
-      "nfTypes": [
-      ],
       "networkArea": {
         "gRanNodeIds": [
           {

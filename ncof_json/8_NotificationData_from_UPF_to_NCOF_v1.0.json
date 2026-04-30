@@ -8,7 +8,6 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.11",
-      "ueMacAddr": "aa-bb-cc-dd-ee-01",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
         "sst": 1,
@@ -43,7 +42,6 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.12",
-      "ueMacAddr": "aa-bb-cc-dd-ee-02",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
         "sst": 1,
@@ -79,7 +77,6 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.13",
-      "ueMacAddr": "aa-bb-cc-dd-ee-03",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
         "sst": 1,
@@ -115,7 +112,6 @@
       "timeStamp": "2026-03-01T12:01:00+09:00",
       "startTime": "2026-03-01T12:01:00+09:00",
       "ueIpv4Addr": "192.168.1.14",
-      "ueMacAddr": "aa-bb-cc-dd-ee-04",
       "dnn": "6g-i2p.etri.re.kr",
       "snssai": {
         "sst": 1,

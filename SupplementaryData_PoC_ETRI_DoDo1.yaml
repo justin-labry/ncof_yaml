@@ -655,6 +655,7 @@ components:
             - EIF
             - AIOTF
             - ADM
+            - RICF
         - type: string
         
     ServiceName:
