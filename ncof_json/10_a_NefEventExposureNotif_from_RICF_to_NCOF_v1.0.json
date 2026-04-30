@@ -1,0 +1,104 @@
+{
+  "notifId": "NOTIFICATION_2026-03-01T12:00:00+09:00_1",
+  "notifUri": "https://6g-i2p.etri.re.kr/poc2/ricf/",
+  "eventNotifs": [
+    {
+      "event": "PERF_DATA",
+      "perfDataInfos": [
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.11"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10001,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.11 8080 to 192.168.1.21 80",
+              "permit ip from 192.168.1.21 80 to 192.168.1.11 8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "appLocs": [
+            "dnai-ue1-gnb1-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.21"
+            },
+            "fqdn": "app-server-1.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50 Mbps",
+            "maxThrputUl": "100 Mbps",
+            "minThrputUl": "100 Mbps",
+            "thrputDl": "150 Mbps",
+            "maxThrputDl": "300 Mbps",
+            "minThrputDl": "300 Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        },
+        {
+          "timeStamp": "2026-03-01T12:01:00+09:00",
+          "appId": "https://6g-i2p.etri.re.kr/poc2/app-server/client-1",
+          "ueIpAddr": {
+            "ipv4Addr": "192.168.1.13"
+          },
+          "ipTrafficFilter": {
+            "flowId": 10003,
+            "flowDescriptions": [
+              "permit ip from 192.168.1.13 8080 to 192.168.1.23 80",
+              "permit ip from 192.168.1.23 80 to 192.168.1.13 8080"
+            ],
+            "tosTC": "0x00"
+          },
+          "appLocs": [
+            "dnai-ue2-gnb2-001"
+          ],
+          "asAddr": {
+            "ipAddr": {
+              "ipv4Addr": "192.168.1.23"
+            },
+            "fqdn": "app-server-2.6g-i2p.etri.re.kr"
+          },
+          "perfData": {
+            "pdb": 10,
+            "pdbDl": 5,
+            "maxPdbUl": 10,
+            "maxPdbDl": 10,
+            "plr": 2,
+            "plrDl": 1,
+            "maxPlrUl": 3,
+            "maxPlrDl": 3,
+            "thrputUl": "50 Mbps",
+            "maxThrputUl": "100 Mbps",
+            "minThrputUl": "100 Mbps",
+            "thrputDl": "150 Mbps",
+            "maxThrputDl": "300 Mbps",
+            "minThrputDl": "300 Mbps",
+            "_minRtt": 5,
+            "_maxRtt": 20,
+            "_delayUl": 5,
+            "_minDelayUl": 2,
+            "_minDelayDl": 2,
+            "_jitter": 0.0
+          }
+        }
+      ],
+      "timeStamp": "2026-03-01T12:01:00+09:00"
+    }
+  ]
+}

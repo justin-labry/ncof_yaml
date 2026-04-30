@@ -50,13 +50,6 @@
               "mnc": "999",
               "mcc": "001"
             },
-            "n3IwfId": "000001"
-          },
-          {
-            "plmnId": {
-              "mnc": "999",
-              "mcc": "001"
-            },
             "gNbId": {
               "bitLength": 24,
               "gNBValue": "000002"
@@ -80,7 +73,7 @@
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.21/32 80 to 192.168.1.11/32 8080",
               "packFiltId": "filter-001-dl",
               "packetFilterUsage": false,
               "flowDirection": "DOWNLINK"
@@ -122,16 +115,12 @@
               "flowDescription": "permit in 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
               "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.23/32 80 to 192.168.1.13/32 8080",
               "packFiltId": "filter-003-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "DOWNLINK"
             }
           ],
@@ -177,8 +166,6 @@
               "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
               "packFiltId": "filter-001-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-001",
               "flowDirection": "UPLINK"
             },
             {
@@ -193,16 +180,12 @@
               "flowDescription": "permit in 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
               "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "UPLINK"
             },
             {
               "flowDescription": "permit out 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
               "packFiltId": "filter-003-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "DOWNLINK"
             }
           ],

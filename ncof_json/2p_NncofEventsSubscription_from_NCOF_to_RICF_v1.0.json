@@ -13,34 +13,31 @@
   "suppFeat": "FF",
   "eventsSubs": [
     {
-      "event": "_CELL_POWER_CTRL",
+      "event": "_POWER_ENERGY_CONSUMPTION",
       "eventFilter": {
-        "tgtUe": {
-          "anyUe": true
-        },
         "locArea": {
           "gRanNodeIds": [
             {
               "plmnId": {
                 "mnc": "999",
-                "mcc": "001"
+                "mcc": "01"
               },
               "gNbId": {
                 "bitLength": 24,
                 "gNBValue": "000001"
               },
-              "nid": "00000000001"
+              "nid": "000000001"
             },
             {
               "plmnId": {
                 "mnc": "999",
-                "mcc": "001"
+                "mcc": "01"
               },
               "gNbId": {
                 "bitLength": 24,
                 "gNBValue": "000002"
               },
-              "nid": "00000000001"
+              "nid": "000000001"
             }
           ]
         }

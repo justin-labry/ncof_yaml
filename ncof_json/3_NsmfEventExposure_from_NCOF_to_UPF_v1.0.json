@@ -84,16 +84,12 @@
               "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
               "packFiltId": "filter-001-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-001",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.21/32 80 to 192.168.1.11/32 8080",
               "packFiltId": "filter-001-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-001",
               "flowDirection": "DOWNLINK"
             }
           ],
@@ -133,16 +129,12 @@
               "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.22/32 80",
               "packFiltId": "filter-002-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.21/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.22/32 80 to 192.168.1.12/32 8080",
               "packFiltId": "filter-002-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
               "flowDirection": "DOWNLINK"
             }
           ],
@@ -182,16 +174,13 @@
               "flowDescription": "permit in 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
               "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.23/32 80 to 192.168.1.13/32 8080",
               "packFiltId": "filter-003-dl",
               "packetFilterUsage": false,
               "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "DOWNLINK"
             }
           ],
@@ -231,16 +220,12 @@
               "flowDescription": "permit in 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
               "packFiltId": "filter-004-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.24/32 80 to 192.168.1.14/32 8080",
               "packFiltId": "filter-004-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
               "flowDirection": "DOWNLINK"
             }
           ],
@@ -288,64 +273,48 @@
               "flowDescription": "permit in 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
               "packFiltId": "filter-001-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-001",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.11/32 8080 to 192.168.1.21/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.21/32 80 to 192.168.1.11/32 8080",
               "packFiltId": "filter-001-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-001",
               "flowDirection": "DOWNLINK"
             },
             {
               "flowDescription": "permit in 6 from 192.168.1.12/32 8080 to 192.168.1.22/32 80",
               "packFiltId": "filter-002-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.12/32 8080 to 192.168.1.22/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.22/32 80 to 192.168.1.12/32 8080",
               "packFiltId": "filter-002-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-002",
               "flowDirection": "DOWNLINK"
             },
             {
               "flowDescription": "permit in 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
               "packFiltId": "filter-003-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.13/32 8080 to 192.168.1.23/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.23/32 80 to 192.168.1.13/32 8080",
               "packFiltId": "filter-003-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-003",
               "flowDirection": "DOWNLINK"
             },
             {
               "flowDescription": "permit in 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
               "packFiltId": "filter-004-ul",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
               "flowDirection": "UPLINK"
             },
             {
-              "flowDescription": "permit out 6 from 192.168.1.14/32 8080 to 192.168.1.24/32 80",
+              "flowDescription": "permit out 6 from 192.168.1.24/32 80 to 192.168.1.14/32 8080",
               "packFiltId": "filter-004-dl",
               "packetFilterUsage": false,
-              "tosTrafficClass": "0x00",
-              "spi": "spi-004",
               "flowDirection": "DOWNLINK"
             }
           ],

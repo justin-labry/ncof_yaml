@@ -23,15 +23,6 @@
           ],
           "_loc": {
             "nrLocation": {
-              "ncgi": {
-                "plmnId": {
-                  "mnc": "999",
-                  "mcc": "001"
-                },
-                "nrCellId": "cell-001",
-                "nid": "00000000001"
-              },
-              "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
@@ -136,15 +127,6 @@
           ],
           "_loc": {
             "nrLocation": {
-              "ncgi": {
-                "plmnId": {
-                  "mnc": "999",
-                  "mcc": "001"
-                },
-                "nrCellId": "cell-001",
-                "nid": "00000000001"
-              },
-              "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
@@ -179,15 +161,6 @@
           ],
           "_loc": {
             "nrLocation": {
-              "ncgi": {
-                "plmnId": {
-                  "mnc": "999",
-                  "mcc": "001"
-                },
-                "nrCellId": "cell-002",
-                "nid": "00000000001"
-              },
-              "ignoreNcgi": false,
               "globalGnbId": {
                 "plmnId": {
                   "mnc": "999",
