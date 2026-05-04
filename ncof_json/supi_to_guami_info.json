@@ -1,0 +1,55 @@
+{
+  "description": "Bootstrap mapping table for 6G-I2P PoC. Loaded at startup. Key (supi) maps 1:1 to (guami) for AMF resolution.",
+  "cacheKey": [
+    "supi"
+  ],
+  "cacheValue": [
+    "guami"
+  ],
+  "mappings": [
+    {
+      "supi": "imsi-001010000000001",
+      "guami": {
+        "plmnId": {
+          "mcc": "999",
+          "mnc": "001",
+          "nid": "00000000001"
+        },
+        "amfId": "000001"
+      }
+    },
+    {
+      "supi": "imsi-001010000000002",
+      "guami": {
+        "plmnId": {
+          "mcc": "999",
+          "mnc": "001",
+          "nid": "00000000001"
+        },
+        "amfId": "000001"
+      }
+    },
+    {
+      "supi": "imsi-001010000000003",
+      "guami": {
+        "plmnId": {
+          "mcc": "999",
+          "mnc": "001",
+          "nid": "00000000001"
+        },
+        "amfId": "000001"
+      }
+    },
+    {
+      "supi": "imsi-001010000000004",
+      "guami": {
+        "plmnId": {
+          "mcc": "999",
+          "mnc": "001",
+          "nid": "00000000001"
+        },
+        "amfId": "000001"
+      }
+    }
+  ]
+}
