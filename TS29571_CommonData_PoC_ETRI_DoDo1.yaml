@@ -65,7 +65,7 @@ components:
     DateTime:
       format: date-time
       type: string
-      description: string with format 'date-time' as defined in OpenAPI.
+      description: string with format "date-time" as defined in OpenAPI.
 
     DateTimeRm:
       format: date-time
@@ -314,7 +314,7 @@ components:
 
     Uri:
       type: string
-      description: String providing an URI formatted according to RFC 3986.
+      description: string providing an URI formatted according to IETF RFC 3986. 
 
     UriRm:
       type: string
@@ -2229,19 +2229,17 @@ components:
         - sst
 
     PlmnId:
+      description: Represents the identifier of a PLMN.
       type: object
       properties:
         mcc:
           $ref: '#/components/schemas/Mcc'
         mnc:
           $ref: '#/components/schemas/Mnc'
-      description: >
-        When PlmnId needs to be converted to string (e.g. when used in maps as key), the string 
-        shall be composed of three digits "mcc" followed by "-" and two or three digits "mnc".
-
       required:
         - mcc
         - mnc
+        
     PlmnIdRm:
       anyOf:
         - $ref: '#/components/schemas/PlmnId'
