@@ -74,14 +74,7 @@
                   "_cellPowerParamSet": {
                     "_paramSetId": "CELL_POWER_PARAM_SET-2026-03-01T12:01:00+09:00_1",
                     "_cellPowerState": "DEEP_SLEEP",
-                    "_cellTxPower": "20dBm",
-                    "_ssPbchBlockPower": "15dBm",
-                    "_siBlockPower": "10dBm",
-                    "_pdschBlockPower": "18dBm",
-                    "_pdcchBlockPower": "12dBm",
-                    "_csiRsPowerOffset": "3dB",
-                    "_qRxLevMin": "-120dBm",
-                    "_cellIndividualOffset": "0dB"
+                    "_cellTxPower": "20dBm"
                   }
                 }
               ]
