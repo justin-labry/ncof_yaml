@@ -243,7 +243,7 @@ components:
     DateTime:
       format: date-time
       type: string
-      description: string with format 'date-time' as defined in OpenAPI.
+      description: string with format "date-time" as defined in OpenAPI.
     DddTrafficDescriptor:
       description: Contains a Traffic Descriptor.
       type: object
@@ -1201,7 +1201,7 @@ components:
           $ref: '#/components/schemas/AddrFqdn'
     Uri:
       type: string
-      description: String providing an URI formatted according to RFC 3986.
+      description: string providing an URI formatted according to IETF RFC 3986.
     VolumeTimedReport:
       description: Contains Usage data information.
       type: object

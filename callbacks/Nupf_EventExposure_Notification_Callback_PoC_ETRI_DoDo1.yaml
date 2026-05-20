@@ -206,7 +206,7 @@ components:
     DateTime:
       format: date-time
       type: string
-      description: string with format 'date-time' as defined in OpenAPI.
+      description: string with format "date-time" as defined in OpenAPI.
     DnProtocol:
       type: string
       description: Domain Name Protocol
@@ -781,7 +781,7 @@ components:
       description: Unsigned Integer, i.e. only value 0 and integers above 0 are permissible.
     Uri:
       type: string
-      description: String providing an URI formatted according to RFC 3986.
+      description: string providing an URI formatted according to IETF RFC 3986.
     UserDataUsageMeasurements:
       description: |
         User Data Usage Measurements either for the PDU session, or the app-id, or the data flow

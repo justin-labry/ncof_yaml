@@ -612,7 +612,7 @@ components:
     DateTime:
       format: date-time
       type: string
-      description: string with format 'date-time' as defined in OpenAPI.
+      description: string with format "date-time" as defined in OpenAPI.
     Direction:
       type: string
       description: "Possible values are:  \n  - NORTH: North direction.\n  - SOUTH: South direction.\n  - EAST: EAST direction.\n\
@@ -1067,6 +1067,11 @@ components:
       properties:
         hfcNId:
           $ref: '#/components/schemas/HfcNId'
+    HorizAxesOrientation:
+      description: Horizontal axes orientation angle clockwise from northing in 0.1 degrees.
+      type: integer
+      minimum: 0
+      maximum: 3600
     HorizontalSpeed:
       description: Indicates value of horizontal speed.
       type: number
@@ -1219,6 +1224,60 @@ components:
         Possible values are:
         - DSL: Identifies a DSL line
         - PON: Identifies a PON line
+    Local2dPointUncertaintyEllipse:
+      description: Local 2D point with uncertainty ellipse
+      allOf:
+      - $ref: '#/components/schemas/GADShape'
+      - type: object
+        required:
+        - localOrigin
+        - point
+        - uncertaintyEllipse
+        - confidence
+        properties:
+          localOrigin:
+            $ref: '#/components/schemas/LocalOrigin'
+          point:
+            $ref: '#/components/schemas/RelativeCartesianLocation'
+          uncertaintyEllipse:
+            $ref: '#/components/schemas/UncertaintyEllipse'
+          confidence:
+            $ref: '#/components/schemas/Confidence'
+    Local3dPointUncertaintyEllipsoid:
+      description: Local 3D point with uncertainty ellipsoid
+      allOf:
+      - $ref: '#/components/schemas/GADShape'
+      - type: object
+        required:
+        - localOrigin
+        - point
+        - uncertaintyEllipsoid
+        - confidence
+        properties:
+          localOrigin:
+            $ref: '#/components/schemas/LocalOrigin'
+          point:
+            $ref: '#/components/schemas/RelativeCartesianLocation'
+          uncertaintyEllipsoid:
+            $ref: '#/components/schemas/UncertaintyEllipsoid'
+          confidence:
+            $ref: '#/components/schemas/Confidence'
+          vConfidence:
+            $ref: '#/components/schemas/Confidence'
+    LocalOrigin:
+      description: Indicates a Local origin in a reference system
+      type: object
+      required:
+      - coordinateId
+      properties:
+        coordinateId:
+          type: string
+        point:
+          $ref: '#/components/schemas/GeographicalCoordinates'
+        area:
+          $ref: '#/components/schemas/GeographicArea'
+        horizAxesOrientation:
+          $ref: '#/components/schemas/HorizAxesOrientation'
     LocationArea5G:
       description: Represents a user location area when the UE is attached to 5G.
       type: object
@@ -1973,14 +2032,13 @@ components:
       - perfData
       - timeStamp
     PlmnId:
+      description: Represents the identifier of a PLMN.
       type: object
       properties:
         mcc:
           $ref: '#/components/schemas/Mcc'
         mnc:
           $ref: '#/components/schemas/Mnc'
-      description: |
-        When PlmnId needs to be converted to string (e.g. when used in maps as key), the string  shall be composed of three digits "mcc" followed by "-" and two or three digits "mnc".
       required:
       - mcc
       - mnc
@@ -2237,6 +2295,19 @@ components:
           $ref: '#/components/schemas/Uri'
         targetSepp:
           $ref: '#/components/schemas/Uri'
+    RelativeCartesianLocation:
+      description: Relative Cartesian Location
+      type: object
+      required:
+      - x
+      - y
+      properties:
+        x:
+          $ref: '#/components/schemas/Float'
+        y:
+          $ref: '#/components/schemas/Float'
+        z:
+          $ref: '#/components/schemas/Float'
     RelativeDirection:
       type: string
       description: "Represents an application's event.  \nPossible values are:\n- ABOVE: Indicates that UE movement with respect\
@@ -2613,6 +2684,23 @@ components:
         semiMajor:
           $ref: '#/components/schemas/Uncertainty'
         semiMinor:
+          $ref: '#/components/schemas/Uncertainty'
+        orientationMajor:
+          $ref: '#/components/schemas/Orientation'
+    UncertaintyEllipsoid:
+      description: Ellipsoid with uncertainty
+      type: object
+      required:
+      - semiMajor
+      - semiMinor
+      - vertical
+      - orientationMajor
+      properties:
+        semiMajor:
+          $ref: '#/components/schemas/Uncertainty'
+        semiMinor:
+          $ref: '#/components/schemas/Uncertainty'
+        vertical:
           $ref: '#/components/schemas/Uncertainty'
         orientationMajor:
           $ref: '#/components/schemas/Orientation'

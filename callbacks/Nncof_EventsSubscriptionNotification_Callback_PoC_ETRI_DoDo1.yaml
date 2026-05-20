@@ -404,7 +404,7 @@ components:
     DateTime:
       format: date-time
       type: string
-      description: string with format 'date-time' as defined in OpenAPI.
+      description: string with format "date-time" as defined in OpenAPI.
     Dnai:
       type: string
       description: DNAI (Data network access identifier), see clause 5.6.7 of 3GPP TS 23.501.
@@ -905,6 +905,11 @@ components:
       properties:
         hfcNId:
           $ref: '#/components/schemas/HfcNId'
+    HorizAxesOrientation:
+      description: Horizontal axes orientation angle clockwise from northing in 0.1 degrees.
+      type: integer
+      minimum: 0
+      maximum: 3600
     InnerRadius:
       description: Indicates value of the inner radius.
       type: integer
@@ -971,6 +976,60 @@ components:
         Possible values are:
         - DSL: Identifies a DSL line
         - PON: Identifies a PON line
+    Local2dPointUncertaintyEllipse:
+      description: Local 2D point with uncertainty ellipse
+      allOf:
+      - $ref: '#/components/schemas/GADShape'
+      - type: object
+        required:
+        - localOrigin
+        - point
+        - uncertaintyEllipse
+        - confidence
+        properties:
+          localOrigin:
+            $ref: '#/components/schemas/LocalOrigin'
+          point:
+            $ref: '#/components/schemas/RelativeCartesianLocation'
+          uncertaintyEllipse:
+            $ref: '#/components/schemas/UncertaintyEllipse'
+          confidence:
+            $ref: '#/components/schemas/Confidence'
+    Local3dPointUncertaintyEllipsoid:
+      description: Local 3D point with uncertainty ellipsoid
+      allOf:
+      - $ref: '#/components/schemas/GADShape'
+      - type: object
+        required:
+        - localOrigin
+        - point
+        - uncertaintyEllipsoid
+        - confidence
+        properties:
+          localOrigin:
+            $ref: '#/components/schemas/LocalOrigin'
+          point:
+            $ref: '#/components/schemas/RelativeCartesianLocation'
+          uncertaintyEllipsoid:
+            $ref: '#/components/schemas/UncertaintyEllipsoid'
+          confidence:
+            $ref: '#/components/schemas/Confidence'
+          vConfidence:
+            $ref: '#/components/schemas/Confidence'
+    LocalOrigin:
+      description: Indicates a Local origin in a reference system
+      type: object
+      required:
+      - coordinateId
+      properties:
+        coordinateId:
+          type: string
+        point:
+          $ref: '#/components/schemas/GeographicalCoordinates'
+        area:
+          $ref: '#/components/schemas/GeographicArea'
+        horizAxesOrientation:
+          $ref: '#/components/schemas/HorizAxesOrientation'
     LocationAreaId:
       description: Contains a Location area identification as defined in 3GPP TS 23.003, clause 4.1.
       type: object
@@ -1319,14 +1378,13 @@ components:
       description: "PduSessionType indicates the type of a PDU session. It shall comply with the provisions defined in table\
         \ 5.4.3.3-1. \n"
     PlmnId:
+      description: Represents the identifier of a PLMN.
       type: object
       properties:
         mcc:
           $ref: '#/components/schemas/Mcc'
         mnc:
           $ref: '#/components/schemas/Mnc'
-      description: |
-        When PlmnId needs to be converted to string (e.g. when used in maps as key), the string  shall be composed of three digits "mcc" followed by "-" and two or three digits "mnc".
       required:
       - mcc
       - mnc
@@ -1631,6 +1689,19 @@ components:
           $ref: '#/components/schemas/Uri'
         targetSepp:
           $ref: '#/components/schemas/Uri'
+    RelativeCartesianLocation:
+      description: Relative Cartesian Location
+      type: object
+      required:
+      - x
+      - y
+      properties:
+        x:
+          $ref: '#/components/schemas/Float'
+        y:
+          $ref: '#/components/schemas/Float'
+        z:
+          $ref: '#/components/schemas/Float'
     RoutingAreaId:
       description: Contains a Routing Area Identification as defined in 3GPP TS 23.003, clause 4.2.
       type: object
@@ -1946,6 +2017,23 @@ components:
           $ref: '#/components/schemas/Uncertainty'
         orientationMajor:
           $ref: '#/components/schemas/Orientation'
+    UncertaintyEllipsoid:
+      description: Ellipsoid with uncertainty
+      type: object
+      required:
+      - semiMajor
+      - semiMinor
+      - vertical
+      - orientationMajor
+      properties:
+        semiMajor:
+          $ref: '#/components/schemas/Uncertainty'
+        semiMinor:
+          $ref: '#/components/schemas/Uncertainty'
+        vertical:
+          $ref: '#/components/schemas/Uncertainty'
+        orientationMajor:
+          $ref: '#/components/schemas/Orientation'
     UpfInformation:
       description: Represents the ID/address/FQDN of the UPF.
       type: object
@@ -1956,7 +2044,7 @@ components:
           $ref: '#/components/schemas/AddrFqdn'
     Uri:
       type: string
-      description: String providing an URI formatted according to RFC 3986.
+      description: string providing an URI formatted according to IETF RFC 3986.
     UserLocation:
       type: object
       properties:
