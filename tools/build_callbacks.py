@@ -338,13 +338,33 @@ def _parse_ref(ref: str, current_file: str) -> tuple[str, str]:
 
 def _rewrite_local(node: Any, current_file: str, found: set[tuple[str, str]]) -> None:
     """Walk ``node`` in place: rewrite every $ref to '#/components/schemas/<Name>'
-    and record (source_file, schema_name) of each referenced schema."""
+    and record (source_file, schema_name) of each referenced schema.
+
+    `discriminator.mapping` values are JSON Pointer *strings* (not `$ref` nodes),
+    so the generic walker below would miss them. We treat each mapping value
+    as a schema reference too, both rewriting it to local form and queueing
+    the target schema for inlining. Without this, polymorphic subtypes that
+    are only reachable via `mapping` (e.g. `Local2dPointUncertaintyEllipse`
+    when the parent `LocalArea` is just `oneOf` + simplified away) get
+    mentioned by name in the output but never defined, causing
+    "Can't resolve $ref" errors when downstream tools (Redocly, generators)
+    bundle the result.
+    """
     if isinstance(node, dict):
         if "$ref" in node and isinstance(node["$ref"], str):
             file, name = _parse_ref(node["$ref"], current_file)
             node["$ref"] = f"#/components/schemas/{name}"
             found.add((file, name))
             return
+        disc = node.get("discriminator")
+        if isinstance(disc, dict):
+            mapping = disc.get("mapping")
+            if isinstance(mapping, dict):
+                for key, value in list(mapping.items()):
+                    if isinstance(value, str) and "#" in value:
+                        file, name = _parse_ref(value, current_file)
+                        mapping[key] = f"#/components/schemas/{name}"
+                        found.add((file, name))
         for v in node.values():
             _rewrite_local(v, current_file, found)
     elif isinstance(node, list):
