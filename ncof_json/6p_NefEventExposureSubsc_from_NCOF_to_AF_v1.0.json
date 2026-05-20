@@ -47,13 +47,6 @@
                 "mnc": "999",
                 "mcc": "001"
               },
-              "n3IwfId": "000001"
-            },
-            {
-              "plmnId": {
-                "mnc": "999",
-                "mcc": "001"
-              },
               "gNbId": {
                 "bitLength": 24,
                 "gNBValue": "000002"
