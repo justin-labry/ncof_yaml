@@ -27,9 +27,15 @@ Outputs (two notifications):
 Decision rule (single-threshold band with hysteresis):
 
     metric_mbps = sum of DL throughput from 12p_c
-    if metric_mbps >= TH_HIGH:        gNB2 -> DEEP_SLEEP
-    elif metric_mbps <= TH_LOW:       gNB2 -> ACTIVE
+    if metric_mbps >= TH_HIGH:        gNB2 -> ACTIVE       (WLAN saturated; cannot absorb offload)
+    elif metric_mbps <= TH_LOW:       gNB2 -> DEEP_SLEEP   (WLAN has spare; offload feasible)
     else:                             gNB2 -> previous_state
+
+Direction rationale: high WLAN throughput means Non-3GPP is already busy
+and has little spare capacity to absorb UEs offloaded from gNB2, so gNB2
+must stay ACTIVE. Low WLAN throughput means there is headroom on the
+Wi-Fi path, so gNB2 can sleep safely. This matches the spare-capacity
+logic of ``tools/decide_cell_power.py`` rule R4.
 
 QoS mapping per output policy set (driven by the new gNB2 state):
 
@@ -68,8 +74,8 @@ from typing import Any
 # Tunables (PoC defaults; override via CLI)
 # ---------------------------------------------------------------------------
 
-TH_HIGH_MBPS = 500.0       # >= : DEEP_SLEEP
-TH_LOW_MBPS = 300.0        # <= : ACTIVE     (hysteresis band = [TH_LOW, TH_HIGH))
+TH_HIGH_MBPS = 500.0       # >= : ACTIVE       (WLAN busy -> can't offload, keep gNB2 awake)
+TH_LOW_MBPS = 300.0        # <= : DEEP_SLEEP   (WLAN idle -> can offload, sleep gNB2)
 
 GNB2_VALUE = "000002"      # which gNB the rule controls
 GNB1_VALUE = "000001"      # primary gNB; never affected by this rule
@@ -162,14 +168,14 @@ def decide_gnb2_state(
 ) -> str:
     """Hysteresis rule.
 
-    metric >= th_high  -> DEEP_SLEEP
-    metric <= th_low   -> ACTIVE
+    metric >= th_high  -> ACTIVE       (WLAN saturated, gNB2 must stay awake)
+    metric <= th_low   -> DEEP_SLEEP   (WLAN has headroom, gNB2 can sleep)
     otherwise          -> previous_state  (stay put in the hysteresis band)
     """
     if metric_mbps >= th_high:
-        return "DEEP_SLEEP"
-    if metric_mbps <= th_low:
         return "ACTIVE"
+    if metric_mbps <= th_low:
+        return "DEEP_SLEEP"
     return previous_state
 
 
